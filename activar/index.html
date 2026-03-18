@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cruz Digital — Activa tu sistema de WhatsApp hoy</title>
+
+<!-- WhatsApp / Social Preview -->
+<meta property="og:title" content="Activa tu sistema automático de WhatsApp — Cruz Digital">
+<meta property="og:description" content="Tu negocio responde solo. 24 horas. 7 días. Sistema activo en menos de 24h. Desde 97€.">
+<meta property="og:image" content="https://i.postimg.cc/rpx2WvPF/C-Users-albia-One-Drive-Escritorio-inteligencia-PROGRAMADOR-N8N-VSCODE-maquina-leads-generator.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Sistema de WhatsApp automático para negocios locales. Responde clientes 24/7, capta ventas mientras duermes. Desde 97€.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --bg: #0a0f1e;
+  --card: #0D1B2A;
+  --card2: #0f2236;
+  --green: #25D366;
+  --green2: #1da851;
+  --blue: #63b3ed;
+  --purple: #c4b5fd;
+  --text: rgba(255,255,255,0.88);
+  --muted: rgba(255,255,255,0.5);
+  --border: rgba(255,255,255,0.08);
+}
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+}
+
+/* ── NAV ── */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(10,15,30,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 24px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-brand { display:flex; align-items:center; gap:10px; }
+.nav-icon {
+  width:36px; height:36px; background:var(--green);
+  border-radius:10px; display:flex; align-items:center; justify-content:center;
+  font-size:18px; font-weight:900; color:#fff; flex-shrink:0;
+}
+.nav-name { font-size:15px; font-weight:700; color:#fff; letter-spacing:0.5px; }
+.nav-cta {
+  background:var(--green); color:#fff;
+  padding:9px 20px; border-radius:30px;
+  font-size:13px; font-weight:700; text-decoration:none;
+  transition:background 0.2s;
+}
+.nav-cta:hover { background:var(--green2); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 90vh;
+  display: flex; flex-direction:column; align-items:center; justify-content:center;
+  text-align:center; padding: 80px 24px 60px;
+  position:relative; overflow:hidden;
+}
+.hero::before {
+  content:'';
+  position:absolute; top:-200px; left:50%; transform:translateX(-50%);
+  width:600px; height:600px;
+  background:radial-gradient(circle, rgba(37,211,102,0.12) 0%, transparent 70%);
+  pointer-events:none;
+}
+.hero-tag {
+  display:inline-flex; align-items:center; gap:8px;
+  background:rgba(37,211,102,0.12); border:1px solid rgba(37,211,102,0.3);
+  color:var(--green); font-size:12px; font-weight:700;
+  letter-spacing:2px; text-transform:uppercase;
+  padding:7px 18px; border-radius:30px; margin-bottom:28px;
+}
+.hero h1 {
+  font-size:clamp(36px,7vw,64px); font-weight:900;
+  color:#fff; line-height:1.08; letter-spacing:-1px;
+  max-width:800px; margin-bottom:20px;
+}
+.hero h1 span { color:var(--green); }
+.hero-sub {
+  font-size:clamp(16px,2.5vw,20px); color:var(--muted);
+  max-width:560px; margin-bottom:40px; font-weight:400;
+}
+.hero-btns { display:flex; gap:14px; flex-wrap:wrap; justify-content:center; }
+.btn-primary {
+  background:linear-gradient(135deg,var(--green),var(--green2));
+  color:#fff; padding:16px 36px; border-radius:14px;
+  font-size:16px; font-weight:700; text-decoration:none;
+  box-shadow:0 8px 30px rgba(37,211,102,0.3);
+  transition:transform 0.2s, box-shadow 0.2s;
+}
+.btn-primary:hover { transform:translateY(-2px); box-shadow:0 12px 40px rgba(37,211,102,0.4); }
+.btn-secondary {
+  background:transparent; color:#fff;
+  border:1px solid rgba(255,255,255,0.2);
+  padding:16px 36px; border-radius:14px;
+  font-size:16px; font-weight:600; text-decoration:none;
+  transition:border-color 0.2s, background 0.2s;
+}
+.btn-secondary:hover { border-color:var(--green); background:rgba(37,211,102,0.06); }
+.hero-trust {
+  margin-top:48px; display:flex; align-items:center; gap:20px;
+  flex-wrap:wrap; justify-content:center;
+}
+.trust-item { display:flex; align-items:center; gap:8px; color:var(--muted); font-size:13px; }
+.trust-dot { width:6px; height:6px; background:var(--green); border-radius:50%; }
+
+/* ── SECTION BASE ── */
+section { padding: 80px 24px; max-width:1000px; margin:0 auto; }
+.section-label {
+  text-align:center; font-size:11px; font-weight:700;
+  letter-spacing:3px; text-transform:uppercase;
+  color:var(--green); margin-bottom:14px;
+}
+.section-title {
+  text-align:center; font-size:clamp(26px,4vw,38px);
+  font-weight:800; color:#fff; margin-bottom:12px;
+}
+.section-sub {
+  text-align:center; color:var(--muted);
+  font-size:16px; max-width:520px; margin:0 auto 48px;
+}
+
+/* ── HOW IT WORKS ── */
+.steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; }
+.step {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:20px; padding:28px 20px; text-align:center;
+  position:relative;
+}
+.step-num {
+  position:absolute; top:-12px; left:50%; transform:translateX(-50%);
+  background:var(--green); color:#fff;
+  width:24px; height:24px; border-radius:50%;
+  font-size:11px; font-weight:800;
+  display:flex; align-items:center; justify-content:center;
+}
+.step-icon { font-size:36px; margin-bottom:14px; }
+.step-title { font-size:14px; font-weight:700; color:#fff; margin-bottom:6px; }
+.step-desc { font-size:12.5px; color:var(--muted); line-height:1.5; }
+
+/* ── PLANES ── */
+.planes-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px; align-items:start;
+}
+.plan-card {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:24px; padding:32px 24px;
+  position:relative; transition:transform 0.2s;
+}
+.plan-card:hover { transform:translateY(-4px); }
+.plan-card.featured {
+  border:2px solid rgba(37,211,102,0.6);
+  background:linear-gradient(160deg,rgba(37,211,102,0.08),rgba(99,179,237,0.05));
+  box-shadow:0 0 40px rgba(37,211,102,0.12);
+}
+.plan-card.mensual { border-color:rgba(167,139,250,0.3); }
+
+.plan-badge {
+  position:absolute; top:-1px; right:20px;
+  background:linear-gradient(135deg,var(--green),var(--green2));
+  color:#fff; font-size:9px; font-weight:800;
+  letter-spacing:2px; text-transform:uppercase;
+  padding:5px 14px; border-radius:0 0 12px 12px;
+  box-shadow:0 4px 14px rgba(37,211,102,0.4);
+}
+
+.plan-header { margin-bottom:20px; }
+.plan-icon-row { display:flex; align-items:center; gap:12px; margin-bottom:16px; }
+.plan-emoji {
+  width:44px; height:44px; border-radius:14px;
+  display:flex; align-items:center; justify-content:center; font-size:22px;
+}
+.plan-card:not(.featured):not(.mensual) .plan-emoji { background:rgba(37,211,102,0.12); }
+.plan-card.featured .plan-emoji { background:rgba(37,211,102,0.2); }
+.plan-card.mensual .plan-emoji { background:rgba(167,139,250,0.12); }
+
+.plan-name { font-size:15px; font-weight:700; color:#fff; text-transform:uppercase; letter-spacing:0.5px; }
+.plan-tagline { font-size:11px; color:var(--muted); margin-top:2px; }
+.plan-price { display:flex; align-items:baseline; gap:4px; }
+.price-num {
+  font-size:48px; font-weight:900; line-height:1;
+}
+.plan-card:not(.featured):not(.mensual) .price-num { color:var(--green); }
+.plan-card.featured .price-num { color:#fff; }
+.plan-card.mensual .price-num { color:var(--purple); }
+.price-sym { font-size:24px; font-weight:700; }
+.plan-card:not(.featured):not(.mensual) .price-sym { color:var(--green); }
+.plan-card.featured .price-sym { color:#fff; }
+.plan-card.mensual .price-sym { color:var(--purple); }
+.price-period { font-size:13px; color:var(--muted); margin-left:4px; }
+
+.plan-sep { height:1px; background:var(--border); margin:20px 0; }
+.plan-card.featured .plan-sep { background:rgba(37,211,102,0.2); }
+
+.plan-features { list-style:none; display:flex; flex-direction:column; gap:10px; margin-bottom:28px; }
+.plan-features li { display:flex; align-items:flex-start; gap:10px; font-size:13.5px; color:var(--text); }
+.feat-check {
+  width:18px; height:18px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:10px; flex-shrink:0; margin-top:2px;
+}
+.plan-card:not(.mensual) .feat-check { background:rgba(37,211,102,0.2); color:var(--green); }
+.plan-card.mensual .feat-check { background:rgba(167,139,250,0.2); color:var(--purple); }
+.feat-check::before { content:'✓'; font-weight:700; }
+
+.plan-btn {
+  width:100%; padding:15px; border:none; border-radius:14px;
+  font-size:15px; font-weight:700; cursor:pointer;
+  transition:transform 0.15s, box-shadow 0.15s; font-family:'Poppins',sans-serif;
+}
+.plan-card:not(.featured):not(.mensual) .plan-btn {
+  background:rgba(37,211,102,0.15); color:var(--green);
+  border:1px solid rgba(37,211,102,0.4);
+}
+.plan-card:not(.featured):not(.mensual) .plan-btn:hover {
+  background:var(--green); color:#fff;
+}
+.plan-card.featured .plan-btn {
+  background:linear-gradient(135deg,var(--green),var(--green2)); color:#fff;
+  box-shadow:0 6px 24px rgba(37,211,102,0.35);
+}
+.plan-card.featured .plan-btn:hover { transform:translateY(-2px); box-shadow:0 10px 30px rgba(37,211,102,0.45); }
+.plan-card.mensual .plan-btn {
+  background:rgba(167,139,250,0.12); color:var(--purple);
+  border:1px solid rgba(167,139,250,0.35);
+}
+.plan-card.mensual .plan-btn:hover { background:var(--purple); color:#fff; }
+
+/* ── FAQ ── */
+.faq { display:flex; flex-direction:column; gap:12px; }
+.faq-item {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:16px; overflow:hidden;
+}
+.faq-q {
+  padding:18px 22px; font-size:14.5px; font-weight:600; color:#fff;
+  cursor:pointer; display:flex; justify-content:space-between; align-items:center;
+  user-select:none;
+}
+.faq-q::after { content:'+'; font-size:20px; color:var(--green); font-weight:300; flex-shrink:0; }
+.faq-item.open .faq-q::after { content:'−'; }
+.faq-a {
+  display:none; padding:0 22px 18px;
+  font-size:13.5px; color:var(--muted); line-height:1.6;
+}
+.faq-item.open .faq-a { display:block; }
+
+/* ── CTA FINAL ── */
+.cta-final {
+  background:linear-gradient(135deg,rgba(37,211,102,0.12),rgba(99,179,237,0.08));
+  border:1px solid rgba(37,211,102,0.25);
+  border-radius:28px; padding:60px 40px; text-align:center; margin:0 24px;
+}
+.cta-final h2 { font-size:clamp(24px,4vw,36px); font-weight:800; color:#fff; margin-bottom:12px; }
+.cta-final p { color:var(--muted); font-size:16px; margin-bottom:32px; }
+
+/* ── FOOTER ── */
+footer {
+  background:rgba(0,0,0,0.3); border-top:1px solid var(--border);
+  padding:40px 24px; text-align:center;
+}
+.footer-brand { display:flex; align-items:center; justify-content:center; gap:10px; margin-bottom:20px; }
+.footer-links { display:flex; justify-content:center; gap:24px; margin-bottom:20px; flex-wrap:wrap; }
+.footer-links a { color:var(--muted); text-decoration:none; font-size:13px; transition:color 0.2s; }
+.footer-links a:hover { color:var(--green); }
+.social-links { display:flex; justify-content:center; gap:14px; margin-bottom:24px; }
+.social-btn {
+  width:40px; height:40px; border-radius:50%;
+  background:rgba(255,255,255,0.06); border:1px solid var(--border);
+  display:flex; align-items:center; justify-content:center;
+  color:var(--muted); text-decoration:none; font-size:17px;
+  transition:background 0.2s, color 0.2s, border-color 0.2s;
+}
+.social-btn:hover { background:var(--green); color:#fff; border-color:var(--green); }
+.footer-copy { font-size:12px; color:rgba(255,255,255,0.2); }
+
+/* ── MODAL ── */
+.modal-overlay {
+  display:none; position:fixed; inset:0; z-index:1000;
+  background:rgba(0,0,0,0.75); backdrop-filter:blur(6px);
+  align-items:center; justify-content:center; padding:20px;
+}
+.modal-overlay.open { display:flex; }
+.modal {
+  background:linear-gradient(160deg,#0D1B2A,#0f2236);
+  border:1px solid rgba(37,211,102,0.3);
+  border-radius:24px; padding:36px 32px; width:100%; max-width:480px;
+  position:relative; max-height:90vh; overflow-y:auto;
+}
+.modal-close {
+  position:absolute; top:16px; right:16px;
+  background:rgba(255,255,255,0.08); border:none; color:var(--muted);
+  width:30px; height:30px; border-radius:50%; cursor:pointer;
+  font-size:16px; display:flex; align-items:center; justify-content:center;
+  transition:background 0.2s;
+}
+.modal-close:hover { background:rgba(255,255,255,0.15); }
+.modal-plan-tag {
+  display:inline-block; background:rgba(37,211,102,0.15);
+  border:1px solid rgba(37,211,102,0.35); color:var(--green);
+  font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;
+  padding:5px 14px; border-radius:30px; margin-bottom:16px;
+}
+.modal h3 { font-size:22px; font-weight:800; color:#fff; margin-bottom:6px; }
+.modal-sub { font-size:13px; color:var(--muted); margin-bottom:24px; }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.form-group { display:flex; flex-direction:column; gap:6px; margin-bottom:14px; }
+.form-group label { font-size:12px; font-weight:600; color:rgba(255,255,255,0.6); text-transform:uppercase; letter-spacing:0.5px; }
+.form-group input, .form-group textarea, .form-group select {
+  background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12);
+  border-radius:10px; padding:12px 14px; color:#fff;
+  font-size:14px; font-family:'Poppins',sans-serif;
+  transition:border-color 0.2s; outline:none;
+}
+.form-group input:focus, .form-group textarea:focus {
+  border-color:rgba(37,211,102,0.5);
+  background:rgba(37,211,102,0.04);
+}
+.form-group input::placeholder, .form-group textarea::placeholder { color:rgba(255,255,255,0.25); }
+.form-group textarea { resize:vertical; min-height:80px; }
+.form-submit {
+  width:100%; padding:16px; background:linear-gradient(135deg,var(--green),var(--green2));
+  border:none; border-radius:14px; color:#fff; font-size:16px; font-weight:700;
+  font-family:'Poppins',sans-serif; cursor:pointer;
+  box-shadow:0 6px 24px rgba(37,211,102,0.3);
+  transition:transform 0.15s, box-shadow 0.15s;
+  display:flex; align-items:center; justify-content:center; gap:8px;
+}
+.form-submit:hover { transform:translateY(-2px); box-shadow:0 10px 30px rgba(37,211,102,0.4); }
+.form-submit:disabled { opacity:0.6; transform:none; }
+.form-privacy { font-size:11px; color:rgba(255,255,255,0.25); text-align:center; margin-top:12px; }
+.spinner { width:16px; height:16px; border:2px solid rgba(255,255,255,0.3); border-top-color:#fff; border-radius:50%; animation:spin 0.7s linear infinite; display:none; }
+@keyframes spin { to { transform:rotate(360deg); } }
+
+/* ── RESPONSIVE ── */
+@media(max-width:600px) {
+  .form-row { grid-template-columns:1fr; }
+  .modal { padding:28px 20px; }
+  .cta-final { padding:40px 20px; margin:0 12px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <div class="nav-icon">C</div>
+    <span class="nav-name">Cruz Digital</span>
+  </div>
+  <a href="#planes" class="nav-cta">Ver planes</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-tag">⚡ Sistema WhatsApp Automatizado</div>
+  <h1>Tu negocio responde solo.<br><span>24 horas. 7 días.</span></h1>
+  <p class="hero-sub">Sin que estés pendiente del móvil. Sin perder ni un cliente. Activo en menos de 24 horas.</p>
+  <div class="hero-btns">
+    <a href="#planes" class="btn-primary">Activar mi sistema →</a>
+    <a href="#como-funciona" class="btn-secondary">Ver cómo funciona</a>
+  </div>
+  <div class="hero-trust">
+    <div class="trust-item"><div class="trust-dot"></div>Sin conocimientos técnicos</div>
+    <div class="trust-item"><div class="trust-dot"></div>Activo en 24h</div>
+    <div class="trust-item"><div class="trust-dot"></div>Soporte incluido</div>
+  </div>
+</div>
+
+<!-- CÓMO FUNCIONA -->
+<section id="como-funciona">
+  <div class="section-label">El proceso</div>
+  <h2 class="section-title">Cómo funciona</h2>
+  <p class="section-sub">Cuatro pasos. Completamente automático. Sin que hagas nada.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-icon">👤</div>
+      <div class="step-title">Cliente escribe</div>
+      <div class="step-desc">Un cliente te manda un mensaje por WhatsApp, a cualquier hora del día o la noche.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-icon">💬</div>
+      <div class="step-title">Bot responde</div>
+      <div class="step-desc">El sistema responde al instante con la información exacta que necesita ese cliente.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-icon">🎯</div>
+      <div class="step-title">Detecta interés</div>
+      <div class="step-desc">El bot identifica quién está interesado de verdad y lo guía hacia la venta.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-icon">💰</div>
+      <div class="step-title">Venta cerrada</div>
+      <div class="step-desc">Tú recibes el cliente ya interesado, listo para comprar. Sin haber hecho nada.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANES -->
+<section id="planes">
+  <div class="section-label">Elige tu plan</div>
+  <h2 class="section-title">Activa tu sistema hoy</h2>
+  <p class="section-sub">Elige la opción que mejor se adapte a tu negocio. Todos incluyen el sistema funcionando en 24h.</p>
+  <div class="planes-grid">
+
+    <!-- BÁSICO -->
+    <div class="plan-card">
+      <div class="plan-header">
+        <div class="plan-icon-row">
+          <div class="plan-emoji">🚀</div>
+          <div>
+            <div class="plan-name">Plan Básico</div>
+            <div class="plan-tagline">Pago único · Sin permanencia</div>
+          </div>
+        </div>
+        <div class="plan-price">
+          <span class="price-sym">€</span>
+          <span class="price-num">97</span>
+        </div>
+      </div>
+      <div class="plan-sep"></div>
+      <ul class="plan-features">
+        <li><div class="feat-check"></div>Sistema funcionando y respondiendo automáticamente</li>
+        <li><div class="feat-check"></div>Respuestas automáticas 24h / 7 días</li>
+        <li><div class="feat-check"></div>WhatsApp Business conectado</li>
+        <li><div class="feat-check"></div>Guía de configuración incluida</li>
+        <li><div class="feat-check"></div><strong>Activo en menos de 24h</strong></li>
+      </ul>
+      <button class="plan-btn" onclick="openModal('basico')">Quiero este plan →</button>
+    </div>
+
+    <!-- COMPLETO (FEATURED) -->
+    <div class="plan-card featured">
+      <div class="plan-badge">⭐ Recomendado</div>
+      <div class="plan-header">
+        <div class="plan-icon-row">
+          <div class="plan-emoji">🔥</div>
+          <div>
+            <div class="plan-name">Plan Completo</div>
+            <div class="plan-tagline">La opción más vendida</div>
+          </div>
+        </div>
+        <div class="plan-price">
+          <span class="price-sym">€</span>
+          <span class="price-num">247</span>
+        </div>
+      </div>
+      <div class="plan-sep"></div>
+      <ul class="plan-features">
+        <li><div class="feat-check"></div>Todo lo del Plan Básico</li>
+        <li><div class="feat-check"></div>Sistema <strong>optimizado para convertir clientes</strong></li>
+        <li><div class="feat-check"></div>Automatización completa adaptada a tu negocio</li>
+        <li><div class="feat-check"></div>Mensajes personalizados para tu sector</li>
+        <li><div class="feat-check"></div><strong>Primer mes de acompañamiento GRATIS 🎉</strong></li>
+        <li><div class="feat-check"></div><strong>Activo en menos de 24h</strong></li>
+      </ul>
+      <button class="plan-btn" onclick="openModal('completo')">Quiero este plan →</button>
+    </div>
+
+    <!-- MANTENIMIENTO -->
+    <div class="plan-card mensual">
+      <div class="plan-header">
+        <div class="plan-icon-row">
+          <div class="plan-emoji">🔧</div>
+          <div>
+            <div class="plan-name">Mantenimiento</div>
+            <div class="plan-tagline">Tras activar el sistema</div>
+          </div>
+        </div>
+        <div class="plan-price">
+          <span class="price-sym">€</span>
+          <span class="price-num">29</span>
+          <span class="price-period">/mes</span>
+        </div>
+      </div>
+      <div class="plan-sep"></div>
+      <ul class="plan-features">
+        <li><div class="feat-check"></div>Soporte continuo personalizado</li>
+        <li><div class="feat-check"></div>Mejoras y optimización mensual</li>
+        <li><div class="feat-check"></div>Actualizaciones del sistema incluidas</li>
+        <li><div class="feat-check"></div>Adaptación a temporadas y campañas</li>
+        <li><div class="feat-check"></div><strong>Sin permanencia — cancela cuando quieras</strong></li>
+      </ul>
+      <button class="plan-btn" onclick="openModal('mantenimiento')">Quiero este plan →</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="section-label">Preguntas frecuentes</div>
+  <h2 class="section-title">Resolvemos tus dudas</h2>
+  <p class="section-sub">Lo más habitual que nos preguntan antes de activar el sistema.</p>
+  <div class="faq">
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">¿Necesito conocimientos técnicos para usarlo?</div>
+      <div class="faq-a">No. El sistema funciona desde el primer día sin que tengas que configurar nada técnico. En el Plan Completo lo dejamos todo listo nosotros.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">¿En cuánto tiempo empieza a funcionar?</div>
+      <div class="faq-a">En menos de 24 horas desde que confirmas el pago. Recibirás acceso e instrucciones al momento.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">¿Qué pasa si no estoy satisfecho?</div>
+      <div class="faq-a">Si en los primeros 30 días no ves resultados, te devolvemos el importe sin preguntas. Sin letra pequeña.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">¿Funciona con mi número de WhatsApp actual?</div>
+      <div class="faq-a">Sí, se conecta a tu número de WhatsApp Business. No necesitas cambiar de número ni de aplicación.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">¿Puedo cambiar de plan más adelante?</div>
+      <div class="faq-a">Sí, puedes ampliar tu plan en cualquier momento. Escríbenos y lo gestionamos sin coste adicional.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<div class="cta-final">
+  <h2>Empieza hoy — activo en 24h</h2>
+  <p>Más de 24 horas pendiente del móvil son dinero que se pierde. Actívalo ahora.</p>
+  <a href="#planes" class="btn-primary">Ver planes y activar →</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <div class="nav-icon">C</div>
+    <span class="nav-name">Cruz Digital</span>
+  </div>
+  <div class="social-links">
+    <a href="https://instagram.com/cruzdigital" target="_blank" class="social-btn" title="Instagram">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    </a>
+    <a href="https://linkedin.com/company/cruzdigital" target="_blank" class="social-btn" title="LinkedIn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    </a>
+    <a href="https://wa.me/34622427915" target="_blank" class="social-btn" title="WhatsApp">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+  </div>
+  <div class="footer-links">
+    <a href="#como-funciona">Cómo funciona</a>
+    <a href="#planes">Planes</a>
+    <a href="https://wa.me/34622427915">Contacto</a>
+  </div>
+  <div class="footer-copy">© 2025 Cruz Digital · cruzdigital.es · Todos los derechos reservados</div>
+</footer>
+
+<!-- MODAL FORMULARIO -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-plan-tag" id="modalPlanTag">Plan Básico</div>
+    <h3 id="modalTitle">Activa tu sistema</h3>
+    <p class="modal-sub">Rellena tus datos y te contactamos en menos de 24 horas para dejarlo todo funcionando.</p>
+
+    <form id="activarForm" onsubmit="submitForm(event)">
+      <input type="hidden" id="planField" name="plan" value="">
+      <input type="hidden" id="precioField" name="precio" value="">
+      <input type="hidden" id="stripeField" name="stripe_url" value="">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Nombre completo *</label>
+          <input type="text" name="nombre" placeholder="Tu nombre" required>
+        </div>
+        <div class="form-group">
+          <label>Nombre del negocio *</label>
+          <input type="text" name="negocio" placeholder="Tu negocio" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>WhatsApp *</label>
+          <input type="tel" name="telefono" placeholder="+34 600 000 000" required>
+        </div>
+        <div class="form-group">
+          <label>Email *</label>
+          <input type="email" name="email" placeholder="tu@email.com" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>¿A qué se dedica tu negocio?</label>
+        <textarea name="mensaje" placeholder="Cuéntanos brevemente tu negocio y qué necesitas (opcional)"></textarea>
+      </div>
+
+      <button type="submit" class="form-submit" id="submitBtn">
+        <span id="submitText">Activar mi plan →</span>
+        <div class="spinner" id="submitSpinner"></div>
+      </button>
+      <p class="form-privacy">🔒 Tus datos están seguros. No los compartimos con nadie.</p>
+    </form>
+  </div>
+</div>
+
+<script>
+const PLANES = {
+  basico: {
+    tag: 'Plan Básico — 97€',
+    title: 'Activa el Plan Básico',
+    precio: '97€',
+    stripe: 'https://buy.stripe.com/6oU6oIbTL3KA4oNdincMM04'
+  },
+  completo: {
+    tag: 'Plan Completo — 247€ ⭐',
+    title: 'Activa el Plan Completo',
+    precio: '247€',
+    stripe: 'https://buy.stripe.com/6oU6oIf5X6WM4oNbafcMM05'
+  },
+  mantenimiento: {
+    tag: 'Mantenimiento — 29€/mes',
+    title: 'Activa el Mantenimiento',
+    precio: '29€/mes',
+    stripe: 'https://buy.stripe.com/4gM14o5vnepeaNbdincMM06'
+  }
+};
+
+const N8N_WEBHOOK = 'https://n8n.cruzn8n.com/webhook/landing-form';
+
+function openModal(plan) {
+  const p = PLANES[plan];
+  document.getElementById('modalPlanTag').textContent = p.tag;
+  document.getElementById('modalTitle').textContent = p.title;
+  document.getElementById('planField').value = plan;
+  document.getElementById('precioField').value = p.precio;
+  document.getElementById('stripeField').value = p.stripe;
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function closeModalOutside(e) {
+  if (e.target === document.getElementById('modalOverlay')) closeModal();
+}
+
+async function submitForm(e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn = document.getElementById('submitBtn');
+  const txt = document.getElementById('submitText');
+  const spin = document.getElementById('submitSpinner');
+  const stripeUrl = document.getElementById('stripeField').value;
+
+  // UI loading
+  btn.disabled = true;
+  txt.textContent = 'Procesando...';
+  spin.style.display = 'block';
+
+  // Collect data
+  const data = {
+    plan: form.plan.value,
+    precio: form.precio.value,
+    nombre: form.nombre.value,
+    negocio: form.negocio.value,
+    telefono: form.telefono.value,
+    email: form.email.value,
+    mensaje: form.mensaje.value,
+    fecha: new Date().toISOString(),
+    origen: 'landing-cruzdigital'
+  };
+
+  // Send to n8n (fire and forget — user always goes to Stripe)
+  try {
+    navigator.sendBeacon(N8N_WEBHOOK, JSON.stringify(data));
+  } catch(err) {
+    // ignore, user still redirects
+  }
+
+  // Short delay then redirect to Stripe
+  setTimeout(() => { window.location.href = stripeUrl; }, 800);
+}
+
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+
+</body>
+</html>
