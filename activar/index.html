@@ -686,7 +686,8 @@ async function submitForm(e) {
 
   // Send to n8n (fire and forget — user always goes to Stripe)
   try {
-    navigator.sendBeacon(N8N_WEBHOOK, JSON.stringify(data));
+    const blob = new Blob([JSON.stringify(data)], { type: 'application/json' });
+    navigator.sendBeacon(N8N_WEBHOOK, blob);
   } catch(err) {
     // ignore, user still redirects
   }
