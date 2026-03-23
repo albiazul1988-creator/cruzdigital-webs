@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Rincón de Chiclana | Restaurante en Chiclana de la Frontera</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#FF6B35;--secondary:#FF9F1C;--dark:#1A0A00;--light:#FFF8F3}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Poppins',sans-serif;color:var(--dark);background:var(--light)}a{text-decoration:none;color:inherit}.header{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(26,10,0,.95);backdrop-filter:blur(10px);padding:12px 20px;display:flex;justify-content:space-between;align-items:center}.header-name{color:#fff;font-weight:700;font-size:1.1rem;letter-spacing:-0.5px}.header-wa{background:#25D366;color:#fff;padding:8px 16px;border-radius:50px;font-size:.8rem;font-weight:600;display:flex;align-items:center;gap:6px;transition:transform .2s}.header-wa:hover{transform:scale(1.05)}.header-wa svg{width:18px;height:18px;fill:#fff}.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 20px 60px;overflow:hidden}.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1400&q=80&fit=crop') center/cover no-repeat}.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,10,0,.7) 0%,rgba(26,10,0,.85) 100%)}.hero-content{position:relative;z-index:2;max-width:700px}.hero-badge{display:inline-block;background:var(--primary);color:#fff;padding:6px 18px;border-radius:50px;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:20px;animation:pulse 2s infinite}.hero h1{color:#fff;font-size:clamp(2rem,6vw,3.2rem);font-weight:900;line-height:1.1;margin-bottom:16px}.hero h1 span{color:var(--secondary)}.hero-sub{color:rgba(255,255,255,.85);font-size:clamp(.95rem,2.5vw,1.15rem);margin-bottom:30px;line-height:1.5}.hero-buttons{display:flex;flex-direction:column;gap:12px;align-items:center;margin-bottom:20px}.btn-wa{background:#25D366;color:#fff;padding:16px 36px;border-radius:60px;font-size:1.1rem;font-weight:700;display:inline-flex;align-items:center;gap:10px;transition:all .2s;border:none;cursor:pointer;box-shadow:0 4px 25px rgba(37,211,102,.4)}.btn-wa:hover{transform:translateY(-2px);box-shadow:0 8px 35px rgba(37,211,102,.5)}.btn-wa svg{width:24px;height:24px;fill:#fff}.btn-call{background:transparent;color:#fff;padding:14px 32px;border-radius:60px;font-size:1rem;font-weight:600;border:2px solid rgba(255,255,255,.4);display:inline-flex;align-items:center;gap:8px;transition:all .2s}.btn-call:hover{background:rgba(255,255,255,.1);border-color:#fff}.urgency{color:var(--secondary);font-size:.85rem;font-weight:600;animation:pulse 2s infinite}@keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}.social{padding:60px 20px;background:#fff;text-align:center}.social-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:600px;margin:0 auto 30px}.social-item{padding:20px 10px}.social-num{font-size:clamp(2rem,5vw,2.8rem);font-weight:900;color:var(--primary)}.social-label{font-size:.8rem;color:#666;font-weight:500;margin-top:4px}.social-map{display:inline-flex;align-items:center;gap:8px;background:var(--dark);color:#fff;padding:12px 28px;border-radius:50px;font-weight:600;font-size:.9rem;transition:all .2s}.social-map:hover{transform:scale(1.05);background:var(--primary)}.servicios{padding:70px 20px;background:var(--light)}.section-title{text-align:center;font-size:clamp(1.6rem,4vw,2.2rem);font-weight:800;margin-bottom:10px;color:var(--dark)}.section-sub{text-align:center;color:#666;margin-bottom:40px;font-size:.95rem}.serv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;max-width:900px;margin:0 auto 40px}.serv-card{background:#fff;border-radius:16px;padding:28px 24px;text-align:center;transition:all .2s;border:2px solid transparent;cursor:default}.serv-card:hover{border-color:var(--primary);transform:translateY(-4px);box-shadow:0 12px 30px rgba(255,107,53,.12)}.serv-emoji{font-size:2.5rem;margin-bottom:12px;display:block}.serv-name{font-weight:700;font-size:1.05rem;margin-bottom:6px}.serv-desc{font-size:.85rem;color:#666;line-height:1.4}.serv-cta{text-align:center}.cta-section{padding:70px 20px;background:linear-gradient(135deg,var(--primary),var(--secondary));text-align:center}.cta-section h2{color:#fff;font-size:clamp(1.5rem,4vw,2.2rem);font-weight:800;margin-bottom:8px}.cta-section p{color:rgba(255,255,255,.9);margin-bottom:30px;font-size:1rem}.btn-wa-white{background:#fff;color:var(--primary);padding:18px 42px;border-radius:60px;font-size:1.15rem;font-weight:800;display:inline-flex;align-items:center;gap:10px;transition:all .2s;border:none;cursor:pointer;box-shadow:0 8px 30px rgba(0,0,0,.2)}.btn-wa-white:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 12px 40px rgba(0,0,0,.3)}.btn-wa-white svg{width:26px;height:26px;fill:var(--primary)}.info{padding:70px 20px;background:#fff}.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;max-width:900px;margin:0 auto}.info-block h3{font-size:1.3rem;font-weight:700;margin-bottom:20px;color:var(--primary);display:flex;align-items:center;gap:8px}.schedule-row{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #f0e8e0;font-size:.9rem}.schedule-day{font-weight:600}.schedule-time{color:#666}.closed{color:var(--primary);font-weight:600}.location-addr{font-size:1rem;line-height:1.6;margin-bottom:20px;color:#444}.location-link{display:inline-flex;align-items:center;gap:8px;background:var(--dark);color:#fff;padding:12px 24px;border-radius:50px;font-weight:600;font-size:.9rem;transition:all .2s}.location-link:hover{background:var(--primary);transform:scale(1.05)}.footer{background:var(--dark);color:rgba(255,255,255,.7);padding:40px 20px;text-align:center}.footer-name{color:#fff;font-size:1.2rem;font-weight:700;margin-bottom:8px}.footer-phone{color:var(--secondary);font-size:1rem;font-weight:600;margin-bottom:16px;display:block}.footer-links{margin-bottom:20px}.footer-links a{color:rgba(255,255,255,.6);font-size:.85rem;transition:color .2s;cursor:pointer}.footer-links a:hover{color:#fff}.footer-credit{font-size:.75rem;color:rgba(255,255,255,.35)}.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:9999;align-items:center;justify-content:center;padding:20px}.modal-content{background:#fff;border-radius:16px;padding:40px 30px;max-width:600px;width:100%;max-height:80vh;overflow-y:auto;position:relative}.modal-close{position:absolute;top:15px;right:20px;font-size:1.5rem;cursor:pointer;color:#999;background:none;border:none;font-weight:700;transition:color .2s}.modal-close:hover{color:var(--dark)}.modal-content h2{font-size:1.4rem;font-weight:700;margin-bottom:16px;color:var(--dark)}.modal-content p{font-size:.85rem;color:#555;line-height:1.7;margin-bottom:12px}@media(min-width:600px){.hero-buttons{flex-direction:row;justify-content:center}}@media(max-width:480px){.social-grid{grid-template-columns:1fr;gap:10px}.social-item{display:flex;align-items:center;gap:12px;padding:14px 20px;background:#fafafa;border-radius:12px}.social-num{font-size:1.8rem}.social-label{margin-top:0}}</style>
+</head>
+<body>
+<header class="header">
+<span class="header-name">El Rincón de Chiclana</span>
+<a href="https://wa.me/34956400123?text=Hola%2C%20me%20interesa%20informacion" class="header-wa"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp</a>
+</header>
+<section class="hero">
+<div class="hero-bg"></div>
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<span class="hero-badge">📍 Chiclana de la Frontera</span>
+<h1>Tu restaurante en <span>Chiclana</span> con respuesta inmediata por WhatsApp</h1>
+<p class="hero-sub">Cocina andaluza tradicional, pescados frescos de la bahía. Más de 20 años haciéndote sentir en casa.</p>
+<div class="hero-buttons">
+<a href="https://wa.me/34956400123?text=Hola%2C%20me%20interesa%20informacion" class="btn-wa"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Reservar por WhatsApp</a>
+<a href="tel:+34956400123" class="btn-call">📞 Llamar: 956 400 123</a>
+</div>
+<span class="urgency">⚡ Respondemos en menos de 5 minutos</span>
+</div>
+</section>
+<section class="social">
+<div class="social-grid">
+<div class="social-item">
+<div>
+<div class="social-num">+20</div>
+<div class="social-label">Años en Chiclana</div>
+</div>
+</div>
+<div class="social-item">
+<div>
+<div class="social-num">12€</div>
+<div class="social-label">Menú del día</div>
+</div>
+</div>
+<div class="social-item">
+<div>
+<div class="social-num">⭐ 4.8</div>
+<div class="social-label">Valoración clientes</div>
+</div>
+</div>
+</div>
+<a href="https://maps.google.com/?q=El%20Rincon%20de%20Chiclana%20Chiclana%20de%20la%20Frontera" class="social-map">📍 Calle Real 45, Chiclana de la Frontera → Ver en Maps</a>
+</section>
+<section class="servicios">
+<h2 class="section-title">Lo que te espera</h2>
+<p class="section-sub">Sabores de toda la vida con producto fresco de la bahía</p>
+<div class="serv-grid">
+<div class="serv-card">
+<span class="serv-emoji">🍽️</span>
+<div class="serv-name">Menú del Día — 12€</div>
+<div class="serv-desc">Primero, segundo, postre y bebida. Casero y abundante, como siempre.</div>
+</div>
+<div class="serv-card">
+<span class="serv-emoji">🦐</span>
+<div class="serv-name">Carta de Mariscos</div>
+<div class="serv-desc">Gambas de la bahía, langostinos, cigalas... Producto fresco del día.</div>
+</div>
+<div class="serv-card">
+<span class="serv-emoji">🔥</span>
+<div class="serv-name">Pescados a la Brasa</div>
+<div class="serv-desc">Dorada, lubina, atún rojo... A la brasa con ese punto perfecto.</div>
+</div>
+<div class="serv-card">
+<span class="serv-emoji">🥘</span>
+<div class="serv-name">Paella los Domingos</div>
+<div class="serv-desc">Tradición chiclanera. Reserva tu paella para el domingo en familia.</div>
+</div>
+<div class="serv-card">
+<span class="serv-emoji">🍢</span>
+<div class="serv-name">Tapeo Andaluz</div>
+<div class="serv-desc">Tapas clásicas y creativas. Ideal para compartir y disfrutar.</div>
+</div>
+<div class="serv-card">
+<span class="serv-emoji">☀️</span>
+<div class="serv-name">Terraza Exterior</div>
+<div class="serv-desc">Disfruta al aire libre en nuestra terraza en plena Calle Real.</div>
+</div>
+</div>
+<div class="serv-cta">
+<a href="https://wa.me/34956400123?text=Hola%2C%20me%20interesa%20informacion" class="btn-wa"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Consultar o Reservar Mesa</a>
+</div>
+</section>
+<section class="cta-section">
+<h2>¿Te apetece comer bien hoy?</h2>
+<p>Escríbenos y reserva tu mesa en segundos</p>
+<a href="https://wa.me/34956400123?text=Hola%2C%20me%20interesa%20informacion" class="btn-wa-white"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Abrir WhatsApp Ahora</a>
+</section>
+<section class="info">
+<div class="info-grid">
+<div class="info-block">
+<h3>🕐 Horarios</h3>
+<div class="schedule-row">
+<span class="schedule-day">Lunes</span>
+<span class="schedule-time">13:00–16:00 / 20:00–23:30</span>
+</div>
+<div class="schedule-row">
+<span class="schedule-day">Martes</span>
+<span class="closed">Cerrado</span>
+</div>
+<div class="schedule-row">
+<span class="schedule-day">Miércoles</span>
+<span class="schedule-time">13:00–16:00 / 20:00–23:30</span>
+</div>
+<div class="schedule-row">
+<span class="schedule-day">Jueves</span>
+<span class="schedule-time">13:00–16:00 / 20:00–23:30</span>
+</div>
+<div class="schedule-row">
+<span class="schedule-day">Viernes</span>
+<span class="schedule-time">13:00–16:00 / 20:00–23:30</span>
+</div>
+<div class="schedule-row">
+<span class="schedule-day">Sábado</span>
+<span class="schedule-time">13:00–17:00</span>
+</div>
+<div class="schedule-row">
+<span class="schedule-day">Domingo</span>
+<span class="schedule-time">13:00–17:00</span>
+</div>
+</div>
+<div class="info-block">
+<h3>📍 Ubicación</h3>
+<p class="location-addr">Calle Real 45<br>Chiclana de la Frontera<br>Cádiz, España<br><br>📞 <a href="tel:+34956400123" style="color:var(--primary);font-weight:600">956 400 123</a></p>
+<a href="https://maps.google.com/?q=El%20Rincon%20de%20Chiclana%20Chiclana%20de%20la%20Frontera" class="location-link">🗺️ Cómo llegar en Google Maps</a>
+</div>
+</div>
+</section>
+<footer class="footer">
+<div class="footer-name">El Rincón de Chiclana</div>
+<a href="tel:+34956400123" class="footer-phone">956 400 123</a>
+<div class="footer-links">
+<a onclick="document.getElementById('aviso-legal-modal').style.display='flex'">Aviso Legal</a>
+</div>
+<div class="footer-credit">Cruz Digital</div>
+</footer>
+<div id="aviso-legal-modal" class="modal-overlay" onclick="if(event.target===this)this.style.display='none'">
+<div class="modal-content">
+<button class="modal-close" onclick="document.getElementById('aviso-legal-modal').style.display='none'">✕</button>
+<h2>Aviso Legal</h2>
+<p><strong>Titular:</strong> El Rincón de Chiclana<br><strong>Domicilio:</strong> Calle Real 45, Chiclana de la Frontera, Cádiz, España<br><strong>Teléfono:</strong> 956 400 123</p>
+<p>En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSICE), se ponen a disposición de los usuarios los datos identificativos del titular de esta página web.</p>
+<p><strong>Protección de datos:</strong> De conformidad con lo establecido en el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo (RGPD) y la Ley Orgánica 3/2018 de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD), le informamos que los datos personales facilitados a través de esta web serán tratados con la finalidad de gestionar su consulta o reserva.</p>
+<p><strong>Propiedad intelectual:</strong> Todos los contenidos de esta página web, incluyendo textos, imágenes, diseño gráfico y código fuente, están protegidos por la normativa de propiedad intelectual e industrial.</p>
+<p><strong>Contacto:</strong> Para cualquier consulta relacionada con este aviso legal, puede contactarnos en el teléfono 956 400 123 o en nuestra dirección postal.</p>
+</div>
+</div>
+
+<div id="aviso-legal-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:99999;align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto">
+  <div style="background:#fff;color:#222;max-width:680px;width:100%;margin:40px auto;border-radius:14px;padding:36px;font-family:sans-serif;font-size:14px;line-height:1.75;position:relative">
+    <button onclick="document.getElementById('aviso-legal-modal').style.display='none'" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:#aaa;line-height:1">&#x2715;</button>
+    <h2 style="font-size:20px;font-weight:800;margin-bottom:6px">Aviso Legal y Pol&iacute;tica de Privacidad</h2>
+    <p style="font-size:12px;color:#999;margin-bottom:24px">El Rincon de Chiclana &mdash; &uacute;ltima actualizaci&oacute;n 2026</p>
+
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px;color:#111">1. Datos identificativos del titular</h3>
+    <p>En cumplimiento del art&iacute;culo 10 de la Ley 34/2002 (LSSI-CE) se informa:</p>
+    <ul style="margin:10px 0 10px 20px;color:#444">
+      <li><strong>Titular:</strong> Antonio Garcia Lopez</li>
+      <li><strong>NIF / CIF:</strong> 12345678A</li>
+      <li><strong>Domicilio:</strong> Calle Real 45, Chiclana de la Frontera</li>
+      <li><strong>Tel&eacute;fono:</strong> 956400123</li>
+      <li><strong>Email:</strong> rincon@gmail.com</li>
+    </ul>
+
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px;color:#111">2. Objeto y &aacute;mbito de aplicaci&oacute;n</h3>
+    <p>El presente Aviso Legal regula el uso del sitio web de <strong>El Rincon de Chiclana</strong>. El acceso implica la aceptaci&oacute;n expresa de estas condiciones.</p>
+
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px;color:#111">3. Protecci&oacute;n de datos (RGPD y LOPDGDD)</h3>
+    <p>De conformidad con el Reglamento (UE) 2016/679 y la Ley Org&aacute;nica 3/2018:</p>
+    <ul style="margin:10px 0 10px 20px;color:#444">
+      <li><strong>Responsable:</strong> Antonio Garcia Lopez, NIF/CIF 12345678A</li>
+      <li><strong>Finalidad:</strong> Gesti&oacute;n de consultas y comunicaciones comerciales</li>
+      <li><strong>Base jur&iacute;dica:</strong> Consentimiento del interesado (art. 6.1.a RGPD)</li>
+      <li><strong>Conservaci&oacute;n:</strong> Mientras dure la relaci&oacute;n o hasta solicitud de supresi&oacute;n</li>
+      <li><strong>Derechos:</strong> Acceso, rectificaci&oacute;n, supresi&oacute;n y oposici&oacute;n. Contacto: rincon@gmail.com</li>
+      <li><strong>Reclamaciones:</strong> Agencia Espa&ntilde;ola de Protecci&oacute;n de Datos &mdash; <a href="https://www.aepd.es" target="_blank" style="color:#0077B6">www.aepd.es</a></li>
+    </ul>
+
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px;color:#111">4. Cookies</h3>
+    <p>Este sitio no utiliza cookies de seguimiento ni anal&iacute;ticas. Solo recursos t&eacute;cnicos necesarios para el funcionamiento b&aacute;sico.</p>
+
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px;color:#111">5. Propiedad intelectual</h3>
+    <p>Los contenidos son propiedad de <strong>Antonio Garcia Lopez</strong> o cuentan con licencia de uso. Queda prohibida su reproducci&oacute;n sin autorizaci&oacute;n expresa.</p>
+
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px;color:#111">6. Legislaci&oacute;n aplicable</h3>
+    <p>Este aviso se rige por la legislaci&oacute;n espa&ntilde;ola vigente. Las partes se someten a los juzgados del domicilio del titular.</p>
+
+    <p style="margin-top:28px;font-size:11px;color:#bbb;border-top:1px solid #eee;padding-top:16px">Dise&ntilde;o web: Cruz Digital &middot; cruzdigital.shop</p>
+  </div>
+</div>
+<script>document.addEventListener('keydown',function(e){if(e.key==='Escape'){var m=document.getElementById('aviso-legal-modal');if(m)m.style.display='none';}});</script>
+</body>
+</html>
