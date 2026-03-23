@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Rincón de Chiclana | Restaurante en Chiclana de la Frontera</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+--primary: #FF6B35;
+--secondary: #FF9F1C;
+--dark: #1A0A00;
+--light: #FFF8F3;
+}
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: 'Poppins', sans-serif;
+color: var(--dark);
+background: #fff;
+}
+a {
+text-decoration: none;
+color: inherit;
+}
+.header {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 1000;
+background: rgba(26, 10, 0, 0.75);
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+padding: 12px 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.header-name {
+color: #fff;
+font-weight: 700;
+font-size: 1.05rem;
+letter-spacing: -0.3px;
+}
+.header-wa {
+display: inline-flex;
+align-items: center;
+gap: 6px;
+background: #25D366;
+color: #fff;
+font-weight: 600;
+font-size: 0.82rem;
+padding: 8px 14px;
+border-radius: 50px;
+}
+.hero {
+position: relative;
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 100px 20px 60px;
+background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1400&q=80&fit=crop') center/cover no-repeat;
+}
+.hero::before {
+content: '';
+position: absolute;
+inset: 0;
+background: rgba(0, 0, 0, 0.6);
+}
+.hero-content {
+position: relative;
+z-index: 2;
+max-width: 700px;
+}
+.hero h1 {
+color: #fff;
+font-weight: 900;
+font-size: 2rem;
+line-height: 1.15;
+margin-bottom: 14px;
+letter-spacing: -0.5px;
+}
+.hero-sub {
+color: rgba(255, 255, 255, 0.7);
+font-size: 0.95rem;
+margin-bottom: 30px;
+font-weight: 400;
+}
+.hero-buttons {
+display: flex;
+gap: 12px;
+justify-content: center;
+flex-wrap: wrap;
+margin-bottom: 18px;
+}
+.btn-wa {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+background: #25D366;
+color: #fff;
+font-weight: 700;
+font-size: 1.05rem;
+padding: 16px 32px;
+border-radius: 50px;
+}
+.btn-call {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+border: 2px solid #fff;
+color: #fff;
+font-weight: 700;
+font-size: 1.05rem;
+padding: 14px 30px;
+border-radius: 50px;
+background: transparent;
+}
+.hero-urgency {
+color: rgba(255, 255, 255, 0.6);
+font-size: 0.8rem;
+}
+.social-proof {
+background: var(--light);
+padding: 50px 20px;
+text-align: center;
+}
+.metrics {
+display: flex;
+justify-content: center;
+gap: 30px;
+flex-wrap: wrap;
+margin-bottom: 28px;
+max-width: 700px;
+margin-left: auto;
+margin-right: auto;
+}
+.metric {
+flex: 1;
+min-width: 150px;
+}
+.metric-number {
+font-size: 2.2rem;
+font-weight: 900;
+color: var(--primary);
+line-height: 1.1;
+}
+.metric-text {
+font-size: 0.82rem;
+color: #666;
+margin-top: 4px;
+font-weight: 400;
+}
+.location-link {
+display: inline-block;
+color: var(--primary);
+font-weight: 600;
+font-size: 0.95rem;
+margin-top: 10px;
+border-bottom: 2px dashed var(--primary);
+padding-bottom: 2px;
+}
+.services {
+padding: 60px 20px;
+max-width: 900px;
+margin: 0 auto;
+text-align: center;
+}
+.services h2 {
+font-size: 1.8rem;
+font-weight: 900;
+margin-bottom: 36px;
+color: var(--dark);
+}
+.services-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 16px;
+margin-bottom: 36px;
+}
+.service-card {
+background: var(--light);
+border-radius: 16px;
+padding: 24px 16px;
+text-align: center;
+border: 1px solid rgba(255, 107, 53, 0.1);
+}
+.service-emoji {
+font-size: 2.2rem;
+margin-bottom: 8px;
+display: block;
+}
+.service-name {
+font-weight: 700;
+font-size: 0.95rem;
+margin-bottom: 4px;
+color: var(--dark);
+}
+.service-desc {
+font-size: 0.78rem;
+color: #888;
+line-height: 1.3;
+}
+.btn-secondary {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+background: transparent;
+color: var(--primary);
+border: 2px solid var(--primary);
+font-weight: 700;
+font-size: 1rem;
+padding: 14px 28px;
+border-radius: 50px;
+}
+.cta-urgency {
+background: var(--primary);
+padding: 60px 20px;
+text-align: center;
+}
+.cta-urgency h2 {
+color: #fff;
+font-weight: 900;
+font-size: 1.7rem;
+margin-bottom: 10px;
+}
+.cta-urgency .cta-sub {
+color: rgba(255, 255, 255, 0.85);
+font-size: 0.95rem;
+margin-bottom: 28px;
+}
+.btn-white {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+background: #fff;
+color: var(--primary);
+font-weight: 700;
+font-size: 1.1rem;
+padding: 16px 36px;
+border-radius: 50px;
+}
+.cta-phone {
+color: rgba(255, 255, 255, 0.7);
+font-size: 0.82rem;
+margin-top: 14px;
+}
+.cta-phone a {
+color: #fff;
+font-weight: 600;
+border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+.info-section {
+padding: 60px 20px;
+max-width: 800px;
+margin: 0 auto;
+display: grid;
+grid-template-columns: 1fr;
+gap: 40px;
+}
+.info-block h3 {
+font-size: 1.2rem;
+font-weight: 700;
+margin-bottom: 16px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.info-block h3 span {
+font-size: 1.5rem;
+}
+.schedule-lines {
+font-size: 0.9rem;
+line-height: 1.9;
+color: #555;
+}
+.schedule-lines strong {
+color: var(--dark);
+font-weight: 600;
+}
+.schedule-closed {
+color: var(--primary);
+font-weight: 600;
+}
+.info-address {
+font-size: 0.95rem;
+color: #555;
+margin-bottom: 16px;
+line-height: 1.6;
+}
+.btn-maps {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+background: var(--dark);
+color: #fff;
+font-weight: 600;
+font-size: 0.9rem;
+padding: 12px 22px;
+border-radius: 50px;
+}
+.footer {
+background: var(--dark);
+padding: 40px 20px;
+text-align: center;
+}
+.footer-name {
+color: rgba(255, 255, 255, 0.9);
+font-weight: 700;
+font-size: 1rem;
+margin-bottom: 6px;
+}
+.footer-city {
+color: rgba(255, 255, 255, 0.4);
+font-size: 0.82rem;
+margin-bottom: 10px;
+}
+.footer-phone {
+color: var(--secondary);
+font-weight: 600;
+font-size: 0.95rem;
+margin-bottom: 20px;
+display: inline-block;
+}
+.footer-credit {
+color: rgba(255, 255, 255, 0.25);
+font-size: 0.72rem;
+}
+.footer-credit a {
+color: rgba(255, 255, 255, 0.4);
+border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+@media (min-width: 768px) {
+.hero h1 {
+font-size: 2.8rem;
+}
+.services-grid {
+grid-template-columns: 1fr 1fr 1fr;
+}
+.info-section {
+grid-template-columns: 1fr 1fr;
+}
+.header-name {
+font-size: 1.15rem;
+}
+}
+</style>
+</head>
+<body>
+<header class="header">
+<div class="header-name">El Rincón de Chiclana</div>
+<a href="https://wa.me/34956400123?text=Hola%2C%20me%20interesa%20informacion" class="header-wa">💬 WhatsApp</a>
+</header>
+<section class="hero">
+<div class="hero-content">
+<h1>Restaurante en Chiclana de la Frontera con respuesta inmediata por WhatsApp</h1>
+<p class="hero-sub">Clientes de Chiclana de la Frontera ya contactan directamente. Sin esperas.</p>
+<div class="hero-buttons">
+<a href="https://wa.me/34956400123?text=Hola%2C%20me%20interesa%20informacion" class="btn-wa">💬 Contactar ahora</a>
+<a href="tel:+34956400123" class="btn-call">📞 Llamar</a>
+</div>
+<p class="hero-urgency">⚡ Alta demanda en horarios punta — respondemos rápido</p>
+</div>
+</section>
+<section class="social-proof">
+<div class="metrics">
+<div class="metric">
+<div class="metric-number">200+</div>
+<div class="metric-text">clientes atendidos</div>
+</div>
+<div class="metric">
+<div class="metric-number">⭐</div>
+<div class="metric-text">Valorado en Chiclana de la Frontera</div>
+</div>
+<div class="metric">
+<div class="metric-number">&lt;5 min</div>
+<div class="metric-text">Respuesta en minutos</div>
+</div>
+</div>
+<a href="https://maps.google.com/?q=El%20Rincon%20de%20Chiclana%20Chiclana%20de%20la%20Frontera" class="location-link">📍 Calle Real 45, Chiclana de la Frontera, Cádiz</a>
+</section>
+<section class="services">
+<h2>Nuestros servicios</h2>
+<div class="services-grid">
+<div class="service-card">
+<span class="service-emoji">🍽️</span>
+<div class="service-name">Menú del día</div>
+<div class="service-desc">Completo por solo 12€</div>
+</div>
+<div class="service-card">
+<span class="service-emoji">🦐</span>
+<div class="service-name">Carta de mariscos</div>
+<div class="service-desc">Frescos de la bahía de Cádiz</div>
+</div>
+<div class="service-card">
+<span class="service-emoji">🔥</span>
+<div class="service-name">Pescados a la brasa</div>
+<div class="service-desc">Preparados al momento</div>
+</div>
+<div class="service-card">
+<span class="service-emoji">🥘</span>
+<div class="service-name">Paella los domingos</div>
+<div class="service-desc">Tradición cada fin de semana</div>
+</div>
+<div class="service-card">
+<span class="service-emoji">🍢</span>
+<div class="service-name">Tapas y raciones</div>
+<div class="service-desc">Para compartir como siempre</div>
+</div>
+<div class="service-card">
+<span class="service-emoji">☀️</span>
+<div class="service-name">Terraza exterior</div>
+<div class="service-desc">En pleno centro de Chiclana</div>
+</div>
+<div class="service-card">
+<span class="service-emoji">🎉</span>
+<div class="service-name">Celebraciones y eventos</div>
+<div class="service-desc">Reuniones familiares y grupos</div>
+</div>
+</div>
+<a href="https://wa.me/34956400123?text=Hola%2C%20me%20interesa%20informacion" class="btn-secondary">💬 Preguntar por un servicio</a>
+</section>
+<section class="cta-urgency">
+<h2>¿Listo para contactar con El Rincón de Chiclana?</h2>
+<p class="cta-sub">Miles de clientes en Chiclana de la Frontera ya lo hacen por WhatsApp</p>
+<a href="https://wa.me/34956400123?text=Hola%2C%20me%20interesa%20informacion" class="btn-white">💬 Contactar ahora</a>
+<p class="cta-phone">También puedes llamar al <a href="tel:+34956400123">956 400 123</a></p>
+</section>
+<section class="info-section">
+<div class="info-block">
+<h3><span>🕐</span> Horarios</h3>
+<div class="schedule-lines">
+<strong>Lunes, Miércoles a Viernes</strong><br>
+13:00 – 16:00 y 20:00 – 23:30<br><br>
+<strong>Sábado y Domingo</strong><br>
+13:00 – 17:00 y 20:00 – 00:00<br><br>
+<span class="schedule-closed">Martes cerrado</span>
+</div>
+</div>
+<div class="info-block">
+<h3><span>📍</span> Dónde estamos</h3>
+<p class="info-address">Calle Real 45<br>Chiclana de la Frontera, Cádiz</p>
+<a href="https://maps.google.com/?q=El%20Rincon%20de%20Chiclana%20Chiclana%20de%20la%20Frontera" class="btn-maps">📍 Ver en Google Maps</a>
+</div>
+</section>
+<footer class="footer">
+<div class="footer-name">El Rincón de Chiclana</div>
+<div class="footer-city">Chiclana de la Frontera, Cádiz</div>
+<a href="tel:+34956400123" class="footer-phone">956 400 123</a>
+<div class="footer-credit">Diseñado por <a href="https://cruzdigital.shop">Cruz Digital · cruzdigital.shop</a></div>
+</footer>
+</body>
+</html>
