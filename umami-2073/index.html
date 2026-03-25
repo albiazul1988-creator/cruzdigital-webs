@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>umami — restaurante en chiclana de la frontera</title>
+<meta name="description" content="umami en chiclana de la frontera. Llama o escribe por WhatsApp ahora.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#FF6B35;--secondary:#FF9F1C;--dark:#1A0A00;--light:#FFF8F3}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;color:var(--dark);background:var(--light)}
+a{text-decoration:none}
+.header{position:sticky;top:0;z-index:100;background:rgba(26,10,0,.95);backdrop-filter:blur(10px);padding:12px 20px;display:flex;justify-content:space-between;align-items:center}
+.header-name{color:#fff;font-weight:800;font-size:1.4rem;letter-spacing:-0.5px}
+.btn-wa{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;font-weight:700;padding:12px 24px;border-radius:50px;font-size:.95rem;transition:transform .2s,box-shadow .2s;border:none;cursor:pointer}
+.btn-wa:hover{transform:scale(1.05);box-shadow:0 8px 25px rgba(37,211,102,.4)}
+.btn-wa-sm{padding:10px 20px;font-size:.85rem}
+.btn-call{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--dark);font-weight:700;padding:12px 24px;border-radius:50px;font-size:.95rem;transition:transform .2s,box-shadow .2s;border:2px solid var(--dark)}
+.btn-call:hover{transform:scale(1.05);box-shadow:0 8px 25px rgba(0,0,0,.15)}
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AU_ZVEFPcHtkjvFLwXNzJ6p-GgKbvUxtMaXCnaMjTcUECrMhp0ZAvjz7vdniYgQM88VOvjQ_4ik-84pCSz8grciknPUxoX_0cSTnjCpXOPcRWQ1-o1jw6nGcysz9TVCfdbU1huTAUBE0roKqlbJ_mObeNgT2eqlRxOYdWj655haz3j8lQrsSh3in0_MQZ-Mj8E2TWucQiBvj9SiycHL1alp2USdDq1aMPgYevu151CGxauB_ymo3rWZbroKoBPLdkFF7KehSFLGR6cl5buuDrUwdxr7UbNXet4lZND3GgNIBb-DRwg&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw');background-size:cover;background-position:center}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,10,0,.7) 0%,rgba(26,10,0,.85) 100%)}
+.hero-content{position:relative;z-index:2;text-align:center;padding:40px 20px;max-width:700px}
+.hero-content h1{color:#fff;font-size:2.4rem;font-weight:900;line-height:1.15;margin-bottom:16px;letter-spacing:-1px}
+.hero-content h1 span{color:var(--secondary)}
+.hero-subtitle{color:rgba(255,255,255,.9);font-size:1.1rem;margin-bottom:28px;font-weight:400}
+.hero-buttons{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:20px}
+.badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);backdrop-filter:blur(8px);color:#fff;padding:8px 18px;border-radius:50px;font-size:.82rem;font-weight:600}
+.badge .dot{width:8px;height:8px;background:#25D366;border-radius:50%;animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
+.section{padding:60px 20px}
+.section-title{text-align:center;font-size:1.8rem;font-weight:800;margin-bottom:40px;letter-spacing:-0.5px}
+.social-proof{background:#fff}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:700px;margin:0 auto 24px}
+.stat{text-align:center;padding:24px 12px;background:var(--light);border-radius:16px}
+.stat-num{font-size:2.2rem;font-weight:900;color:var(--primary);line-height:1}
+.stat-label{font-size:.82rem;color:#666;margin-top:6px;font-weight:500}
+.gmaps-link{display:block;text-align:center;color:var(--primary);font-weight:700;font-size:.95rem;margin-top:8px}
+.gmaps-link:hover{text-decoration:underline}
+.services-section{background:var(--light)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;max-width:900px;margin:0 auto 32px}
+.service-card{background:#fff;padding:32px 24px;border-radius:16px;text-align:center;box-shadow:0 2px 16px rgba(0,0,0,.06);transition:transform .2s}
+.service-card:hover{transform:translateY(-4px)}
+.service-emoji{font-size:2.4rem;margin-bottom:12px}
+.service-name{font-weight:700;font-size:1.05rem}
+.services-cta{text-align:center}
+.album-section{background:#fff;padding:60px 20px}
+.album-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:1000px;margin:0 auto}
+.album-grid img{width:100%;height:220px;object-fit:cover;border-radius:12px}
+.review-section{background:var(--light);padding:60px 20px;text-align:center}
+.review-box{max-width:700px;margin:0 auto}
+.review-quotes{font-size:4rem;line-height:1;color:var(--primary);font-family:Georgia,serif}
+.review-text{font-style:italic;font-size:1.1rem;line-height:1.7;color:#333;margin:12px 0 20px}
+.review-stars{color:var(--primary);font-size:1.3rem;margin-bottom:8px}
+.review-author{font-weight:600;color:#666;font-size:.92rem}
+.cta-section{background:var(--primary);padding:60px 20px;text-align:center}
+.cta-section h2{color:#fff;font-size:2rem;font-weight:900;margin-bottom:8px}
+.cta-section p{color:rgba(255,255,255,.9);margin-bottom:24px;font-size:1rem}
+.btn-wa-white{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--primary);font-weight:800;padding:16px 36px;border-radius:50px;font-size:1.1rem;transition:transform .2s,box-shadow .2s;border:none;cursor:pointer}
+.btn-wa-white:hover{transform:scale(1.05);box-shadow:0 8px 30px rgba(0,0,0,.2)}
+.info-section{background:#fff;padding:60px 20px}
+.info-grid{display:grid;grid-template-columns:1fr;gap:32px;max-width:900px;margin:0 auto}
+.hours-table{width:100%;border-collapse:collapse}
+.hours-table th,.hours-table td{padding:12px 16px;text-align:left;border-bottom:1px solid #eee;font-size:.92rem}
+.hours-table th{font-weight:700;width:35%}
+.hours-table td{color:#555}
+.hours-note{margin-top:12px;font-size:.82rem;color:#888;text-align:center}
+.address-block{margin-top:16px;font-size:.92rem;color:#555;text-align:center}
+.address-block a{color:var(--primary);font-weight:600}
+.footer{background:var(--dark);color:rgba(255,255,255,.7);padding:32px 20px;text-align:center;font-size:.85rem}
+.footer a{color:rgba(255,255,255,.7)}
+.footer a:hover{color:#fff}
+.footer-name{color:#fff;font-weight:700;font-size:1.1rem;margin-bottom:4px}
+.footer-links{margin-top:12px;display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
+.footer-credit{margin-top:16px;font-size:.75rem;color:rgba(255,255,255,.4)}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:9999;justify-content:center;align-items:center;padding:20px}
+.modal-content{background:#fff;border-radius:16px;padding:32px 24px;max-width:600px;width:100%;max-height:85vh;overflow-y:auto;position:relative}
+.modal-content h2{font-size:1.3rem;margin-bottom:16px;color:var(--dark)}
+.modal-content p{font-size:.88rem;color:#555;line-height:1.7;margin-bottom:12px}
+.modal-close{position:absolute;top:12px;right:16px;font-size:1.6rem;cursor:pointer;color:#999;background:none;border:none;font-weight:700}
+.modal-close:hover{color:var(--dark)}
+@media(min-width:768px){
+.hero-content h1{font-size:3.2rem}
+.album-grid{grid-template-columns:repeat(3,1fr)}
+.info-grid{grid-template-columns:1fr 1fr}
+.stat-num{font-size:2.8rem}
+}
+@media(max-width:480px){
+.hero-content h1{font-size:1.8rem}
+.section-title{font-size:1.4rem}
+.stats{grid-template-columns:repeat(3,1fr);gap:10px}
+.stat-num{font-size:1.6rem}
+.stat{padding:16px 8px}
+.btn-wa,.btn-call{padding:10px 18px;font-size:.85rem}
+.cta-section h2{font-size:1.5rem}
+}
+</style>
+<meta name="description" content="umami en chiclana de la frontera. Contacta ahora por WhatsApp.">
+<meta property="og:image" content="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AU_ZVEFPcHtkjvFLwXNzJ6p-GgKbvUxtMaXCnaMjTcUECrMhp0ZAvjz7vdniYgQM88VOvjQ_4ik-84pCSz8grciknPUxoX_0cSTnjCpXOPcRWQ1-o1jw6nGcysz9TVCfdbU1huTAUBE0roKqlbJ_mObeNgT2eqlRxOYdWj655haz3j8lQrsSh3in0_MQZ-Mj8E2TWucQiBvj9SiycHL1alp2USdDq1aMPgYevu151CGxauB_ymo3rWZbroKoBPLdkFF7KehSFLGR6cl5buuDrUwdxr7UbNXet4lZND3GgNIBb-DRwg&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw">
+<meta property="og:title" content="umami">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"umami","telephone":"+34681884155","url":"https://albiazul1988-creator.github.io/cruzdigital-webs/umami-2073/","address":{"@type":"PostalAddress","addressLocality":"chiclana de la frontera","addressCountry":"ES","streetAddress":"Centro Comercial Bellamar, Local 15, Playa de la Barrosa, 11139"},"description":"Restaurante ubicado en chiclana de la frontera, con 4.5 estrellas en Google, 136 reseñas verificadas.","image":"https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AU_ZVEFPcHtkjvFLwXNzJ6p-GgKbvUxtMaXCnaMjTcUECrMhp0ZAvjz7vdniYgQM88VOvjQ_4ik-84pCSz8grciknPUxoX_0cSTnjCpXOPcRWQ1-o1jw6nGcysz9TVCfdbU1huTAUBE0roKqlbJ_mObeNgT2eqlRxOYdWj655haz3j8lQrsSh3in0_MQZ-Mj8E2TWucQiBvj9SiycHL1alp2USdDq1aMPgYevu151CGxauB_ymo3rWZbroKoBPLdkFF7KehSFLGR6cl5buuDrUwdxr7UbNXet4lZND3GgNIBb-DRwg&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw","email":"negocio@umami.labarrosa"}</script>
+</head>
+<body>
+
+<header class="header">
+<div class="header-name">umami</div>
+<a href="https://wa.me/34681884155?text=Hola%2C%20me%20interesa%20informacion" class="btn-wa btn-wa-sm">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.616l4.54-1.472A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.331 0-4.512-.67-6.363-1.822l-.357-.218-2.943.954.978-2.883-.232-.369A9.935 9.935 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+WhatsApp
+</a>
+</header>
+
+<section class="hero">
+<div class="hero-bg"></div>
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<h1>El <span>restaurante</span> que buscabas en Chiclana de la Frontera</h1>
+<p class="hero-subtitle">⭐ 4.5 estrellas en Google · 136 reseñas verificadas · Playa de la Barrosa</p>
+<div class="hero-buttons">
+<a href="https://wa.me/34681884155?text=Hola%2C%20me%20interesa%20informacion" class="btn-wa">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.616l4.54-1.472A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.331 0-4.512-.67-6.363-1.822l-.357-.218-2.943.954.978-2.883-.232-.369A9.935 9.935 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+WhatsApp
+</a>
+<a href="tel:+34681884155" class="btn-call">📞 Llamar ahora</a>
+</div>
+<div class="badge"><span class="dot"></span> Respuesta en minutos</div>
+</div>
+</section>
+
+<section class="section social-proof">
+<h2 class="section-title">¿Por qué elegirnos?</h2>
+<div class="stats">
+<div class="stat">
+<div class="stat-num">4.5</div>
+<div class="stat-label">Estrellas Google</div>
+</div>
+<div class="stat">
+<div class="stat-num">136</div>
+<div class="stat-label">Reseñas verificadas</div>
+</div>
+<div class="stat">
+<div class="stat-num">📍</div>
+<div class="stat-label">Playa de la Barrosa</div>
+</div>
+</div>
+<a href="https://maps.google.com/?q=umami%20chiclana%20de%20la%20frontera" target="_blank" class="gmaps-link">Ver en Google Maps →</a>
+</section>
+
+<section class="section services-section">
+<h2 class="section-title">Nuestros servicios</h2>
+<div class="services-grid">
+<div class="service-card">
+<div class="service-emoji">📋</div>
+<div class="service-name">Consultar carta en local</div>
+</div>
+<div class="service-card">
+<div class="service-emoji">📅</div>
+<div class="service-name">Reservas</div>
+</div>
+<div class="service-card">
+<div class="service-emoji">🥡</div>
+<div class="service-name">Comida para llevar</div>
+</div>
+</div>
+<div class="services-cta">
+<a href="https://wa.me/34681884155?text=Hola%2C%20me%20interesa%20informacion" class="btn-wa">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.616l4.54-1.472A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.331 0-4.512-.67-6.363-1.822l-.357-.218-2.943.954.978-2.883-.232-.369A9.935 9.935 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+Reservar por WhatsApp
+</a>
+</div>
+</section>
+
+<section class="album-section">
+<h2 class="section-title">Nuestro espacio</h2>
+<div class="album-grid">
+<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AU_ZVEFaViaSZr-obufngAUCtpa1kYUWrZjBxxZvEWxTz4Y1W3T4UWCb-WKo7YQVR8VunpvdyQBzVp18Auq2dHr3fT5TM60jm9OisQYNOcQ8YZjprrFh3eJdq8u_UAXaadAIIzJyhJuBgMgnKiMKiVy3Xk3yipBIU91m8e5AS9UY7S9hbxiqrVMOWViwWQ6Kk7wy7xHdufeKCpcu6EMsP3EfJRUBfu6lzMHcTDtEK59hVQo1ROL9XrbRZ2SAjvDs01DAzXGkWjgrYnPZl2nZO5DznPnprfuMTs5tDCSnYXbtVwaNq7c-MPh4Wbj4jSjZHDyQ3WEcvrGo7_a6hQ9Qc58oT9JlOnZPb1f3pqYvp9B7_TcxoyqVipKTg79A1m8yhCgCFOnNrCgNo1eoYWRl1i2V8NJ9d_jZI552EAUpR5h7mqO1ryhwpbR468EiL6s4rvcj&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw" alt="Umami restaurante" loading="lazy">
+<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AU_ZVEGfnqvrjYrXJs7yAD1BL2Qbe2uh-rnKLlokhMouzeXrNe7cfBqyLYIqY1K0Fy7-wy4Kz1U9mcV2qqMne_6IXdbvKpqEUGHIyNIke9LU-OHF2J74y3GkwlAbxgm5qVJz3nITuR9Akh3RaZ5LsVc-JFu9Zwm5daJxFcjrohw-F-uqBkVMPg4W-bmEdQ-arBdBwWMw2QQU8u9Vx2g0isTlIvNWA_XBxOljmtJUvfwTGguYu-oi5Dab7pK7IukMo0cefof5Rz949XjMXWMtJ60kWilubuqSWqBK4Rt0BpXFtbsQCqJidQwhqywPJbna6ObwwF5KewLbP8nksvoechLdJqdmjufImR9GzkzxDEWbEuC9hBfz4QxxyCb2cW8JNQCmdfWN491NkQoud17OFsgO_1LSjEJXFKIPYAAoXCIaKUcJtG5k&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw" alt="Umami restaurante" loading="lazy">
+<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AU_ZVEF5JlwHLW3KI6AAWyRl28T21D5oHJfLoXiyb1QhqvwRVunp_nzs-x6xqvzTj5EGULbMvE2URR11mLUUhuN3sYjoz2fPI4KVVDn-8ayNuNrqS9r7qCCbi7a5hVA-zlFFXp3zUKewQRd_CNnjvoga1GUrrxZmB4jdn0Fy2L0V0Js_AZKw1tigaS_uo8u-DM9_1kJWnGrwQUqxMODD9hEECpvPkfk8R8mDFUKV1lEagQS7P1-dTECDkT4iY4-OTj40FHMYVLWKPf7an6NbQCbqTlUTBeCN8vaw3jzrpj0xz5cVLO6S4Nf8ynpZoinMlcefO7o7opjAVZseRNwLlOEVMK5ixg82Sjk6Ud3DqYhfb7Kjr3GSgjMXJn0a6RH0346HlP-fVnXN7BIPoyIrt8urmFsBT1AVa1JwmTLkvDiQY8rOvkGQUZHAUOrHA6OXJ0EU&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw" alt="Umami restaurante" loading="lazy">
+<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AU_ZVEEo9CZqelU4Pc5MjUAtvlbGc05yuXKG65XrWaKwAqiwLprVt3t64BAhj9F1xPiGkzRBuaIDF8NRSRWkK3KSU_GLuGbuMpixK5zw2UQ0q4lKuEUTpwc3-IF-f8aYmfIQaUh4M2CgJWaBrharxN5Aq9Aym4ID2-gw6H7DrKYOWkr9cE8q_c0YJnlloViXFcXOqxgInRnfRqHXKGwR-VDA_ro4ZUFJFdYxRQ7JNtwi0SXam7dqeBGaAyPjnAiEHSKRoPP0lR5iob3LqP98G3ztwaJL_4keoUOWgtdEgMsremCHA4lz7zmk3m3An5Eh1qQ49SUhKSGg_7RMsKaTrF4MT7rDQKrHCuoOKfCrSw7stKeKAxssue4xOucZB_mnJQZNSRQaoelRGbea-HEDYmpkS6odPbaJZC39ELi0xWSpMgUwceU&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw" alt="Umami restaurante" loading="lazy">
+</div>
+</section>
+
+<section class="review-section">
+<div class="review-box">
+<div class="review-quotes">&ldquo;</div>
+<div class="review-stars">★★★★★</div>
+<p class="review-text">Nuevos descubrimiento en Chiclana, cerca de Sancti Petri. El local tiene como dos ambientes, uno de mesas altas y otro de mesas más bajas. En ambas se puede beber y comer, el incon...</p>
+<div class="review-author">— Guillermo LloGa · Google</div>
+</div>
+</section>
+
+<section class="cta-section">
+<h2>¿Listo para disfrutar?</h2>
+<p>Reserva tu mesa ahora y no te quedes sin sitio</p>
+<a href="https://wa.me/34681884155?text=Hola%2C%20me%20interesa%20informacion" class="btn-wa-white">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="#FF6B35"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5<a href="https://wa.me/34681884155?text=Hola%2C%20me%20interesa%20informacion" target="_blank" rel="noopener" aria-label="WhatsApp" style="position:fixed;bottom:22px;right:18px;z-index:9998;background:#25D366;border-radius:50%;width:58px;height:58px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(37,211,102,0.5);text-decoration:none"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<div id="aviso-legal-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:99999;align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto">
+  <div style="background:#fff;color:#222;max-width:680px;width:100%;margin:40px auto;border-radius:14px;padding:36px;font-family:sans-serif;font-size:14px;line-height:1.75;position:relative">
+    <button onclick="document.getElementById('aviso-legal-modal').style.display='none'" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:#aaa">&#x2715;</button>
+    <h2 style="font-size:20px;font-weight:800;margin-bottom:6px">Aviso Legal y Pol&iacute;tica de Privacidad</h2>
+    <p style="font-size:12px;color:#999;margin-bottom:24px">umami &mdash; 2026</p>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">1. Datos del titular</h3>
+    <ul style="margin:10px 0 10px 20px;color:#444">
+      <li><strong>Titular:</strong> umami</li>
+      <li><strong>NIF/CIF:</strong> 12345678a</li>
+      <li><strong>Domicilio:</strong> Centro Comercial Bellamar, Local 15, Playa de la Barrosa, 11139</li>
+      <li><strong>Tel&eacute;fono:</strong> 681884155</li>
+      <li><strong>Email:</strong> negocio@umami.labarrosa</li>
+    </ul>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">2. Protecci&oacute;n de datos (RGPD)</h3>
+    <ul style="margin:10px 0 10px 20px;color:#444">
+      <li><strong>Responsable:</strong> umami</li>
+      <li><strong>Finalidad:</strong> Gesti&oacute;n de consultas comerciales</li>
+      <li><strong>Base jur&iacute;dica:</strong> Consentimiento (art. 6.1.a RGPD)</li>
+      <li><strong>Derechos:</strong> Acceso, rectificaci&oacute;n y supresi&oacute;n. Contacto: negocio@umami.labarrosa</li>
+      <li><strong>Reclamaciones:</strong> <a href="https://www.aepd.es" target="_blank" style="color:#0077B6">www.aepd.es</a></li>
+    </ul>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">3. Cookies</h3>
+    <p>Este sitio no usa cookies de seguimiento ni anal&iacute;ticas.</p>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">4. Propiedad intelectual</h3>
+    <p>Contenidos propiedad de umami. Prohibida reproducci&oacute;n sin autorizaci&oacute;n.</p>
+    <p style="margin-top:24px;font-size:11px;color:#bbb;border-top:1px solid #eee;padding-top:14px">Dise&ntilde;o: Cruz Digital &middot; cruzdigital.shop</p>
+  </div>
+</div>
+<script>document.addEventListener('keydown',function(e){if(e.key==='Escape'){var m=document.getElementById('aviso-legal-modal');if(m)m.style.display='none';}});</script>
