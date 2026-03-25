@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clínica Medicina Estética SYMETRIA — clinica en chiclana de la frontera</title>
+<meta name="description" content="Clínica Medicina Estética SYMETRIA en chiclana de la frontera. Llama o escribe por WhatsApp ahora.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#0077B6;--secondary:#00B4D8;--dark:#001220;--light:#EFF9FF}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;color:var(--dark);background:#fff}
+a{text-decoration:none;color:inherit}
+.btn-wa{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;font-weight:700;font-size:1rem;padding:14px 28px;border-radius:50px;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 15px rgba(37,211,102,.4)}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,211,102,.5)}
+.btn-wa svg{width:22px;height:22px;fill:#fff;flex-shrink:0}
+.btn-call{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#fff;font-weight:700;font-size:1rem;padding:13px 28px;border-radius:50px;border:2px solid #fff;cursor:pointer;transition:background .2s}
+.btn-call:hover{background:rgba(255,255,255,.15)}
+.btn-call svg{width:20px;height:20px;fill:#fff;flex-shrink:0}
+header{position:sticky;top:0;z-index:999;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.1);padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
+header .logo{font-size:1rem;font-weight:800;color:var(--primary);line-height:1.2;max-width:60%}
+header .logo span{display:block;font-size:.7rem;font-weight:400;color:#555}
+header .btn-wa{font-size:.85rem;padding:10px 18px}
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AU_ZVEF_uM9IMYwKmmV4VRrrp0TnQEiYalzv3UExVusJfQat3Fz4DCqooIY3Afv8Gybk7MxDUndTtDrQMtE7hRd7WdwgQGnF-4ChPVN_ss7dfsD1SQRp_fK0BRz9QIjceJ6nIAJ72aXT42jnBxsIXAjxZ4YZJ8Rii66HG7WE6P3gDpNHFLswSaIKfvh4p5NrkeZ66sW7Dw3bnqf2YtTsdAsntN8GeC0MVq0Pd9JdKvU-qCcmak4sGZ1HN1MmxQEKgW5d779RcWydKAQhP2mCRAvxAwMVwp6GrkCl_h4gN38TJA4uhQ&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw');background-size:cover;background-position:center}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(0,18,32,.82) 0%,rgba(0,119,182,.55) 100%)}
+.hero-content{position:relative;z-index:1;text-align:center;padding:40px 20px;max-width:780px}
+.hero-content h1{font-size:clamp(2rem,6vw,3.4rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:16px;text-shadow:0 2px 10px rgba(0,0,0,.3)}
+.hero-content p{font-size:clamp(1rem,2.5vw,1.25rem);color:rgba(255,255,255,.9);margin-bottom:28px;font-weight:400}
+.hero-btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:20px}
+.badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);backdrop-filter:blur(6px);color:#fff;font-size:.85rem;font-weight:600;padding:8px 18px;border-radius:50px;border:1px solid rgba(255,255,255,.3)}
+.badge::before{content:'⚡'}
+.social-proof{background:var(--dark);padding:60px 20px;text-align:center}
+.social-proof h2{color:#fff;font-size:1rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;margin-bottom:36px;opacity:.7}
+.stats{display:flex;flex-wrap:wrap;justify-content:center;gap:32px;margin-bottom:32px}
+.stat{min-width:140px}
+.stat .num{font-size:clamp(2.4rem,7vw,3.8rem);font-weight:900;color:var(--secondary);line-height:1}
+.stat .label{font-size:.85rem;color:rgba(255,255,255,.7);margin-top:4px}
+.maps-link{display:inline-flex;align-items:center;gap:8px;color:var(--secondary);font-weight:600;font-size:.95rem;border:1px solid var(--secondary);padding:10px 22px;border-radius:50px;transition:background .2s}
+.maps-link:hover{background:rgba(0,180,216,.1)}
+.maps-link svg{width:18px;height:18px;fill:var(--secondary)}
+.services{padding:60px 20px;background:#fff;text-align:center}
+.services h2{font-size:clamp(1.5rem,4vw,2.2rem);font-weight:800;color:var(--dark);margin-bottom:8px}
+.services .sub{color:#666;font-size:.95rem;margin-bottom:36px}
+.grid-services{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;max-width:860px;margin:0 auto 36px}
+.card-service{background:var(--light);border-radius:16px;padding:28px 20px;transition:transform .2s,box-shadow .2s}
+.card-service:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,119,182,.15)}
+.card-service .emoji{font-size:2.2rem;margin-bottom:12px}
+.card-service h3{font-size:1rem;font-weight:700;color:var(--dark)}
+.album{padding:60px 20px;background:#f8fcff;text-align:center}
+.album h2{font-size:clamp(1.4rem,4vw,2rem);font-weight:800;color:var(--dark);margin-bottom:32px}
+.album-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:960px;margin:0 auto}
+@media(min-width:640px){.album-grid{grid-template-columns:repeat(3,1fr)}}
+.album-grid img{width:100%;height:220px;object-fit:cover;border-radius:12px;display:block}
+.review-section{background:var(--light);padding:60px 20px;text-align:center}
+.review-inner{max-width:680px;margin:0 auto;position:relative;padding:20px 10px}
+.review-inner .quotes{font-size:5rem;line-height:.8;color:var(--primary);font-family:Georgia,serif;display:block;margin-bottom:8px}
+.review-text{font-style:italic;font-size:clamp(1rem,2.5vw,1.2rem);color:var(--dark);line-height:1.7;margin-bottom:20px}
+.review-author{font-weight:700;font-size:.95rem;color:#555}
+.review-stars{color:var(--primary);font-size:1.4rem;margin-bottom:10px}
+.cta-urgencia{background:var(--primary);padding:70px 20px;text-align:center}
+.cta-urgencia h2{font-size:clamp(1.6rem,5vw,2.6rem);font-weight:900;color:#fff;margin-bottom:14px;line-height:1.2}
+.cta-urgencia p{color:rgba(255,255,255,.85);font-size:1rem;margin-bottom:32px}
+.cta-urgencia .btn-wa{font-size:1.1rem;padding:18px 36px;background:#fff;color:#25D366;box-shadow:0 6px 24px rgba(0,0,0,.2)}
+.cta-urgencia .btn-wa svg{fill:#25D366}
+.cta-urgencia .btn-wa:hover{background:#f0fff4}
+.horarios{padding:60px 20px;background:#fff;max-width:900px;margin:0 auto}
+.horarios h2{font-size:clamp(1.4rem,4vw,2rem);font-weight:800;color:var(--dark);margin-bottom:28px;text-align:center}
+.horarios-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;max-width:420px;margin:0 auto 8px;border-radius:12px;overflow:hidden;border:1px solid #e0eef7}
+.horarios-grid .row{display:contents}
+.horarios-grid .day,.horarios-grid .time{padding:12px 16px;font-size:.9rem;border-bottom:1px solid #e0eef7}
+.horarios-grid .day{font-weight:600;color:var(--dark);background:var(--light)}
+.horarios-grid .time{color:#444;background:#fff}
+.horarios-grid .day:last-of-type,.horarios-grid .time:last-of-type{border-bottom:none}
+.mas-horarios{text-align:center;margin-top:10px}
+.mas-horarios a{color:var(--primary);font-size:.85rem;font-weight:600}
+footer{background:var(--dark);color:rgba(255,255,255,.7);padding:28px 20px;text-align:center;font-size:.85rem}
+footer .footer-name{font-weight:700;color:#fff;font-size:1rem;margin-bottom:6px}
+footer .footer-tel{margin-bottom:10px}
+footer .footer-tel a{color:var(--secondary);font-weight:600}
+footer .footer-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:10px}
+footer .footer-links a{color:rgba(255,255,255,.6);font-size:.8rem;transition:color .2s}
+footer .footer-links a:hover{color:#fff}
+footer .cruz{font-size:.75rem;opacity:.5;margin-top:6px}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:9999;align-items:center;justify-content:center;padding:20px}
+.modal-box{background:#fff;border-radius:16px;max-width:640px;width:100%;max-height:85vh;overflow-y:auto;padding:32px 28px;position:relative}
+.modal-box h2{font-size:1.3rem;font-weight:800;color:var(--dark);margin-bottom:16px}
+.modal-box p,.modal-box li{font-size:.88rem;color:#333;line-height:1.7;margin-bottom:10px}
+.modal-box ul{padding-left:18px;margin-bottom:10px}
+.modal-close{position:absolute;top:16px;right:20px;background:none;border:none;font-size:1.6rem;cursor:pointer;color:#999}
+.modal-close:hover{color:var(--dark)}
+@media(max-width:480px){.hero-btns{flex-direction:column;align-items:center}.stats{gap:20px}.stat .num{font-size:2.4rem}}
+</style>
+<meta name="description" content="Clínica Medicina Estética SYMETRIA en chiclana de la frontera. Contacta ahora por WhatsApp.">
+<meta property="og:image" content="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AU_ZVEF_uM9IMYwKmmV4VRrrp0TnQEiYalzv3UExVusJfQat3Fz4DCqooIY3Afv8Gybk7MxDUndTtDrQMtE7hRd7WdwgQGnF-4ChPVN_ss7dfsD1SQRp_fK0BRz9QIjceJ6nIAJ72aXT42jnBxsIXAjxZ4YZJ8Rii66HG7WE6P3gDpNHFLswSaIKfvh4p5NrkeZ66sW7Dw3bnqf2YtTsdAsntN8GeC0MVq0Pd9JdKvU-qCcmak4sGZ1HN1MmxQEKgW5d779RcWydKAQhP2mCRAvxAwMVwp6GrkCl_h4gN38TJA4uhQ&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw">
+<meta property="og:title" content="Clínica Medicina Estética SYMETRIA">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalBusiness","name":"Clínica Medicina Estética SYMETRIA","telephone":"+34682782175","url":"https://albiazul1988-creator.github.io/cruzdigital-webs/clinica-medicina-estetica-symetria-chicl-mn64zr3w/","address":{"@type":"PostalAddress","addressLocality":"chiclana de la frontera","addressCountry":"ES","streetAddress":"C. Colón, 31, 11100 San Fernando, Cádiz"},"description":"Clínica ubicado en chiclana de la frontera, con 5 estrellas en Google, 13 reseñas verificadas.","image":"https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AU_ZVEF_uM9IMYwKmmV4VRrrp0TnQEiYalzv3UExVusJfQat3Fz4DCqooIY3Afv8Gybk7MxDUndTtDrQMtE7hRd7WdwgQGnF-4ChPVN_ss7dfsD1SQRp_fK0BRz9QIjceJ6nIAJ72aXT42jnBxsIXAjxZ4YZJ8Rii66HG7WE6P3gDpNHFLswSaIKfvh4p5NrkeZ66sW7Dw3bnqf2YtTsdAsntN8GeC0MVq0Pd9JdKvU-qCcmak4sGZ1HN1MmxQEKgW5d779RcWydKAQhP2mCRAvxAwMVwp6GrkCl_h4gN38TJA4uhQ&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw","email":"contacto@cruzdigital.shop"}</script>
+</head>
+<body>
+
+<header>
+<div class="logo">Clínica Medicina Estética SYMETRIA<span>Chiclana de la Frontera</span></div>
+<a href="https://wa.me/34682782175?text=Hola%2C%20me%20interesa%20informacion" class="btn-wa" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.847L.057 23.547a.75.75 0 0 0 .916.916l5.7-1.471A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.007-1.37l-.36-.214-3.724.96.986-3.607-.234-.371A9.818 9.818 0 1 1 12 21.818z"/></svg>
+WhatsApp
+</a>
+</header>
+
+<section class="hero">
+<div class="hero-bg"></div>
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<h1>La clínica que buscabas en Chiclana de la Frontera</h1>
+<p>Medicina estética profesional · 5 estrellas en Google · Atención personalizada desde el primer minuto</p>
+<div class="hero-btns">
+<a href="https://wa.me/34682782175?text=Hola%2C%20me%20interesa%20informacion" class="btn-wa" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.847L.057 23.547a.75.75 0 0 0 .916.916l5.7-1.471A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.007-1.37l-.36-.214-3.724.96.986-3.607-.234-.371A9.818 9.818 0 1 1 12 21.818z"/></svg>
+Escríbenos por WhatsApp
+</a>
+<a href="tel:+34682782175" class="btn-call">
+<svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+Llamar ahora
+</a>
+</div>
+<div class="badge">Respuesta en minutos</div>
+</div>
+</section>
+
+<section class="social-proof">
+<h2>Por qué confían en nosotros</h2>
+<div class="stats">
+<div class="stat">
+<div class="num">5★</div>
+<div class="label">Valoración Google</div>
+</div>
+<div class="stat">
+<div class="num">13</div>
+<div class="label">Reseñas verificadas</div>
+</div>
+<div class="stat">
+<div class="num">100%</div>
+<div class="label">Atención personalizada</div>
+</div>
+</div>
+<a href="https://maps.google.com/?q=Cl%C3%ADnica%20Medicina%20Est%C3%A9tica%20SYMETRIA%20chiclana%20de%20la%20frontera" target="_blank" rel="noopener" class="maps-link">
+<svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+Ver reseñas en Google Maps
+</a>
+</section>
+
+<section class="services">
+<h2>Nuestros servicios</h2>
+<p class="sub">Todo lo que necesitas en un solo lugar</p>
+<div class="grid-services">
+<div class="card-service">
+<div class="emoji">🩺</div>
+<h3>Primera consulta</h3>
+</div>
+<div class="card-service">
+<div class="emoji">🔍</div>
+<h3>Diagnóstico</h3>
+</div>
+<div class="card-service">
+<div class="emoji">💉</div>
+<h3>Tratamiento</h3>
+</div>
+<div class="card-service">
+<div class="emoji">📅</div>
+<h3>Revisión periódica</h3>
+</div>
+</div>
+<a href="https://wa.me/34682782175?text=Hola%2C%20me%20interesa%20informacion" class="btn-wa" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.847L.057 23.547a.75.75 0 0 0 .916.916l5.7-1.471A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.007-1.37l-.36-.214-3.724.96.986-3.607-.234-.371A9.818 9.818 0 1 1 12 21.818z"/></svg>
+Pedir cita por WhatsApp
+</a>
+</section>
+
+<section class="album">
+<h2>Nuestro espacio</h2>
+<div class="album-grid">
+<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AU_ZVEHIyMU6iI4di7mZWxgDj2i8C9zGF17xSOWNmZ7MzTpdyVdprNNwvOKGaHgNgs60gSr2n6QbbJ_b8ZVp1yIFMg1jvWFGtIKeGk6-YzW23u4NnGbNGOP_PvN7XlctOhnq0Cl1z_9CG2H5E9YqoUhh42M0BvLBybVGslcmweSz9zDTA64YjjpFS5AheOF1VwL99uinEaXjRLErC6NvrNNDfVurpGs6NdpXVM19iRv3C5gGOAuGQXZKiiDOqh3ZnZVvrHvzd4a2WnylJvOtD32td1pTh9QQDYmR7sW4qMKdbDQTOw&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw" alt="Espacio clínica" loading="lazy">
+</div>
+</section>
+
+<section class="review-section">
+<div class="review-inner">
+<span class="quotes">"</span>
+<div class="review-stars">★★★★★</div>
+<p class="review-text">Llegué a ellos porque mi médico estética estaba en Madrid y por cuestión de tiempo me era imposible acudir de forma periódica. Inma y David fueron y son profesionales en el más amp...</p>
+<div class="review-author">— Rocio Cristina Lavilla · Google</div>
+</div>
+</section>
+
+<section class="cta-urgencia">
+<h2>¿Listo para dar el primer paso?</h2>
+<p>Consulta sin compromiso · Respuesta inmediata · Atención profesional</p>
+<a href="https://wa.me/34682782175?text=Hola%2C%20me%20interesa%20informacion" class="btn-wa" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.847L.057 23.547a.75.75 0 0 0 .916.916l5.7-1.471A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.007-1.37l-.36-.214-3.724.96.986-3.607-.234-.371A9.818 9.818 0 1 1 12 21.818z"/></svg>
+Contactar ahora por WhatsApp
+</a>
+</section>
+
+<section style="padding:60px 20px;background:#fff">
+<div class="horarios">
+<h2>Horarios y ubicación</h2>
+<div class="horarios-grid">
+<div class="day">Lunes</div><div class="time">17:00–20:00</div>
+<div class="day">Martes</div><div class="time">17:00–20:00</div>
+<div class="day">Miércoles</div><div class="time">17:00–20:00</div>
+</div>
+<div class="mas-horarios"><a href="https://maps.google.com/?q=Cl%C3%ADnica%20Medicina%20Est%C3%A9tica%20SYMETRIA%20chiclana%20de%20la%20frontera" target="_blank" rel="noopener">Ver más horarios en Google →</a></div>
+<iframe src="https://maps.google.com/maps?q=Cl%C3%ADnica%20Medicina%20Est%C3%A9tica%20SYMETRIA%20chiclana%20de%20la%20frontera&output=embed" width="100%" height="240" style="border:0;border-radius:12px;margin-top:16px" loading="lazy" allowfullscreen></iframe>
+</div>
+</section>
+
+<footer>
+<div class="footer-name">Clínica Medicina Estética SYMETRIA</div>
+<div class="footer-tel"><a href="tel:+34682782175">682 782 175</a></div>
+<div class="footer-links">
+<a href="tel:+34682782175">Llamar</a>
+<a href="https://wa.me/34682782175?text=Hola%2C%20me%20interesa%20informacion" target="_blank" rel="noopener">WhatsApp</a>
+<a href="#" onclick="document.getElementById('aviso-legal-modal').style.display='flex';return false;">Aviso Legal</a>
+</div>
+<div class="cruz">Página web creada por Cruz Digital</div>
+</footer>
+
+<div id="aviso-legal-modal" class="modal-overlay" onclick="<a href="https://wa.me/34682782175?text=Hola%2C%20me%20interesa%20informacion" target="_blank" rel="noopener" aria-label="WhatsApp" style="position:fixed;bottom:22px;right:18px;z-index:9998;background:#25D366;border-radius:50%;width:58px;height:58px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(37,211,102,0.5);text-decoration:none"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<div id="aviso-legal-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:99999;align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto">
+  <div style="background:#fff;color:#222;max-width:680px;width:100%;margin:40px auto;border-radius:14px;padding:36px;font-family:sans-serif;font-size:14px;line-height:1.75;position:relative">
+    <button onclick="document.getElementById('aviso-legal-modal').style.display='none'" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:#aaa">&#x2715;</button>
+    <h2 style="font-size:20px;font-weight:800;margin-bottom:6px">Aviso Legal y Pol&iacute;tica de Privacidad</h2>
+    <p style="font-size:12px;color:#999;margin-bottom:24px">Clínica Medicina Estética SYMETRIA &mdash; 2026</p>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">1. Datos del titular</h3>
+    <ul style="margin:10px 0 10px 20px;color:#444">
+      <li><strong>Titular:</strong> Clínica Medicina Estética SYMETRIA</li>
+      <li><strong>NIF/CIF:</strong> En tr&aacute;mitaci&oacute;n</li>
+      <li><strong>Domicilio:</strong> C. Colón, 31, 11100 San Fernando, Cádiz</li>
+      <li><strong>Tel&eacute;fono:</strong> 682782175</li>
+      <li><strong>Email:</strong> contacto@cruzdigital.shop</li>
+    </ul>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">2. Protecci&oacute;n de datos (RGPD)</h3>
+    <ul style="margin:10px 0 10px 20px;color:#444">
+      <li><strong>Responsable:</strong> Clínica Medicina Estética SYMETRIA</li>
+      <li><strong>Finalidad:</strong> Gesti&oacute;n de consultas comerciales</li>
+      <li><strong>Base jur&iacute;dica:</strong> Consentimiento (art. 6.1.a RGPD)</li>
+      <li><strong>Derechos:</strong> Acceso, rectificaci&oacute;n y supresi&oacute;n. Contacto: contacto@cruzdigital.shop</li>
+      <li><strong>Reclamaciones:</strong> <a href="https://www.aepd.es" target="_blank" style="color:#0077B6">www.aepd.es</a></li>
+    </ul>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">3. Cookies</h3>
+    <p>Este sitio no usa cookies de seguimiento ni anal&iacute;ticas.</p>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">4. Propiedad intelectual</h3>
+    <p>Contenidos propiedad de Clínica Medicina Estética SYMETRIA. Prohibida reproducci&oacute;n sin autorizaci&oacute;n.</p>
+    <p style="margin-top:24px;font-size:11px;color:#bbb;border-top:1px solid #eee;padding-top:14px">Dise&ntilde;o: Cruz Digital &middot; cruzdigital.shop</p>
+  </div>
+</div>
+<script>document.addEventListener('keydown',function(e){if(e.key==='Escape'){var m=document.getElementById('aviso-legal-modal');if(m)m.style.display='none';}});</script>
