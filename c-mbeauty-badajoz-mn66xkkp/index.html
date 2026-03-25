@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C&MBeauty — estetica en badajoz</title>
+<meta name="description" content="C&MBeauty en badajoz. Llama o escribe por WhatsApp ahora.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#7B2D8B;--secondary:#C77DFF;--dark:#130016;--light:#F9F0FF}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:#fff;color:var(--dark);overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+.btn-wa{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;font-weight:700;padding:14px 28px;border-radius:50px;font-size:1rem;cursor:pointer;border:none;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 18px rgba(37,211,102,.35)}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,.5)}
+.btn-call{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#fff;font-weight:700;padding:13px 28px;border-radius:50px;font-size:1rem;cursor:pointer;border:2px solid #fff;transition:transform .2s,background .2s}
+.btn-call:hover{background:rgba(255,255,255,.15);transform:translateY(-2px)}
+header{position:sticky;top:0;z-index:999;background:var(--dark);display:flex;align-items:center;justify-content:space-between;padding:12px 20px;box-shadow:0 2px 16px rgba(0,0,0,.4)}
+header .logo{font-size:1.3rem;font-weight:800;color:#fff;letter-spacing:-0.5px}
+header .logo span{color:var(--secondary)}
+header .btn-wa{padding:10px 20px;font-size:.88rem}
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AU_ZVEEoLbruBbJIey6sfV87d1zzWS6b00O8SiEKL-xb7LfX5IFGKptn5MbZwAMgb6pOuqOFP4rx_D-ZFtsjPgKzoZlS-irXA57LlnHanBHO-xIPRxM_T4ZrU68CwqFtHKtLqp6Y2JJ2FdTPymDyxMHzxHHoh8nFPok_D2GbhcJRdPqzRRAj-n1JCfVFg-OojO8S5d3nG2yLubh-Csc964yf5WrsOifcVIBIqsGlqCjNaxcwmkDsSQf1AS9IVbRtv2nRGCCdd1zmqOHLXPNm2raHeapKN5IWL8XlQyjsEdU5oCXTIQ&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw');background-size:cover;background-position:center}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(19,0,22,.82) 0%,rgba(123,45,139,.6) 100%)}
+.hero-content{position:relative;z-index:1;padding:20px;max-width:700px}
+.hero-content h1{font-size:clamp(2rem,6vw,3.4rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:16px;text-shadow:0 2px 12px rgba(0,0,0,.4)}
+.hero-content p{font-size:clamp(.95rem,2.5vw,1.2rem);color:rgba(255,255,255,.9);margin-bottom:28px;font-weight:400}
+.hero-btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:22px}
+.badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.3);color:#fff;padding:8px 18px;border-radius:50px;font-size:.82rem;font-weight:600}
+.badge::before{content:'⚡';font-size:1rem}
+.social-proof{background:var(--dark);padding:52px 20px;text-align:center}
+.stats{display:flex;flex-wrap:wrap;justify-content:center;gap:32px;margin-bottom:28px}
+.stat{display:flex;flex-direction:column;align-items:center}
+.stat-num{font-size:clamp(2.4rem,7vw,3.8rem);font-weight:900;color:var(--secondary);line-height:1}
+.stat-label{font-size:.82rem;color:rgba(255,255,255,.65);margin-top:4px;text-transform:uppercase;letter-spacing:.05em}
+.maps-link{display:inline-flex;align-items:center;gap:8px;background:var(--primary);color:#fff;padding:12px 26px;border-radius:50px;font-weight:600;font-size:.9rem;transition:opacity .2s}
+.maps-link:hover{opacity:.85}
+.services{padding:56px 20px;background:var(--light)}
+.section-title{text-align:center;font-size:clamp(1.5rem,4vw,2.2rem);font-weight:800;color:var(--dark);margin-bottom:36px}
+.section-title span{color:var(--primary)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;max-width:860px;margin:0 auto 36px}
+.service-card{background:#fff;border-radius:16px;padding:28px 16px;text-align:center;box-shadow:0 4px 20px rgba(123,45,139,.1);transition:transform .2s,box-shadow .2s}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 10px 32px rgba(123,45,139,.2)}
+.service-card .emoji{font-size:2.2rem;margin-bottom:10px}
+.service-card h3{font-size:.95rem;font-weight:700;color:var(--dark)}
+.services .btn-wa{display:flex;margin:0 auto;max-width:280px;justify-content:center}
+.album{padding:52px 20px;background:#fff}
+.album-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:960px;margin:0 auto}
+.album-grid img{width:100%;height:220px;object-fit:cover;border-radius:12px;display:block}
+.review{background:var(--light);padding:52px 20px;text-align:center}
+.review-inner{max-width:680px;margin:0 auto}
+.review-quote{font-size:5rem;line-height:.8;color:var(--primary);font-family:Georgia,serif;margin-bottom:8px}
+.review-text{font-style:italic;font-size:clamp(1rem,2.5vw,1.25rem);color:var(--dark);line-height:1.65;margin-bottom:18px}
+.review-stars{color:var(--primary);font-size:1.4rem;letter-spacing:2px;margin-bottom:8px}
+.review-author{font-weight:600;font-size:.9rem;color:#555}
+.cta{background:var(--primary);padding:64px 20px;text-align:center}
+.cta h2{font-size:clamp(1.6rem,5vw,2.6rem);font-weight:900;color:#fff;margin-bottom:12px;line-height:1.2}
+.cta p{color:rgba(255,255,255,.85);font-size:1rem;margin-bottom:30px}
+.cta .btn-wa{background:#fff;color:var(--primary);font-size:1.05rem;padding:16px 36px}
+.cta .btn-wa:hover{background:var(--light)}
+.location{padding:52px 20px;background:var(--light)}
+.location-inner{max-width:860px;margin:0 auto}
+.location h2{font-size:clamp(1.4rem,4vw,2rem);font-weight:800;color:var(--dark);margin-bottom:28px;text-align:center}
+.horarios-table{width:100%;border-collapse:collapse;margin-bottom:8px;font-size:.9rem}
+.horarios-table td{padding:10px 14px;border-bottom:1px solid rgba(123,45,139,.12)}
+.horarios-table td:first-child{font-weight:600;color:var(--primary);width:45%}
+.horarios-table tr:last-child td{border-bottom:none}
+footer{background:var(--dark);padding:28px 20px;text-align:center}
+footer .footer-name{font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:6px}
+footer .footer-tel{color:var(--secondary);font-size:.9rem;margin-bottom:10px}
+footer .footer-links{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap}
+footer .footer-links a{color:rgba(255,255,255,.55);font-size:.78rem;transition:color .2s}
+footer .footer-links a:hover{color:#fff}
+footer .cruz{color:rgba(255,255,255,.3);font-size:.72rem;margin-top:14px}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:9999;align-items:center;justify-content:center;padding:20px}
+.modal-box{background:#fff;border-radius:16px;padding:36px 28px;max-width:600px;width:100%;max-height:80vh;overflow-y:auto;position:relative}
+.modal-box h2{font-size:1.3rem;font-weight:800;color:var(--primary);margin-bottom:16px}
+.modal-box p{font-size:.85rem;color:#444;line-height:1.65;margin-bottom:10px}
+.modal-close{position:absolute;top:14px;right:18px;font-size:1.5rem;cursor:pointer;color:#888;background:none;border:none;font-weight:700}
+@media(min-width:600px){.album-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:480px){.hero-btns{flex-direction:column;align-items:center}.btn-wa,.btn-call{width:100%;max-width:300px;justify-content:center}}
+</style>
+<meta name="description" content="C&MBeauty en badajoz. Contacta ahora por WhatsApp.">
+<meta property="og:image" content="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AU_ZVEEoLbruBbJIey6sfV87d1zzWS6b00O8SiEKL-xb7LfX5IFGKptn5MbZwAMgb6pOuqOFP4rx_D-ZFtsjPgKzoZlS-irXA57LlnHanBHO-xIPRxM_T4ZrU68CwqFtHKtLqp6Y2JJ2FdTPymDyxMHzxHHoh8nFPok_D2GbhcJRdPqzRRAj-n1JCfVFg-OojO8S5d3nG2yLubh-Csc964yf5WrsOifcVIBIqsGlqCjNaxcwmkDsSQf1AS9IVbRtv2nRGCCdd1zmqOHLXPNm2raHeapKN5IWL8XlQyjsEdU5oCXTIQ&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw">
+<meta property="og:title" content="C&MBeauty">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BeautySalon","name":"C&MBeauty","telephone":"+34622269297","url":"https://albiazul1988-creator.github.io/cruzdigital-webs/c-mbeauty-badajoz-mn66xkkp/","address":{"@type":"PostalAddress","addressLocality":"badajoz","addressCountry":"ES","streetAddress":"C. Isidro Pacense, 4, 06008 Badajoz"},"description":"Centro de estética ubicado en badajoz, con 4.8 estrellas en Google, 41 reseñas verificadas.","image":"https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AU_ZVEEoLbruBbJIey6sfV87d1zzWS6b00O8SiEKL-xb7LfX5IFGKptn5MbZwAMgb6pOuqOFP4rx_D-ZFtsjPgKzoZlS-irXA57LlnHanBHO-xIPRxM_T4ZrU68CwqFtHKtLqp6Y2JJ2FdTPymDyxMHzxHHoh8nFPok_D2GbhcJRdPqzRRAj-n1JCfVFg-OojO8S5d3nG2yLubh-Csc964yf5WrsOifcVIBIqsGlqCjNaxcwmkDsSQf1AS9IVbRtv2nRGCCdd1zmqOHLXPNm2raHeapKN5IWL8XlQyjsEdU5oCXTIQ&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw","email":"contacto@cruzdigital.shop"}</script>
+</head>
+<body>
+
+<header>
+<div class="logo">C<span>&</span>MBeauty</div>
+<a class="btn-wa" href="https://wa.me/34622269297?text=Hola%2C%20me%20interesa%20informacion" target="_blank" rel="noopener">
+<svg width="18" height="18" fill="#fff" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.556 4.122 1.528 5.858L.057 23.571a.75.75 0 0 0 .921.921l5.713-1.471A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.732 9.732 0 0 1-4.964-1.357l-.355-.212-3.694.95.968-3.594-.231-.371A9.712 9.712 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+WhatsApp
+</a>
+</header>
+
+<section class="hero">
+<div class="hero-bg"></div>
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<h1>La estética que buscabas en Badajoz</h1>
+<p>4.8 ★ en Google · Tratamientos personalizados · Respuesta inmediata</p>
+<div class="hero-btns">
+<a class="btn-wa" href="https://wa.me/34622269297?text=Hola%2C%20me%20interesa%20informacion" target="_blank" rel="noopener">
+<svg width="18" height="18" fill="#fff" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.556 4.122 1.528 5.858L.057 23.571a.75.75 0 0 0 .921.921l5.713-1.471A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.732 9.732 0 0 1-4.964-1.357l-.355-.212-3.694.95.968-3.594-.231-.371A9.712 9.712 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+WhatsApp
+</a>
+<a class="btn-call" href="tel:+34622269297">📞 Llamar ahora</a>
+</div>
+<div class="badge">Respuesta en minutos</div>
+</div>
+</section>
+
+<section class="social-proof">
+<div class="stats">
+<div class="stat">
+<span class="stat-num">+5</span>
+<span class="stat-label">Años de experiencia</span>
+</div>
+<div class="stat">
+<span class="stat-num">41</span>
+<span class="stat-label">Reseñas verificadas</span>
+</div>
+<div class="stat">
+<span class="stat-num">4.8★</span>
+<span class="stat-label">Valoración Google</span>
+</div>
+</div>
+<a class="maps-link" href="https://maps.google.com/?q=C%26MBeauty%20badajoz" target="_blank" rel="noopener">📍 Ver en Google Maps</a>
+</section>
+
+<section class="services">
+<h2 class="section-title">Nuestros <span>servicios</span></h2>
+<div class="services-grid">
+<div class="service-card"><div class="emoji">✨</div><h3>Tratamiento facial</h3></div>
+<div class="service-card"><div class="emoji">🌿</div><h3>Depilación</h3></div>
+<div class="service-card"><div class="emoji">💅</div><h3>Manicura</h3></div>
+<div class="service-card"><div class="emoji">🦶</div><h3>Pedicura</h3></div>
+<div class="service-card"><div class="emoji">💆</div><h3>Masaje relajante</h3></div>
+</div>
+<a class="btn-wa" href="https://wa.me/34622269297?text=Hola%2C%20me%20interesa%20informacion" target="_blank" rel="noopener">
+<svg width="18" height="18" fill="#fff" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.556 4.122 1.528 5.858L.057 23.571a.75.75 0 0 0 .921.921l5.713-1.471A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.732 9.732 0 0 1-4.964-1.357l-.355-.212-3.694.95.968-3.594-.231-.371A9.712 9.712 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+Pedir cita por WhatsApp
+</a>
+</section>
+
+<section class="album">
+<h2 class="section-title">Nuestro <span>espacio</span></h2>
+<div class="album-grid">
+<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AU_ZVEFtQ-tKS7vYjHYQQTTVcVB60krWQ3YrNHsQXzA7Q4eL7UiP4bkeeOMN4eqfBhA7hgfPW3f-YxPb1qTBgzQZoeEIw-u5sXM-Rg5eDJ-aje3lNfFHUGHLnV_Pskvp6HxlREas93MpCOkwd58BlM8EumWR7pICchNW4dVNH-OXgfLAsoVgUeGrhk0G9PbMwuOwtzFMdaWujxLa0o61n8jJYSeDQgu2rNUNhFpZ8qHEMP-EPPwuRTkEUiTdHqoCQp5DK4Aek56yYyBa-jIiy3zyHiBL-C-N3LJ1STrbUS-xGp61EA&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw" alt="C&MBeauty espacio 1" loading="lazy">
+<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AU_ZVEH-LyIGL2DxwnI_tPGq7IXf3r-C6CmWtrFe4BeTtjZV7XhBQ9AMjiv9A5Hv2NAjJuDg6tJ0Rx-bsbKWrXbfVBwMPIohBgbb7D4818HmMOHqpNOXmN603qCPasCgKF-KkmJscWIShm4qUn_0jwLVqMS_6fAQt5xnDjYtG80OSSpSNUIlDYN8EWXGkSAYnZ7480KMGekTK5zqjg3tr-IxdbpFXVx7jpXjo0OrCPYm1P-ViuHX8Jo3bbAShB8wVpPiKDWL5qjZ4MNDz-g0U594MjOdUdSEMxMN-nHqKQ-Mfl0e4g&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw" alt="C&MBeauty espacio 2" loading="lazy">
+<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AU_ZVEEnpwfSOkZGjwfUgxHh--BY67L66TfHjXlqUeVXsUyZwJxs9B8GnCQ7ORwMmqAV5-0ze3xkbhdWSfbeB8S-iGmUgIbObIQgOkioiEnenINQM9y7nDIe6i8E__q9UnqTiCvPJzORsRwEzOsK3b48drCyAZF4YJ9lytw-NCJ6gkgRH9efhYd6nORJJnx3EqVpH4WcLzK1wUIx6_oMSkEe7ZmPOmW69dQa3B2J-Zatr-I---AVe8KQ5W28Jz-FwOMuaoGPhyKWky0-ZLA0srz96wQ80L_YaZ7HQ0qmylTtNdubMA&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw" alt="C&MBeauty espacio 3" loading="lazy">
+<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AU_ZVEFdkrZd26p-Tc6PrFnkWHXeyPd28mBi7YRsmEgCO741wx8uRwzr0jyRvg_GddBhYbyahOh-NcIFAu2r9b1NJvAMfW3spVp9xLoV0ST9mFpxG_wq4SAVRGLZgGnfeXNUb-sQpyT5LR8xWVWlZlA_4L_FvQgNf3vb24BGRE5rIVciwUalWoNVLbL5s6mtcanPxVGLqbyPP2XI4sBn6D_0559dmnweZoV620OdE_vvnuJd8EVH-3NM_reJ_45hFsWJgnK9fcOctAywJllS7bY7quN6Px9ADQJywDnkI7JbOMKd-Q&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw" alt="C&MBeauty espacio 4" loading="lazy">
+</div>
+</section>
+
+<section class="review">
+<div class="review-inner">
+<div class="review-quote">&ldquo;</div>
+<p class="review-text">Hola a todos. El viernes 21 de noviembre tenía cita en este salón para que me dieran un masaje holístico. He recibido muchos masajes en diversos centros y en este también y todos...</p>
+<div class="review-stars">★★★★★</div>
+<p class="review-author">— Marisol Cordero · Google</p>
+</div>
+</section>
+
+<section class="cta">
+<h2>¿Lista para tu tratamiento?</h2>
+<p>Reserva ahora y te atendemos hoy mismo en Badajoz</p>
+<a class="btn-wa" href="https://wa.me/34622269297?text=Hola%2C%20me%20interesa%20informacion" target="_blank" rel="noopener">
+<svg width="20" height="20" fill="var(--primary)" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.556 4.122 1.528 5.858L.057 23.571a.75.75 0 0 0 .921.921l5.713-1.471A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.732 9.732 0 0 1-4.964-1.357l-.355-.212-3.694.95.968-3.594-.231-.371A9.712 9.712 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+Escribir por WhatsApp ahora
+</a>
+</section>
+
+<section class="location">
+<div class="location-inner">
+<h2>Horarios y ubicación</h2>
+<table class="horarios-table">
+<tr><td>Lunes</td><td>10:00–14:00 · 16:00–20:30</td></tr>
+<tr><td<a href="https://wa.me/34622269297?text=Hola%2C%20me%20interesa%20informacion" target="_blank" rel="noopener" aria-label="WhatsApp" style="position:fixed;bottom:22px;right:18px;z-index:9998;background:#25D366;border-radius:50%;width:58px;height:58px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(37,211,102,0.5);text-decoration:none"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<div id="aviso-legal-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:99999;align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto">
+  <div style="background:#fff;color:#222;max-width:680px;width:100%;margin:40px auto;border-radius:14px;padding:36px;font-family:sans-serif;font-size:14px;line-height:1.75;position:relative">
+    <button onclick="document.getElementById('aviso-legal-modal').style.display='none'" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:#aaa">&#x2715;</button>
+    <h2 style="font-size:20px;font-weight:800;margin-bottom:6px">Aviso Legal y Pol&iacute;tica de Privacidad</h2>
+    <p style="font-size:12px;color:#999;margin-bottom:24px">C&MBeauty &mdash; 2026</p>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">1. Datos del titular</h3>
+    <ul style="margin:10px 0 10px 20px;color:#444">
+      <li><strong>Titular:</strong> C&MBeauty</li>
+      <li><strong>NIF/CIF:</strong> En tr&aacute;mitaci&oacute;n</li>
+      <li><strong>Domicilio:</strong> C. Isidro Pacense, 4, 06008 Badajoz</li>
+      <li><strong>Tel&eacute;fono:</strong> 622269297</li>
+      <li><strong>Email:</strong> contacto@cruzdigital.shop</li>
+    </ul>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">2. Protecci&oacute;n de datos (RGPD)</h3>
+    <ul style="margin:10px 0 10px 20px;color:#444">
+      <li><strong>Responsable:</strong> C&MBeauty</li>
+      <li><strong>Finalidad:</strong> Gesti&oacute;n de consultas comerciales</li>
+      <li><strong>Base jur&iacute;dica:</strong> Consentimiento (art. 6.1.a RGPD)</li>
+      <li><strong>Derechos:</strong> Acceso, rectificaci&oacute;n y supresi&oacute;n. Contacto: contacto@cruzdigital.shop</li>
+      <li><strong>Reclamaciones:</strong> <a href="https://www.aepd.es" target="_blank" style="color:#0077B6">www.aepd.es</a></li>
+    </ul>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">3. Cookies</h3>
+    <p>Este sitio no usa cookies de seguimiento ni anal&iacute;ticas.</p>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">4. Propiedad intelectual</h3>
+    <p>Contenidos propiedad de C&MBeauty. Prohibida reproducci&oacute;n sin autorizaci&oacute;n.</p>
+    <p style="margin-top:24px;font-size:11px;color:#bbb;border-top:1px solid #eee;padding-top:14px">Dise&ntilde;o: Cruz Digital &middot; cruzdigital.shop</p>
+  </div>
+</div>
+<script>document.addEventListener('keydown',function(e){if(e.key==='Escape'){var m=document.getElementById('aviso-legal-modal');if(m)m.style.display='none';}});</script>
