@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Secretos Beauty Parlour Indiba — estetica en Badajoz</title>
+<meta name="description" content="Secretos Beauty Parlour Indiba en Badajoz. Llama o escribe por WhatsApp ahora.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#7B2D8B;--secondary:#C77DFF;--dark:#130016;--light:#F9F0FF}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:#fff;color:var(--dark)}
+a{text-decoration:none}
+.btn-wa{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;font-weight:700;padding:14px 24px;border-radius:50px;font-size:1rem;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 15px rgba(37,211,102,.4)}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,211,102,.5)}
+.btn-wa svg{width:22px;height:22px;fill:#fff;flex-shrink:0}
+.btn-call{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#fff;font-weight:700;padding:13px 24px;border-radius:50px;font-size:1rem;border:2px solid #fff;transition:background .2s}
+.btn-call:hover{background:rgba(255,255,255,.15)}
+.btn-call svg{width:20px;height:20px;fill:#fff;flex-shrink:0}
+header{position:sticky;top:0;z-index:100;background:var(--dark);display:flex;align-items:center;justify-content:space-between;padding:12px 20px;box-shadow:0 2px 12px rgba(0,0,0,.4)}
+.header-name{color:#fff;font-weight:700;font-size:.95rem;line-height:1.2}
+.header-name span{color:var(--secondary);display:block;font-size:.75rem;font-weight:400}
+.header-wa{display:inline-flex;align-items:center;gap:6px;background:#25D366;color:#fff;font-weight:700;padding:9px 16px;border-radius:50px;font-size:.85rem;white-space:nowrap}
+.header-wa svg{width:18px;height:18px;fill:#fff}
+section{padding:60px 20px}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:80px 20px}
+.hero-bg{position:absolute;inset:0;background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AU_ZVEH1JodEYsEhU2Pn3MMDyjP2Ow4zXZnhSVcDzypd-mZSFBudywhfS5bqgkEruyqNQVdJxJVdPTO1S0F_rJvj7Bh6d5yAJPiYJ6z832ztZkU_YklfYA5m-pG7IsEBTp2mdzgSshGhDB80XqfmfjZ2tixZlHMfHWarEcC_k6ibRGaZXHEaDCdrj_jhOHiNy25Y_iytiRKgoXjs1fFNf6HPyqkJ3Ha8eJX44EY0yfqwo7zMQD086p_tiaCk_303qx_88EKp1cdkDer38HxfqK9jQhppIons68eicqeAF42Bzb2y6w&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw');background-size:cover;background-position:center}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(19,0,22,.85) 0%,rgba(123,45,139,.65) 100%)}
+.hero-content{position:relative;z-index:1;max-width:700px}
+.hero-badge{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;font-size:.8rem;font-weight:600;padding:6px 16px;border-radius:50px;margin-bottom:20px;backdrop-filter:blur(6px)}
+.hero h1{color:#fff;font-size:clamp(2rem,6vw,3.2rem);font-weight:900;line-height:1.15;margin-bottom:16px}
+.hero h1 span{color:var(--secondary)}
+.hero p{color:rgba(255,255,255,.85);font-size:clamp(1rem,2.5vw,1.2rem);margin-bottom:32px;line-height:1.6}
+.hero-btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.hero-btns .btn-wa{font-size:1.05rem;padding:16px 28px}
+.response-badge{margin-top:20px;color:rgba(255,255,255,.7);font-size:.82rem}
+.response-badge span{color:#25D366;font-weight:600}
+.social-proof{background:var(--dark);text-align:center}
+.social-proof h2{color:#fff;font-size:1.1rem;font-weight:600;margin-bottom:36px;opacity:.7}
+.stats{display:flex;flex-wrap:wrap;justify-content:center;gap:32px;margin-bottom:36px}
+.stat{flex:1;min-width:120px}
+.stat-num{font-size:clamp(2.5rem,7vw,3.8rem);font-weight:900;color:var(--secondary);line-height:1}
+.stat-label{color:rgba(255,255,255,.7);font-size:.85rem;margin-top:6px}
+.maps-link{display:inline-flex;align-items:center;gap:8px;color:var(--secondary);font-weight:600;font-size:.95rem;border:1px solid var(--secondary);padding:10px 22px;border-radius:50px;transition:background .2s}
+.maps-link:hover{background:rgba(199,125,255,.1)}
+.maps-link svg{width:18px;height:18px;fill:var(--secondary)}
+.services{background:var(--light)}
+.services h2{text-align:center;font-size:clamp(1.5rem,4vw,2rem);font-weight:800;color:var(--dark);margin-bottom:8px}
+.services .sub{text-align:center;color:#666;font-size:.95rem;margin-bottom:36px}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:16px;max-width:700px;margin:0 auto 36px}
+.service-card{background:#fff;border-radius:16px;padding:24px 16px;text-align:center;box-shadow:0 2px 12px rgba(123,45,139,.1);transition:transform .2s,box-shadow .2s}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(123,45,139,.2)}
+.service-card .emoji{font-size:2rem;margin-bottom:10px}
+.service-card .name{font-size:.9rem;font-weight:600;color:var(--dark)}
+.services-cta{text-align:center}
+.album{background:#fff}
+.album h2{text-align:center;font-size:clamp(1.5rem,4vw,2rem);font-weight:800;color:var(--dark);margin-bottom:32px}
+.album-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:900px;margin:0 auto}
+.album-grid img{width:100%;height:220px;object-fit:cover;border-radius:12px;display:block}
+.review{background:var(--light);text-align:center}
+.review-inner{max-width:650px;margin:0 auto}
+.review-quote{font-size:5rem;line-height:.8;color:var(--primary);font-family:Georgia,serif;margin-bottom:8px}
+.review-text{font-style:italic;font-size:clamp(1.05rem,2.5vw,1.25rem);color:var(--dark);line-height:1.7;margin-bottom:20px}
+.review-stars{color:var(--primary);font-size:1.4rem;margin-bottom:10px}
+.review-author{font-weight:600;color:#555;font-size:.95rem}
+.cta-urgencia{background:var(--primary);text-align:center}
+.cta-urgencia h2{color:#fff;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;margin-bottom:12px;line-height:1.25}
+.cta-urgencia p{color:rgba(255,255,255,.85);margin-bottom:32px;font-size:1rem}
+.cta-urgencia .btn-wa{background:#fff;color:var(--primary);box-shadow:0 4px 20px rgba(0,0,0,.2)}
+.cta-urgencia .btn-wa svg{fill:var(--primary)}
+.cta-urgencia .btn-wa:hover{background:#f0f0f0}
+.location{background:#fff}
+.location h2{text-align:center;font-size:clamp(1.4rem,4vw,1.9rem);font-weight:800;color:var(--dark);margin-bottom:36px}
+.location-inner{display:grid;grid-template-columns:1fr;gap:32px;max-width:800px;margin:0 auto}
+.hours-table{width:100%;border-collapse:collapse}
+.hours-table tr{border-bottom:1px solid #eee}
+.hours-table td{padding:10px 6px;font-size:.9rem}
+.hours-table td:first-child{font-weight:600;color:var(--primary);text-transform:capitalize;width:45%}
+.hours-table td:last-child{color:#444}
+.hours-note{font-size:.8rem;color:#999;margin-top:10px}
+footer{background:var(--dark);color:rgba(255,255,255,.6);text-align:center;padding:28px 20px;font-size:.82rem}
+footer strong{color:#fff;font-size:.95rem;display:block;margin-bottom:6px}
+footer a{color:var(--secondary);margin:0 10px}
+footer a:hover{text-decoration:underline}
+.footer-sep{margin:12px 0;border-color:rgba(255,255,255,.1)}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:999;align-items:center;justify-content:center;padding:20px}
+.modal-box{background:#fff;border-radius:16px;padding:32px;max-width:560px;width:100%;max-height:80vh;overflow-y:auto;position:relative}
+.modal-box h3{color:var(--primary);font-size:1.2rem;font-weight:700;margin-bottom:16px}
+.modal-box p{font-size:.85rem;color:#444;line-height:1.7;margin-bottom:12px}
+.modal-close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#888}
+@media(min-width:600px){.album-grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:700px){.location-inner{grid-template-columns:1fr 1fr}}
+</style>
+<meta name="description" content="Secretos Beauty Parlour Indiba en Badajoz. Contacta ahora por WhatsApp.">
+<meta property="og:image" content="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AU_ZVEH1JodEYsEhU2Pn3MMDyjP2Ow4zXZnhSVcDzypd-mZSFBudywhfS5bqgkEruyqNQVdJxJVdPTO1S0F_rJvj7Bh6d5yAJPiYJ6z832ztZkU_YklfYA5m-pG7IsEBTp2mdzgSshGhDB80XqfmfjZ2tixZlHMfHWarEcC_k6ibRGaZXHEaDCdrj_jhOHiNy25Y_iytiRKgoXjs1fFNf6HPyqkJ3Ha8eJX44EY0yfqwo7zMQD086p_tiaCk_303qx_88EKp1cdkDer38HxfqK9jQhppIons68eicqeAF42Bzb2y6w&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw">
+<meta property="og:title" content="Secretos Beauty Parlour Indiba">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BeautySalon","name":"Secretos Beauty Parlour Indiba","telephone":"+34611514353","url":"https://albiazul1988-creator.github.io/cruzdigital-webs/secretos-beauty-parlour-indiba-badajoz-mn674e1a/","address":{"@type":"PostalAddress","addressLocality":"Badajoz","addressCountry":"ES","streetAddress":"Alcantara, 1, 06010 Badajoz"},"description":"Centro de estética ubicado en Badajoz, con 4.9 estrellas en Google, 26 reseñas verificadas.","image":"https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AU_ZVEH1JodEYsEhU2Pn3MMDyjP2Ow4zXZnhSVcDzypd-mZSFBudywhfS5bqgkEruyqNQVdJxJVdPTO1S0F_rJvj7Bh6d5yAJPiYJ6z832ztZkU_YklfYA5m-pG7IsEBTp2mdzgSshGhDB80XqfmfjZ2tixZlHMfHWarEcC_k6ibRGaZXHEaDCdrj_jhOHiNy25Y_iytiRKgoXjs1fFNf6HPyqkJ3Ha8eJX44EY0yfqwo7zMQD086p_tiaCk_303qx_88EKp1cdkDer38HxfqK9jQhppIons68eicqeAF42Bzb2y6w&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw","email":"contacto@cruzdigital.shop"}</script>
+</head>
+<body>
+<header>
+<div class="header-name">Secretos Beauty Parlour Indiba<span>Estética · Badajoz</span></div>
+<a href="https://wa.me/34611514353?text=Hola%2C%20me%20interesa%20informacion" class="header-wa" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.57a.75.75 0 00.922.921l5.763-1.47A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.718 9.718 0 01-4.953-1.355l-.355-.211-3.42.872.887-3.363-.23-.368A9.718 9.718 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+WhatsApp
+</a>
+</header>
+<section class="hero">
+<div class="hero-bg"></div>
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<div class="hero-badge">⭐ 4.9 en Google · Badajoz</div>
+<h1>La estética que<br>buscabas en <span>Badajoz</span></h1>
+<p>Centro premium con 4.9 estrellas y 26 reseñas verificadas.<br>Resultados reales, trato cercano.</p>
+<div class="hero-btns">
+<a href="https://wa.me/34611514353?text=Hola%2C%20me%20interesa%20informacion" class="btn-wa" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.57a.75.75 0 00.922.921l5.763-1.47A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.718 9.718 0 01-4.953-1.355l-.355-.211-3.42.872.887-3.363-.23-.368A9.718 9.718 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+Pedir cita por WhatsApp
+</a>
+<a href="tel:+34611514353" class="btn-call">
+<svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+Llamar ahora
+</a>
+</div>
+<p class="response-badge"><span>⚡ Respuesta en minutos</span></p>
+</div>
+</section>
+<section class="social-proof">
+<h2>Por qué eligen Secretos Beauty</h2>
+<div class="stats">
+<div class="stat">
+<div class="stat-num">4.9</div>
+<div class="stat-label">⭐ Valoración Google</div>
+</div>
+<div class="stat">
+<div class="stat-num">26</div>
+<div class="stat-label">Reseñas verificadas</div>
+</div>
+<div class="stat">
+<div class="stat-num">5</div>
+<div class="stat-label">Servicios especializados</div>
+</div>
+</div>
+<a href="https://maps.google.com/?q=Secretos%20Beauty%20Parlour%20Indiba%20Badajoz" target="_blank" rel="noopener" class="maps-link">
+<svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+Ver en Google Maps
+</a>
+</section>
+<section class="services">
+<h2>Nuestros servicios</h2>
+<p class="sub">Todo lo que necesitas en un solo lugar</p>
+<div class="services-grid">
+<div class="service-card"><div class="emoji">✨</div><div class="name">Tratamiento facial</div></div>
+<div class="service-card"><div class="emoji">🪒</div><div class="name">Depilación</div></div>
+<div class="service-card"><div class="emoji">💅</div><div class="name">Manicura</div></div>
+<div class="service-card"><div class="emoji">🦶</div><div class="name">Pedicura</div></div>
+<div class="service-card"><div class="emoji">💆</div><div class="name">Masaje relajante</div></div>
+</div>
+<div class="services-cta">
+<a href="https://wa.me/34611514353?text=Hola%2C%20me%20interesa%20informacion" class="btn-wa" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.57a.75.75 0 00.922.921l5.763-1.47A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.718 9.718 0 01-4.953-1.355l-.355-.211-3.42.872.887-3.363-.23-.368A9.718 9.718 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+Consultar disponibilidad
+</a>
+</div>
+</section>
+<section class="album">
+<h2>Nuestro espacio</h2>
+<div class="album-grid">
+<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AU_ZVEFywTuzP9h3G1KabLAYeryL12ZeHJYGHNeaAX65VOyPSOnamhF70SAX9Hm5vc0Pl4FMUf9WpBcmgCMJixZUb32SqY9ZSFd40smCyE7h-4WXj2OijD8npAVnFZveeEgIin6XXBnumnFGOFH_ANp0A1f8Q41vIbc8Vi4zOK2_w8OsLEtfgmbnrJzAv1f4db27WuoRVz6aRN5lS_FPReKlCb2sxIJY45Ly-CWcA8De93VqK0EZr8PKiypchaQ8PT_vEXav6oWejE5dfK5rtCSGzt6pEiF8fAV6gQQE_WHCI3cgzQ&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw" alt="Secretos Beauty Parlour Indiba Badajoz" loading="lazy">
+<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AU_ZVEGuZRX7DEl38Ga73NyWUmXXALp5VYSRGH6F82E55ZMMrNDM2GlYmZKcfdr8WDuDNUvBS9LbmGIAFPvfYjXwzG1b0r3Jpbk0EJdmGNZ9xmxHwnGL41429vEpCU1wc4_bnCd1NueBUqErQWyBUFcdGVU8mr3-4Dhb_I_569Mhf08Mn-IZ5qd1sI1nEycwGm_rIyAqFIwbSknMhBUzO_NsiFf6kWXuVGewr-8YLHflX5hIlyDSbz7nZsPul_QRc59yVDFLNqaFC1ZCyTUyyyxGnOWQU-7zqy_cFN-adWQIeWTSi0e_O2MT9Se0F6ZRmHUETTLr7eSZJiQArHbbLquwZcIa5yhR_K3Kxsa89i40zYKu5PDUSX_yVH3JrzVsL1QCCjhNMK_VnCS96MxGfTn07aKtG515Cn-p1cvgF87Jj7BWjtiv&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw" alt="Secretos Beauty Parlour Indiba Badajoz" loading="lazy">
+<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AU_ZVEE7NgM5vcF1PNNao6YKTe8hg5EOhlGyy0_sMwzsfmZNFrI-lRV62S73S4zJ_YhYa9aExmOEteifHiXqf_C2kQUd_2AqaGVpp_Zai-v6pJ_yN3jTUdctgZAIjfWq-wlDFvGesRvoTfL12fwtwejYxPUo4I0v12bF5GOnfc5X2JayjqA_d7mKPy-EdNnrbYlA8MQjobPM2lU2ZxU_sqTklzrmnn4pVwOvYETrvlhM5I6Kp8ps8ikTs9IK81XBIWFsAtp2xaAMvKOoqurWx6Fvn60BGQSj5fLnuQ8FuJ-EzNt_yg&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw" alt="Secretos Beauty Parlour Indiba Badajoz" loading="lazy">
+<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AU_ZVEHIp3cXy09GaJmrQDnUkTkK7X3vCM44G-3Gc025vvo8qmvvDHJ4y-g-uSG34qudtH4EHSD93JtlYx34FrDgFga2ytqrvw8RBZTxfLzvTJMoUwpIml7CCXnzvSJpDsXpnux-mMYAo_lQ9jDdmWsyNEoJoFJiVAUxEI9eMjBKmdwIr6O4QdoRVkJd5CP7Kd0hJ8avt4_5qeVtxomjO2oaoFLelyL5ks0YFXqPVEUCdxJSRkJf2m18mvSOhbPWDdAsEvXtz44uWC1xF7fKcta8hkHkLQ8kBeFVY6-_3nMBQq_iiA&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw" alt="Secretos Beauty Parlour Indiba Badajoz" loading="lazy">
+</div>
+</section>
+<section class="review">
+<div class="review-inner">
+<div class="review-quote">&ldquo;</div>
+<p class="review-text">Ayer fui a hacerme un lifting de pestañas y aunque tengo que reconocer que me daba un poco de miedo al no conocer el sitio y porque tampoco me lo había hecho nunca acabé encantada....</p>
+<div class="review-stars">★★★★★</div>
+<p class="review-author">— Saray Rodriguez · Google</p>
+</div>
+</section>
+<section class="cta-urgencia">
+<h2>¿Lista para sentirte bien?<br>Escríbenos ahora</h2>
+<p>Pide tu cita hoy y cuídate como mereces</p>
+<a href="https://wa.me/34611514353?text=Hola%2C%20me%20interesa%20informacion" class="btn-wa" target="_blank" rel<a href="https://wa.me/34611514353?text=Hola%2C%20me%20interesa%20informacion" target="_blank" rel="noopener" aria-label="WhatsApp" style="position:fixed;bottom:22px;right:18px;z-index:9998;background:#25D366;border-radius:50%;width:58px;height:58px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(37,211,102,0.5);text-decoration:none"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<div id="aviso-legal-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:99999;align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto">
+  <div style="background:#fff;color:#222;max-width:680px;width:100%;margin:40px auto;border-radius:14px;padding:36px;font-family:sans-serif;font-size:14px;line-height:1.75;position:relative">
+    <button onclick="document.getElementById('aviso-legal-modal').style.display='none'" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:#aaa">&#x2715;</button>
+    <h2 style="font-size:20px;font-weight:800;margin-bottom:6px">Aviso Legal y Pol&iacute;tica de Privacidad</h2>
+    <p style="font-size:12px;color:#999;margin-bottom:24px">Secretos Beauty Parlour Indiba &mdash; 2026</p>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">1. Datos del titular</h3>
+    <ul style="margin:10px 0 10px 20px;color:#444">
+      <li><strong>Titular:</strong> Secretos Beauty Parlour Indiba</li>
+      <li><strong>NIF/CIF:</strong> En tr&aacute;mitaci&oacute;n</li>
+      <li><strong>Domicilio:</strong> Alcantara, 1, 06010 Badajoz</li>
+      <li><strong>Tel&eacute;fono:</strong> 611514353</li>
+      <li><strong>Email:</strong> contacto@cruzdigital.shop</li>
+    </ul>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">2. Protecci&oacute;n de datos (RGPD)</h3>
+    <ul style="margin:10px 0 10px 20px;color:#444">
+      <li><strong>Responsable:</strong> Secretos Beauty Parlour Indiba</li>
+      <li><strong>Finalidad:</strong> Gesti&oacute;n de consultas comerciales</li>
+      <li><strong>Base jur&iacute;dica:</strong> Consentimiento (art. 6.1.a RGPD)</li>
+      <li><strong>Derechos:</strong> Acceso, rectificaci&oacute;n y supresi&oacute;n. Contacto: contacto@cruzdigital.shop</li>
+      <li><strong>Reclamaciones:</strong> <a href="https://www.aepd.es" target="_blank" style="color:#0077B6">www.aepd.es</a></li>
+    </ul>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">3. Cookies</h3>
+    <p>Este sitio no usa cookies de seguimiento ni anal&iacute;ticas.</p>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">4. Propiedad intelectual</h3>
+    <p>Contenidos propiedad de Secretos Beauty Parlour Indiba. Prohibida reproducci&oacute;n sin autorizaci&oacute;n.</p>
+    <p style="margin-top:24px;font-size:11px;color:#bbb;border-top:1px solid #eee;padding-top:14px">Dise&ntilde;o: Cruz Digital &middot; cruzdigital.shop</p>
+  </div>
+</div>
+<script>document.addEventListener('keydown',function(e){if(e.key==='Escape'){var m=document.getElementById('aviso-legal-modal');if(m)m.style.display='none';}});</script>
