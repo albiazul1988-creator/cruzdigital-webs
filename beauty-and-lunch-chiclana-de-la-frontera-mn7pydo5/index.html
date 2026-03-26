@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beauty and lunch — restaurante en Chiclana de la frontera</title>
+<meta name="description" content="Beauty and lunch en Chiclana de la frontera. Llama o escribe por WhatsApp ahora.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#FF6B35;--secondary:#FF9F1C;--dark:#1A0A00;--light:#FFF8F3}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:var(--light);color:var(--dark);overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+
+.btn-wa{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;font-weight:700;font-size:1rem;padding:14px 28px;border-radius:50px;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 15px rgba(37,211,102,.4)}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(37,211,102,.5)}
+.btn-wa svg{width:22px;height:22px;fill:#fff;flex-shrink:0}
+.btn-call{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#fff;font-weight:700;font-size:1rem;padding:14px 28px;border-radius:50px;border:2px solid #fff;cursor:pointer;transition:transform .2s,background .2s}
+.btn-call:hover{background:rgba(255,255,255,.15);transform:translateY(-2px)}
+.btn-call svg{width:20px;height:20px;fill:#fff;flex-shrink:0}
+
+header{position:sticky;top:0;z-index:999;background:var(--dark);display:flex;align-items:center;justify-content:space-between;padding:12px 20px;box-shadow:0 2px 10px rgba(0,0,0,.3)}
+header .logo{font-size:1.15rem;font-weight:800;color:#fff;letter-spacing:.5px}
+header .logo span{color:var(--secondary)}
+header .btn-wa{font-size:.85rem;padding:10px 18px}
+
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AU_ZVEEXbCWoiTKAyeU2WDoDan3ikyMmHQ6fZjqbRFfKY9fXGWK25zgbuR0smwx1BhbkzbObRlY8BHOujQL3REQBytGclYkhm5qmGTHTkTwFlO-NAsGGMsUXMCyWbZI9DaghgQcftyCmx_PcMDPkrcMbiDuM2vnzMmY1K3IazVC5FOE_Kc0hWyr77OyGXfuD7PBORRjxkhYFZbVVodjAx4mSJzDo-teGZ29SgZFm7nh0hZEGdm13DaS4wweWmc40h1sihM09d8F9R-r0invfQpE6R8bfbkRR9G-DYTQHZdOTPZ5IxbFX7cZqxWNGZKIWRerfupmpbLLHDzpxi4hY2IzjuyfDtzbF55G2DZsSJkx9BvRL4vL5sn_03QJAXyG2PRkKRBlCbgpOyPdCaj1bqNtyWUVkLhczngYyEb96hr2N2mKKtg&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw');background-size:cover;background-position:center}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(26,10,0,.75) 0%,rgba(26,10,0,.55) 100%)}
+.hero-content{position:relative;z-index:2;padding:20px;max-width:720px}
+.hero-badge{display:inline-block;background:var(--secondary);color:var(--dark);font-size:.78rem;font-weight:700;padding:6px 16px;border-radius:50px;margin-bottom:18px;text-transform:uppercase;letter-spacing:.8px}
+.hero h1{font-size:clamp(2rem,6vw,3.4rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:16px}
+.hero h1 span{color:var(--secondary)}
+.hero p{font-size:clamp(.95rem,2.5vw,1.2rem);color:rgba(255,255,255,.88);margin-bottom:28px;line-height:1.6}
+.hero-btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.response-badge{margin-top:20px;font-size:.8rem;color:rgba(255,255,255,.7);display:flex;align-items:center;justify-content:center;gap:6px}
+.response-badge::before{content:'⚡';font-size:1rem}
+
+.social-proof{background:var(--dark);padding:52px 20px;text-align:center}
+.social-proof h2{color:#fff;font-size:1rem;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:36px;opacity:.7}
+.stats{display:flex;flex-wrap:wrap;justify-content:center;gap:32px;margin-bottom:28px}
+.stat{flex:1;min-width:130px}
+.stat-num{font-size:clamp(2.4rem,7vw,3.8rem);font-weight:900;color:var(--secondary);line-height:1}
+.stat-label{font-size:.85rem;color:rgba(255,255,255,.65);margin-top:6px;font-weight:500}
+.maps-link{display:inline-flex;align-items:center;gap:8px;color:var(--primary);font-weight:700;font-size:.95rem;border:2px solid var(--primary);padding:10px 22px;border-radius:50px;transition:background .2s,color .2s}
+.maps-link:hover{background:var(--primary);color:#fff}
+.maps-link svg{width:18px;height:18px;fill:currentColor}
+
+.services{padding:60px 20px;background:var(--light);text-align:center}
+.section-title{font-size:clamp(1.5rem,4vw,2.2rem);font-weight:800;color:var(--dark);margin-bottom:8px}
+.section-sub{font-size:.95rem;color:#666;margin-bottom:36px}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;max-width:760px;margin:0 auto 36px}
+.service-card{background:#fff;border-radius:16px;padding:28px 16px;box-shadow:0 4px 20px rgba(0,0,0,.07);transition:transform .2s,box-shadow .2s;border-bottom:3px solid var(--primary)}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(0,0,0,.12)}
+.service-card .emoji{font-size:2.2rem;margin-bottom:10px}
+.service-card p{font-size:.9rem;font-weight:600;color:var(--dark)}
+
+.album{padding:52px 20px;background:#fff;text-align:center}
+.album h2{font-size:clamp(1.5rem,4vw,2.2rem);font-weight:800;margin-bottom:28px;color:var(--dark)}
+.album-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:900px;margin:0 auto}
+.album-grid img{width:100%;height:220px;object-fit:cover;border-radius:12px;transition:transform .3s}
+.album-grid img:hover{transform:scale(1.03)}
+@media(min-width:640px){.album-grid{grid-template-columns:repeat(3,1fr)}}
+
+.review{padding:52px 20px;background:var(--light);text-align:center}
+.review-inner{max-width:680px;margin:0 auto;background:#fff;border-radius:20px;padding:36px 28px;box-shadow:0 6px 30px rgba(0,0,0,.08);position:relative}
+.review-quote{font-size:5rem;line-height:.8;color:var(--primary);font-family:Georgia,serif;position:absolute;top:16px;left:24px;opacity:.25}
+.review-stars{color:var(--primary);font-size:1.4rem;margin-bottom:14px}
+.review-text{font-style:italic;font-size:clamp(1rem,2.5vw,1.15rem);line-height:1.7;color:#333;margin-bottom:18px}
+.review-author{font-weight:700;font-size:.9rem;color:#666}
+
+.cta{background:var(--primary);padding:64px 20px;text-align:center}
+.cta h2{font-size:clamp(1.8rem,5vw,3rem);font-weight:900;color:#fff;margin-bottom:12px;line-height:1.2}
+.cta p{color:rgba(255,255,255,.88);font-size:1.05rem;margin-bottom:32px}
+.cta .btn-wa{background:#fff;color:var(--primary);font-size:1.1rem;padding:16px 36px;box-shadow:0 6px 20px rgba(0,0,0,.2)}
+.cta .btn-wa svg{fill:var(--primary)}
+.cta .btn-wa:hover{background:var(--light)}
+
+.location{padding:56px 20px;background:#fff}
+.location-inner{max-width:860px;margin:0 auto}
+.location h2{font-size:clamp(1.5rem,4vw,2rem);font-weight:800;margin-bottom:28px;text-align:center;color:var(--dark)}
+.location-grid{display:grid;gap:28px}
+@media(min-width:640px){.location-grid{grid-template-columns:1fr 1fr;align-items:start}}
+.hours-table{width:100%;border-collapse:collapse}
+.hours-table tr{border-bottom:1px solid #f0ece8}
+.hours-table td{padding:10px 8px;font-size:.92rem}
+.hours-table td:first-child{font-weight:600;color:var(--dark);text-transform:capitalize}
+.hours-table td:last-child{color:#555;text-align:right}
+.hours-note{font-size:.8rem;color:#888;margin-top:10px;font-style:italic}
+.address-box{background:var(--light);border-radius:14px;padding:18px;margin-bottom:16px}
+.address-box p{font-size:.9rem;color:#555;line-height:1.6}
+.address-box strong{color:var(--dark);display:block;margin-bottom:4px;font-size:1rem}
+
+footer{background:var(--dark);padding:28px 20px;text-align:center}
+footer .footer-name{color:#fff;font-weight:800;font-size:1.1rem;margin-bottom:6px}
+footer .footer-tel a{color:var(--secondary);font-weight:600;font-size:.95rem}
+footer .footer-links{margin-top:12px;display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
+footer .footer-links a{color:rgba(255,255,255,.5);font-size:.8rem;transition:color .2s}
+footer .footer-links a:hover{color:#fff}
+footer .footer-cruz{color:rgba(255,255,255,.3);font-size:.75rem;margin-top:14px}
+footer .footer-cruz a{color:rgba(255,255,255,.4);text-decoration:underline}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:9999;align-items:center;justify-content:center;padding:20px}
+.modal-box{background:#fff;border-radius:16px;max-width:600px;width:100%;max-height:85vh;overflow-y:auto;padding:32px 24px;position:relative}
+.modal-box h3{font-size:1.3rem;font-weight:800;color:var(--dark);margin-bottom:16px}
+.modal-box p,.modal-box li{font-size:.88rem;color:#444;line-height:1.7;margin-bottom:10px}
+.modal-box ul{padding-left:18px;margin-bottom:10px}
+.modal-close{position:absolute;top:14px;right:18px;font-size:1.5rem;cursor:pointer;color:#888;background:none;border:none;font-weight:700}
+.modal-close:hover{color:var(--dark)}
+</style>
+<meta name="description" content="Beauty and lunch en Chiclana de la frontera. Contacta ahora por WhatsApp.">
+<meta property="og:image" content="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AU_ZVEEXbCWoiTKAyeU2WDoDan3ikyMmHQ6fZjqbRFfKY9fXGWK25zgbuR0smwx1BhbkzbObRlY8BHOujQL3REQBytGclYkhm5qmGTHTkTwFlO-NAsGGMsUXMCyWbZI9DaghgQcftyCmx_PcMDPkrcMbiDuM2vnzMmY1K3IazVC5FOE_Kc0hWyr77OyGXfuD7PBORRjxkhYFZbVVodjAx4mSJzDo-teGZ29SgZFm7nh0hZEGdm13DaS4wweWmc40h1sihM09d8F9R-r0invfQpE6R8bfbkRR9G-DYTQHZdOTPZ5IxbFX7cZqxWNGZKIWRerfupmpbLLHDzpxi4hY2IzjuyfDtzbF55G2DZsSJkx9BvRL4vL5sn_03QJAXyG2PRkKRBlCbgpOyPdCaj1bqNtyWUVkLhczngYyEb96hr2N2mKKtg&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw">
+<meta property="og:title" content="Beauty and lunch">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Beauty and lunch","telephone":"+34667664844","url":"https://albiazul1988-creator.github.io/cruzdigital-webs/beauty-and-lunch-chiclana-de-la-frontera-mn7pydo5/","address":{"@type":"PostalAddress","addressLocality":"Chiclana de la frontera","addressCountry":"ES","streetAddress":"Salina Santa María de Jesús, Camino de, 11130 Chiclana de la Frontera, Cádiz"},"description":"Restaurante ubicado en Chiclana de la frontera, con 4.3 estrellas en Google, 518 reseñas verificadas.","image":"https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AU_ZVEEXbCWoiTKAyeU2WDoDan3ikyMmHQ6fZjqbRFfKY9fXGWK25zgbuR0smwx1BhbkzbObRlY8BHOujQL3REQBytGclYkhm5qmGTHTkTwFlO-NAsGGMsUXMCyWbZI9DaghgQcftyCmx_PcMDPkrcMbiDuM2vnzMmY1K3IazVC5FOE_Kc0hWyr77OyGXfuD7PBORRjxkhYFZbVVodjAx4mSJzDo-teGZ29SgZFm7nh0hZEGdm13DaS4wweWmc40h1sihM09d8F9R-r0invfQpE6R8bfbkRR9G-DYTQHZdOTPZ5IxbFX7cZqxWNGZKIWRerfupmpbLLHDzpxi4hY2IzjuyfDtzbF55G2DZsSJkx9BvRL4vL5sn_03QJAXyG2PRkKRBlCbgpOyPdCaj1bqNtyWUVkLhczngYyEb96hr2N2mKKtg&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw","email":"Albiazul1988@gmail.com"}</script>
+</head>
+<body>
+
+<header>
+  <div class="logo">Beauty <span>&</span> Lunch</div>
+  <a class="btn-wa" href="https://wa.me/34667664844?text=Hola%2C%20me%20interesa%20informacion">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WhatsApp
+  </a>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">⭐ 4.3 · 518 reseñas en Google</div>
+    <h1>La <span>restaurante</span> que buscabas en Chiclana de la Frontera</h1>
+    <p>Gastronomía en un entorno único de salinas. Reservas, carta y comida para llevar.</p>
+    <div class="hero-btns">
+      <a class="btn-wa" href="https://wa.me/34667664844?text=Hola%2C%20me%20interesa%20informacion">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <a class="btn-call" href="tel:+34667664844">
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        Llamar ahora
+      </a>
+    </div>
+    <div class="response-badge">Respuesta en minutos</div>
+  </div>
+</section>
+
+<section class="social-proof">
+  <h2>Por qué elegirnos</h2>
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-num">518</div>
+      <div class="stat-label">Reseñas verificadas</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">4.3★</div>
+      <div class="stat-label">Valoración Google</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Clientes satisfechos</div>
+    </div>
+  </div>
+  <a class="maps-link" href="https://maps.google.com/?q=Beauty%20and%20lunch%20Chiclana%20de%20la%20frontera" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+    Ver en Google Maps
+  </a>
+</section>
+
+<section class="services">
+  <h2 class="section-title">Nuestros servicios</h2>
+  <p class="section-sub">Todo lo que necesitas en un solo lugar</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="emoji">🍽️</div>
+      <p>Consultar carta en local</p>
+    </div>
+    <div class="service-card">
+      <div class="emoji">📅</div>
+      <p>Reservas</p>
+    </div>
+    <div class="service-card">
+      <div class="emoji">🥡</div>
+      <p>Comida para llevar</p>
+    </div>
+  </div>
+  <a class="btn-wa" href="https://wa.me/34667664844?text=Hola%2C%20me%20interesa%20informacion">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Consultar por WhatsApp
+  </a>
+</section>
+
+<section class="album">
+  <h2>Nuestro espacio</h2>
+  <div class="album-grid">
+    <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AU_ZVEERtMqxB4ON8p5iAN5Y68F7QeB_74wQvaZduN_bUXzUtRVQ8x8vjKEcZOohLMkeI0L-Vdate0c-0YANSJ-Idk_tVat7zFS9pGDedBOL_lexbhVr1EWwnX6PZYNXw3UdFKZ2PrsJzp_SbvmhXZlKorfW6MMyGZxL3jLwd089iDsYWEU6XRq4P43tz42d2FYH9NumpBaLWdBgFBn8xj4RvcfW4m48HmIvo3KQ9ELD2o5hkODU2LA3bqX5XBPkHhRQAVQPsQVkHIRrG5BgnD3FZ5vpyk-XkKOIcxEn3e8CgSRk9qEBowo0t8gEh9oruZQ9G2Bwqcjp9RkIKGoQSzo4s6I4Xc29CNVTVfKdi8Zw4mOF7h0PSSrfq3Jl06C_eLD3jqXattkk6xfz_7QpJL5OfcPez4bP-6McODHauAdT0LPMFuU&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw" alt="Beauty and lunch" loading="lazy">
+    <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AU_ZVEFzUw5Y6TrS5A2AU1tkn60KMZQTyH025j1NhKHBNGbouYNDjyU1hoyaoT6TZbPWHngQJFKDHne5C0jAxOZu6IQx-oAFKv92wNwuAw59W4MEcitDvMKJc27oR2d1lbaVvTmJ2hnr4S99D0IdwVLMLjLcfOrrBCyG8T-_-vPbMvP6C0KzqatjdathvnxF-1okYrBuvQcMrUjfyou61djqNO02Yz2tynXSyAJs2TUbXq6SOuIpygw1c2VnyaeW7MMh2yljiWfGCk_9uXiv6YOycMvheH9plUmyQ9lwFdQxzad4uw&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw" alt="Beauty and lunch" loading="lazy">
+    <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AU_ZVEGnNwSxXIIVufCdVVmK5QZS-LCU4N6osRJFY9tsDx3SOMPUnSk6SZ1NJUAKcUSmILajkD8mCl6artWarpAesvxQTCeY8Frw180ASmG2oyyiKriYb4sUrleACwitubTa8-4w7GU_q0jzXOEtSPiTDb55waaqES6Ub4sJit1pR8m7HsdWcWY9MJe0IL3g-ZBVOKYCG_vvXCsD9N4F6MwJIe56vy3lP-6fc2PLDy_vQo7jIvUU1U6O1uuzNHg-OjhAEgD-cjL9licY97vhUz9VAIzTKLb9fQ9fHaAggvKHc9OKuv-G9qphKRFHnBQFwEUI8v9VKTB4A_g9zYC3qOjiX2z8P1ZUiTBF4xmnrxnqBD8KKPD0xK3z1LvD4xdlBjKJ90ltNbeqEK5jpc65E6iQiQqIVFXCYe<a href="https://wa.me/34667664844?text=Hola%2C%20me%20interesa%20informacion" target="_blank" rel="noopener" aria-label="WhatsApp" style="position:fixed;bottom:22px;right:18px;z-index:9998;background:#25D366;border-radius:50%;width:58px;height:58px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(37,211,102,0.5);text-decoration:none"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<div id="aviso-legal-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:99999;align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto">
+  <div style="background:#fff;color:#222;max-width:680px;width:100%;margin:40px auto;border-radius:14px;padding:36px;font-family:sans-serif;font-size:14px;line-height:1.75;position:relative">
+    <button onclick="document.getElementById('aviso-legal-modal').style.display='none'" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:#aaa">&#x2715;</button>
+    <h2 style="font-size:20px;font-weight:800;margin-bottom:6px">Aviso Legal y Pol&iacute;tica de Privacidad</h2>
+    <p style="font-size:12px;color:#999;margin-bottom:24px">Beauty and lunch &mdash; 2026</p>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">1. Datos del titular</h3>
+    <ul style="margin:10px 0 10px 20px;color:#444">
+      <li><strong>Titular:</strong> Beauty and lunch</li>
+      <li><strong>NIF/CIF:</strong> En tr&aacute;mitaci&oacute;n</li>
+      <li><strong>Domicilio:</strong> Salina Santa María de Jesús, Camino de, 11130 Chiclana de la Frontera, Cádiz</li>
+      <li><strong>Tel&eacute;fono:</strong> 667664844</li>
+      <li><strong>Email:</strong> Albiazul1988@gmail.com</li>
+    </ul>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">2. Protecci&oacute;n de datos (RGPD)</h3>
+    <ul style="margin:10px 0 10px 20px;color:#444">
+      <li><strong>Responsable:</strong> Beauty and lunch</li>
+      <li><strong>Finalidad:</strong> Gesti&oacute;n de consultas comerciales</li>
+      <li><strong>Base jur&iacute;dica:</strong> Consentimiento (art. 6.1.a RGPD)</li>
+      <li><strong>Derechos:</strong> Acceso, rectificaci&oacute;n y supresi&oacute;n. Contacto: Albiazul1988@gmail.com</li>
+      <li><strong>Reclamaciones:</strong> <a href="https://www.aepd.es" target="_blank" style="color:#0077B6">www.aepd.es</a></li>
+    </ul>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">3. Cookies</h3>
+    <p>Este sitio no usa cookies de seguimiento ni anal&iacute;ticas.</p>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">4. Propiedad intelectual</h3>
+    <p>Contenidos propiedad de Beauty and lunch. Prohibida reproducci&oacute;n sin autorizaci&oacute;n.</p>
+    <p style="margin-top:24px;font-size:11px;color:#bbb;border-top:1px solid #eee;padding-top:14px">Dise&ntilde;o: Cruz Digital &middot; cruzdigital.shop</p>
+  </div>
+</div>
+<script>document.addEventListener('keydown',function(e){if(e.key==='Escape'){var m=document.getElementById('aviso-legal-modal');if(m)m.style.display='none';}});</script>
