@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Santi mace flow — clinica en Chiclana de la frontera</title>
+<meta name="description" content="Santi mace flow en Chiclana de la frontera. Llama o escribe por WhatsApp ahora.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#0077B6;--secondary:#00B4D8;--dark:#001220;--light:#EFF9FF}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;color:var(--dark);background:#fff;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+.btn-wa{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;font-weight:700;font-size:1rem;padding:14px 28px;border-radius:50px;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 15px rgba(37,211,102,.4)}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,211,102,.5)}
+.btn-wa svg{width:22px;height:22px;fill:#fff;flex-shrink:0}
+.btn-call{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#fff;font-weight:700;font-size:1rem;padding:14px 28px;border-radius:50px;border:2px solid #fff;cursor:pointer;transition:transform .2s,background .2s}
+.btn-call:hover{background:rgba(255,255,255,.15);transform:translateY(-2px)}
+.btn-call svg{width:20px;height:20px;fill:#fff;flex-shrink:0}
+header{position:sticky;top:0;z-index:999;background:var(--dark);display:flex;align-items:center;justify-content:space-between;padding:14px 20px;box-shadow:0 2px 12px rgba(0,0,0,.3)}
+header .logo{color:#fff;font-weight:900;font-size:1.1rem;letter-spacing:.5px}
+header .btn-wa{padding:10px 20px;font-size:.9rem}
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AU_ZVEHGVbO4Mi43N7J9Jpq0AIhbSIgD48R2tlNYdzdmf1fFYc2E8iQe6m-XF1thigG8dZS1XhsgIL0noNMd8Zjn2AvS9Q-RoVoHU7pxgSzYdOpjpt8CNIGiN3Adx7_0hyKCA_e6e8q4Ga9w8ScuV_zBLi7i4htFmPyvxbi5ZTFEoWeKax-jOdhFG4nSaxvlJwGDe59afVO4IysrhhQfgObvq9Kfs6UoQA_rEt-AoVkbfQRTZ3u6JbUgNIEMpkgtR8BxugSRj7QNMxYKRCLymc6Ggw-5p5KDpU5eapCByPcLdyyfLA&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw');background-size:cover;background-position:center;filter:brightness(.38)}
+.hero-content{position:relative;z-index:1;padding:40px 20px;max-width:780px;margin:0 auto}
+.hero-content h1{color:#fff;font-size:clamp(2rem,6vw,3.6rem);font-weight:900;line-height:1.15;margin-bottom:18px;text-shadow:0 2px 12px rgba(0,0,0,.5)}
+.hero-content p{color:rgba(255,255,255,.88);font-size:clamp(1rem,2.5vw,1.25rem);margin-bottom:32px;font-weight:400}
+.hero-btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.badge{display:inline-block;background:var(--secondary);color:#fff;font-weight:700;font-size:.82rem;padding:6px 16px;border-radius:50px;margin-bottom:22px;letter-spacing:.5px;text-transform:uppercase}
+.social-proof{background:var(--dark);padding:60px 20px;text-align:center}
+.social-proof h2{color:#fff;font-size:1rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:36px;opacity:.7}
+.cifras{display:flex;flex-wrap:wrap;justify-content:center;gap:32px;margin-bottom:32px}
+.cifra{min-width:140px}
+.cifra span{display:block;color:var(--secondary);font-size:clamp(2.4rem,6vw,3.8rem);font-weight:900;line-height:1}
+.cifra small{color:rgba(255,255,255,.7);font-size:.9rem;margin-top:6px;display:block}
+.maps-link{display:inline-flex;align-items:center;gap:8px;color:var(--secondary);font-weight:600;font-size:.95rem;border:1px solid var(--secondary);padding:10px 22px;border-radius:50px;transition:background .2s}
+.maps-link:hover{background:rgba(0,180,216,.1)}
+.maps-link svg{width:18px;height:18px;fill:var(--secondary)}
+.servicios{padding:64px 20px;background:var(--light)}
+.servicios h2{text-align:center;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;color:var(--dark);margin-bottom:40px}
+.grid-servicios{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;max-width:900px;margin:0 auto 40px}
+.card-serv{background:#fff;border-radius:16px;padding:28px 18px;text-align:center;box-shadow:0 4px 18px rgba(0,119,182,.08);transition:transform .2s,box-shadow .2s}
+.card-serv:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(0,119,182,.15)}
+.card-serv .emoji{font-size:2.4rem;margin-bottom:12px}
+.card-serv p{font-weight:600;font-size:.98rem;color:var(--dark)}
+.servicios .wa-wrap{text-align:center}
+.album{padding:64px 20px;background:#fff}
+.album h2{text-align:center;font-size:clamp(1.4rem,3.5vw,2rem);font-weight:900;color:var(--dark);margin-bottom:32px}
+.album-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:960px;margin:0 auto}
+@media(min-width:640px){.album-grid{grid-template-columns:1fr 1fr 1fr}}
+.album-grid img{width:100%;height:220px;object-fit:cover;border-radius:12px;display:block}
+.resena{background:var(--light);padding:64px 20px;text-align:center}
+.resena .comillas{font-size:5rem;line-height:.8;color:var(--primary);font-family:Georgia,serif;display:block;margin-bottom:8px}
+.resena blockquote{font-style:italic;font-size:clamp(1.05rem,2.5vw,1.3rem);color:var(--dark);max-width:680px;margin:0 auto 20px;line-height:1.7}
+.resena .autor{color:var(--dark);font-weight:600;font-size:.95rem;margin-bottom:8px}
+.resena .estrellas{color:var(--primary);font-size:1.4rem;letter-spacing:3px}
+.cta-urgencia{background:var(--primary);padding:72px 20px;text-align:center}
+.cta-urgencia h2{color:#fff;font-size:clamp(1.8rem,5vw,3rem);font-weight:900;margin-bottom:14px;line-height:1.2}
+.cta-urgencia p{color:rgba(255,255,255,.85);font-size:1.05rem;margin-bottom:36px}
+.cta-urgencia .btn-wa{background:#fff;color:#128C7E;box-shadow:0 6px 24px rgba(0,0,0,.2);font-size:1.1rem;padding:18px 40px}
+.cta-urgencia .btn-wa:hover{background:#f0fdf4}
+.cta-urgencia .btn-wa svg{fill:#25D366}
+.ubicacion{padding:64px 20px;background:#fff}
+.ubicacion h2{text-align:center;font-size:clamp(1.4rem,3.5vw,2rem);font-weight:900;color:var(--dark);margin-bottom:36px}
+.ubi-wrap{display:grid;grid-template-columns:1fr;gap:28px;max-width:900px;margin:0 auto}
+@media(min-width:700px){.ubi-wrap{grid-template-columns:1fr 1fr;align-items:start}}
+.horarios-table{width:100%;border-collapse:collapse}
+.horarios-table td{padding:10px 14px;border-bottom:1px solid #e0eef5;font-size:.95rem}
+.horarios-table td:first-child{font-weight:600;color:var(--primary)}
+.dir-block{display:flex;align-items:flex-start;gap:10px;margin-bottom:16px;font-size:.95rem;color:var(--dark)}
+.dir-block svg{flex-shrink:0;width:20px;height:20px;fill:var(--primary);margin-top:2px}
+footer{background:var(--dark);padding:32px 20px;text-align:center}
+footer .fname{color:#fff;font-weight:700;font-size:1rem;margin-bottom:6px}
+footer .ftel{color:var(--secondary);font-size:.95rem;margin-bottom:14px;display:block}
+footer .flinks{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:16px}
+footer .flinks a{color:rgba(255,255,255,.6);font-size:.85rem;transition:color .2s}
+footer .flinks a:hover{color:#fff}
+footer .cruz{color:rgba(255,255,255,.3);font-size:.78rem}
+footer .cruz a{color:rgba(255,255,255,.5);font-weight:600}
+footer .cruz a:hover{color:#fff}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:9999;align-items:center;justify-content:center;padding:20px}
+.modal-box{background:#fff;border-radius:16px;max-width:640px;width:100%;max-height:85vh;overflow-y:auto;padding:36px 28px;position:relative}
+.modal-box h3{font-size:1.3rem;font-weight:900;color:var(--dark);margin-bottom:16px}
+.modal-box p{font-size:.88rem;color:#444;line-height:1.7;margin-bottom:12px}
+.modal-close{position:absolute;top:14px;right:18px;font-size:1.5rem;cursor:pointer;color:var(--dark);background:none;border:none;font-weight:700}
+@media(max-width:480px){.hero-btns{flex-direction:column;align-items:center}.btn-wa,.btn-call{width:100%;justify-content:center}}
+</style>
+<meta name="description" content="Santi mace flow en Chiclana de la frontera. Contacta ahora por WhatsApp.">
+<meta property="og:image" content="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AU_ZVEHGVbO4Mi43N7J9Jpq0AIhbSIgD48R2tlNYdzdmf1fFYc2E8iQe6m-XF1thigG8dZS1XhsgIL0noNMd8Zjn2AvS9Q-RoVoHU7pxgSzYdOpjpt8CNIGiN3Adx7_0hyKCA_e6e8q4Ga9w8ScuV_zBLi7i4htFmPyvxbi5ZTFEoWeKax-jOdhFG4nSaxvlJwGDe59afVO4IysrhhQfgObvq9Kfs6UoQA_rEt-AoVkbfQRTZ3u6JbUgNIEMpkgtR8BxugSRj7QNMxYKRCLymc6Ggw-5p5KDpU5eapCByPcLdyyfLA&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw">
+<meta property="og:title" content="Santi mace flow">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalBusiness","name":"Santi mace flow","telephone":"+34654690279","url":"https://albiazul1988-creator.github.io/cruzdigital-webs/santi-mace-flow-chiclana-de-la-frontera-mn7j4h4m/","address":{"@type":"PostalAddress","addressLocality":"Chiclana de la frontera","addressCountry":"ES","streetAddress":"Ctra. de la Barrosa, 118, local 11, 11130 Chiclana de la Frontera, Cádiz"},"description":"Clínica ubicado en Chiclana de la frontera, con 5 estrellas en Google, 80 reseñas verificadas.","image":"https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AU_ZVEHGVbO4Mi43N7J9Jpq0AIhbSIgD48R2tlNYdzdmf1fFYc2E8iQe6m-XF1thigG8dZS1XhsgIL0noNMd8Zjn2AvS9Q-RoVoHU7pxgSzYdOpjpt8CNIGiN3Adx7_0hyKCA_e6e8q4Ga9w8ScuV_zBLi7i4htFmPyvxbi5ZTFEoWeKax-jOdhFG4nSaxvlJwGDe59afVO4IysrhhQfgObvq9Kfs6UoQA_rEt-AoVkbfQRTZ3u6JbUgNIEMpkgtR8BxugSRj7QNMxYKRCLymc6Ggw-5p5KDpU5eapCByPcLdyyfLA&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw","email":"Albiazul1988@gmail.com"}</script>
+</head>
+<body>
+<header>
+<div class="logo">Santi mace flow</div>
+<a href="https://wa.me/34654690279?text=Hola%2C%20me%20interesa%20informacion" class="btn-wa" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.85L.057 23.215c-.073.267.162.51.432.448l5.546-1.454A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.806 9.806 0 01-5.001-1.374l-.358-.213-3.713.974 1.01-3.598-.234-.37A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+WhatsApp
+</a>
+</header>
+<section class="hero">
+<div class="hero-bg"></div>
+<div class="hero-content">
+<div class="badge">⚡ Respuesta en minutos</div>
+<h1>La clínica que buscabas en Chiclana de la Frontera</h1>
+<p>5 estrellas en Google · 80 reseñas verificadas · Atención personalizada</p>
+<div class="hero-btns">
+<a href="https://wa.me/34654690279?text=Hola%2C%20me%20interesa%20informacion" class="btn-wa" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.85L.057 23.215c-.073.267.162.51.432.448l5.546-1.454A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.806 9.806 0 01-5.001-1.374l-.358-.213-3.713.974 1.01-3.598-.234-.37A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+Escribir por WhatsApp
+</a>
+<a href="tel:+34654690279" class="btn-call">
+<svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.24 1.02l-2.21 2.2z"/></svg>
+Llamar ahora
+</a>
+</div>
+</div>
+</section>
+<section class="social-proof">
+<h2>Por qué eligen Santi mace flow</h2>
+<div class="cifras">
+<div class="cifra">
+<span>80+</span>
+<small>Reseñas verificadas</small>
+</div>
+<div class="cifra">
+<span>5★</span>
+<small>Valoración Google</small>
+</div>
+<div class="cifra">
+<span>100%</span>
+<small>Clientes satisfechos</small>
+</div>
+</div>
+<a href="https://maps.google.com/?q=Santi%20mace%20flow%20Chiclana%20de%20la%20frontera" target="_blank" rel="noopener" class="maps-link">
+<svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+Ver en Google Maps
+</a>
+</section>
+<section class="servicios">
+<h2>Nuestros Servicios</h2>
+<div class="grid-servicios">
+<div class="card-serv">
+<div class="emoji">🩺</div>
+<p>Primera consulta</p>
+</div>
+<div class="card-serv">
+<div class="emoji">🔍</div>
+<p>Diagnóstico</p>
+</div>
+<div class="card-serv">
+<div class="emoji">💊</div>
+<p>Tratamiento</p>
+</div>
+<div class="card-serv">
+<div class="emoji">📋</div>
+<p>Revisión periódica</p>
+</div>
+</div>
+<div class="wa-wrap">
+<a href="https://wa.me/34654690279?text=Hola%2C%20me%20interesa%20informacion" class="btn-wa" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.85L.057 23.215c-.073.267.162.51.432.448l5.546-1.454A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.806 9.806 0 01-5.001-1.374l-.358-.213-3.713.974 1.01-3.598-.234-.37A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+Consultar por WhatsApp
+</a>
+</div>
+</section>
+<section class="album">
+<h2>Nuestro espacio</h2>
+<div class="album-grid">
+<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AU_ZVEEWiyHUyEenlvuxjBn5UHu7ly4Ayu_-3_AjQtUJtJ4bRhVmjfZ1Nkgz-N-m6VWYi_pJvnrzJ36uae1cIoyYSnTbABCwKioif1UQz0_dv3mKk4-pp5ENqKx2v-vMwxx5Bd3HXXOIy8KBA7ACVQJ_A11UTa0zlAgKE-o2a_i6V0yOKBuXne9trLNjngQdFmT3cnrAmPbD6QO8Cn7lwNvarEQa6JJbpO0HxiQ_x9QvdhxRNWrfk0e1yutd5swniy6oSFPFE9nT6zyZPilf51S8tmC1r3erwI9U26HBfX61vdWmZA&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw" alt="Espacio Santi mace flow" loading="lazy">
+<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AU_ZVEHXfZy53jeIAiVOSG-0X-yf0A9pbMQrYNq7i9BJVkX3SGcG4NB3G-yb1-yYlhdk6Mee8QxLoS5A68FWzkD2IgXvhkdD1Aqa_rfV2vVnrw0rPU2j1p7OLsp1Fxgf4nqyajvXHQgQQ7NCjEAH1zj8T3dNPZ2XrgbEojfQSlo8Mtz6PzqsteUqkKgvTmCLWN40r9kxLJGu00qac2UsRKZx0tOHyTEwGQUUsFrN1yGiLIClSxtIxm2xxNXxVDd2KKys3or8fz29RDXTZ3KP0vaMIK7aXWG8DIJXMDjfjmTwqMYQAw&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw" alt="Espacio Santi mace flow" loading="lazy">
+<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AU_ZVEFsOCQEY-CVKEesuHsJmQtiv1rYDmoFmPq5SBaIQDL4TVy9bGxgLJa4VSIoskYXfyyvJI8nMWE_MEURMUslGP-rAwseuUk80vuGzRmCOD0sb33vbHRsj_CBAdf_wtkhung8QG3IX9MGjGLPMmh0EMHc5dHn0wGLKFsxGl7PX0epbJH5QzdDPQIVdaanGw969cZ9bXOVD7nDU8zV3pZ3UsZYc5XED8Xs4f-pY4yd9KuBLU7uZKKeZ87-ahhevzW6JuTwNf8W3JtU4H-Y888SNXYT_G_ZrnebYgj6y6yoOb9ZdA&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw" alt="Espacio Santi mace flow" loading="lazy">
+<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AU_ZVEF6Tk-jBOyTxO9dU93q_cEkvkRbCeEhGq7RgPzN-4hxbEB5VNTkbAacVc9BeVkCZB3iC39Ymyk1KEFC01fXaqQ_MQLLXlAmsbJEJK4-LWkCtXHcTYZ0Zm5e_ifYWd0X7cr-9KHkvccRErht8wB192jf0Z4bepSw4bqYpfqyH2xBGwRUix_Ts6dNnIbGSEcsGFWgqM1OMM91S7kGrUjKRutywucVS82LAppVatU1X9NkF4rIuv6NK5veeUe6GL8B3SwzpAYqdm-HcrKaz7Qsp-BsnRGz0yo9Zq3S6t67C4KaKux6BgAef1Fek2hhZx7UWY4-jmS97PXo9J3VrOnmR-yE5UAG8MDVbycecgc47ibSofdKW8bk17KTiJ042NZkJLWQZ42Cg2zjwV1OiP2IU1lqOPZu64QGrI2IJoQB8CUwoGtM&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw" alt="Espacio Santi mace flow" loading="lazy">
+</div>
+</section>
+<section class="resena">
+<span class="comillas">&ldquo;</span>
+<blockquote>Lugar mágico con grandes profesionales, comprometidas con lo que hacen.<br><br>Llevo varios años practicando con ellas. No puedo más que agradecer cada instante compartido en sus clases....</blockquote>
+<p class="autor">— Lucía Muñoz · Google</p>
+<div class="estrellas">★★★★★</div>
+</section>
+<section class="cta-urgencia">
+<h2>¿Listo para empezar?</h2>
+<p>Escríbenos ahora y te respondemos en minutos</p>
+<a href="https://wa.me/34654690279?text=Hola%2C%20me%20interesa%20informacion" class="btn-wa" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2<a href="https://wa.me/34654690279?text=Hola%2C%20me%20interesa%20informacion" target="_blank" rel="noopener" aria-label="WhatsApp" style="position:fixed;bottom:22px;right:18px;z-index:9998;background:#25D366;border-radius:50%;width:58px;height:58px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(37,211,102,0.5);text-decoration:none"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<div id="aviso-legal-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:99999;align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto">
+  <div style="background:#fff;color:#222;max-width:680px;width:100%;margin:40px auto;border-radius:14px;padding:36px;font-family:sans-serif;font-size:14px;line-height:1.75;position:relative">
+    <button onclick="document.getElementById('aviso-legal-modal').style.display='none'" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:#aaa">&#x2715;</button>
+    <h2 style="font-size:20px;font-weight:800;margin-bottom:6px">Aviso Legal y Pol&iacute;tica de Privacidad</h2>
+    <p style="font-size:12px;color:#999;margin-bottom:24px">Santi mace flow &mdash; 2026</p>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">1. Datos del titular</h3>
+    <ul style="margin:10px 0 10px 20px;color:#444">
+      <li><strong>Titular:</strong> Santi mace flow</li>
+      <li><strong>NIF/CIF:</strong> En tr&aacute;mitaci&oacute;n</li>
+      <li><strong>Domicilio:</strong> Ctra. de la Barrosa, 118, local 11, 11130 Chiclana de la Frontera, Cádiz</li>
+      <li><strong>Tel&eacute;fono:</strong> 654690279</li>
+      <li><strong>Email:</strong> Albiazul1988@gmail.com</li>
+    </ul>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">2. Protecci&oacute;n de datos (RGPD)</h3>
+    <ul style="margin:10px 0 10px 20px;color:#444">
+      <li><strong>Responsable:</strong> Santi mace flow</li>
+      <li><strong>Finalidad:</strong> Gesti&oacute;n de consultas comerciales</li>
+      <li><strong>Base jur&iacute;dica:</strong> Consentimiento (art. 6.1.a RGPD)</li>
+      <li><strong>Derechos:</strong> Acceso, rectificaci&oacute;n y supresi&oacute;n. Contacto: Albiazul1988@gmail.com</li>
+      <li><strong>Reclamaciones:</strong> <a href="https://www.aepd.es" target="_blank" style="color:#0077B6">www.aepd.es</a></li>
+    </ul>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">3. Cookies</h3>
+    <p>Este sitio no usa cookies de seguimiento ni anal&iacute;ticas.</p>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">4. Propiedad intelectual</h3>
+    <p>Contenidos propiedad de Santi mace flow. Prohibida reproducci&oacute;n sin autorizaci&oacute;n.</p>
+    <p style="margin-top:24px;font-size:11px;color:#bbb;border-top:1px solid #eee;padding-top:14px">Dise&ntilde;o: Cruz Digital &middot; cruzdigital.shop</p>
+  </div>
+</div>
+<script>document.addEventListener('keydown',function(e){if(e.key==='Escape'){var m=document.getElementById('aviso-legal-modal');if(m)m.style.display='none';}});</script>
