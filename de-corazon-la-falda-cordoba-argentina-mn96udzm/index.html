@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>de corazon — otros en la falda cordoba argentina</title>
+<meta name="description" content="de corazon en la falda cordoba argentina. Llama o escribe por WhatsApp ahora.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#1A1A2E;--secondary:#E94560;--dark:#0A0A14;--light:#F8F8FF}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:var(--light);color:var(--dark);overflow-x:hidden}
+a{text-decoration:none}
+.btn-wa{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;font-weight:700;padding:14px 28px;border-radius:50px;font-size:1rem;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 20px rgba(37,211,102,.4)}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,.5)}
+.btn-call{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#fff;font-weight:700;padding:14px 28px;border-radius:50px;font-size:1rem;border:2px solid #fff;transition:background .2s}
+.btn-call:hover{background:rgba(255,255,255,.15)}
+header{position:sticky;top:0;z-index:999;background:var(--primary);display:flex;align-items:center;justify-content:space-between;padding:14px 24px;box-shadow:0 2px 20px rgba(0,0,0,.4)}
+header .logo{color:#fff;font-weight:900;font-size:1.2rem;letter-spacing:1px;text-transform:uppercase}
+header .btn-wa{padding:10px 20px;font-size:.9rem}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AU_ZVEHAY7Lag1Ai7tZmtclEYOC3M32IAFF5gudHtWQRPtLFCaXWudCyOKPJBc_traBve3lo0ajVQwZiaEC-pO22nWrBaTrVwJwVEVljLQiFbNmu3MdVlmD7Nah-ch_00Ayyeorf-iRuiz9nQ0r7Fq9IWxhu4qHqrj5hhpJjBhKvDY9d3951__njRb5jRd5T0bMNcRmKnv3EdefFZcsvpN-GpXVuzoGmnA3ySMYHs1EWba5dOYjUO71UbFFY0eH8NtGrrynGRZH9ncJYBPJ3u88F7CO-teRPpnsXQB7dROtOs7PB8FUCVcKJgwxMdyxDZfO4j_kQi61DYSS06_hspdaB-CN03cyqnkrHb6skwvV4J7LgDM8QXBCx2Umxs1y4tnfJ-W4GhL0iSmPG76Rg-sISTQjp73QnSXdszOI25dRnvPN-w8xp&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw');background-size:cover;background-position:center}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(10,10,20,.85) 0%,rgba(26,26,46,.75) 100%)}
+.hero-content{position:relative;z-index:2;padding:40px 24px;max-width:800px}
+.hero-content h1{font-size:clamp(2rem,6vw,3.6rem);font-weight:900;color:#fff;line-height:1.1;margin-bottom:18px;text-shadow:0 2px 20px rgba(0,0,0,.5)}
+.hero-content h1 span{color:var(--secondary)}
+.hero-content p{color:rgba(255,255,255,.88);font-size:clamp(1rem,2.5vw,1.25rem);margin-bottom:32px;font-weight:400}
+.hero-btns{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:24px}
+.badge{display:inline-block;background:var(--secondary);color:#fff;font-weight:700;font-size:.85rem;padding:8px 20px;border-radius:50px;letter-spacing:.5px;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(233,69,96,.5)}50%{box-shadow:0 0 0 10px rgba(233,69,96,0)}}
+.social-proof{background:var(--dark);padding:60px 24px;text-align:center}
+.social-proof h2{color:rgba(255,255,255,.5);font-size:.9rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:40px}
+.stats{display:flex;flex-wrap:wrap;justify-content:center;gap:40px;margin-bottom:36px}
+.stat{color:#fff}
+.stat .num{font-size:clamp(2.5rem,8vw,4rem);font-weight:900;color:var(--secondary);line-height:1}
+.stat .label{font-size:.85rem;color:rgba(255,255,255,.6);margin-top:6px}
+.maps-link{display:inline-flex;align-items:center;gap:8px;background:var(--primary);color:#fff;padding:12px 24px;border-radius:50px;font-weight:600;font-size:.9rem;border:1px solid rgba(255,255,255,.15);transition:background .2s}
+.maps-link:hover{background:var(--secondary)}
+.services{padding:60px 24px;background:var(--light)}
+.services h2{text-align:center;font-size:clamp(1.5rem,4vw,2.2rem);font-weight:900;color:var(--primary);margin-bottom:10px}
+.services .sub{text-align:center;color:#666;margin-bottom:40px;font-size:.95rem}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;max-width:900px;margin:0 auto 40px}
+.service-card{background:#fff;border-radius:16px;padding:28px 20px;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,.07);transition:transform .2s,box-shadow .2s}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(0,0,0,.12)}
+.service-card .emoji{font-size:2.5rem;margin-bottom:12px;display:block}
+.service-card .name{font-weight:700;color:var(--primary);font-size:.95rem}
+.services-cta{text-align:center}
+.album{padding:60px 24px;background:#fff}
+.album h2{text-align:center;font-size:clamp(1.5rem,4vw,2.2rem);font-weight:900;color:var(--primary);margin-bottom:36px}
+.album-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:1000px;margin:0 auto}
+@media(min-width:768px){.album-grid{grid-template-columns:repeat(3,1fr)}}
+.album-grid img{width:100%;height:220px;object-fit:cover;border-radius:12px;display:block}
+.review{padding:60px 24px;background:var(--light);text-align:center}
+.review-inner{max-width:700px;margin:0 auto}
+.review-quote{font-size:5rem;line-height:.8;color:var(--primary);font-family:Georgia,serif;opacity:.3;margin-bottom:8px}
+.review-text{font-style:italic;font-size:clamp(1.1rem,3vw,1.4rem);color:var(--primary);line-height:1.6;margin-bottom:20px;font-weight:400}
+.review-stars{color:var(--primary);font-size:1.4rem;margin-bottom:8px}
+.review-author{color:#888;font-weight:600;font-size:.9rem}
+.cta-urgency{background:var(--primary);padding:70px 24px;text-align:center}
+.cta-urgency h2{color:#fff;font-size:clamp(1.8rem,5vw,3rem);font-weight:900;margin-bottom:14px;line-height:1.1}
+.cta-urgency h2 span{color:var(--secondary)}
+.cta-urgency p{color:rgba(255,255,255,.7);margin-bottom:36px;font-size:1rem}
+.cta-urgency .btn-wa{font-size:1.15rem;padding:18px 36px}
+.location{padding:60px 24px;background:#fff}
+.location h2{text-align:center;font-size:clamp(1.5rem,4vw,2.2rem);font-weight:900;color:var(--primary);margin-bottom:40px}
+.location-inner{display:flex;flex-wrap:wrap;gap:40px;max-width:1000px;margin:0 auto;align-items:flex-start}
+.horarios{flex:1;min-width:220px}
+.horarios h3{font-size:1rem;font-weight:700;color:var(--primary);margin-bottom:16px;text-transform:uppercase;letter-spacing:1px}
+.horario-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:.9rem;color:#444}
+.horario-row:last-child{border-bottom:none}
+.map-wrap{flex:2;min-width:280px}
+.address-line{display:flex;align-items:center;gap:8px;color:#666;font-size:.9rem;margin-top:12px}
+footer{background:var(--dark);color:rgba(255,255,255,.6);padding:30px 24px;text-align:center;font-size:.85rem}
+footer .footer-name{color:#fff;font-weight:700;font-size:1rem;margin-bottom:6px}
+footer .footer-links{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:12px}
+footer .footer-links a{color:rgba(255,255,255,.5);font-size:.8rem;transition:color .2s}
+footer .footer-links a:hover{color:#fff}
+footer .cruz{color:rgba(255,255,255,.25);font-size:.75rem;margin-top:14px}
+.modal{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.7);align-items:center;justify-content:center;padding:24px}
+.modal-box{background:#fff;border-radius:16px;padding:36px;max-width:600px;width:100%;max-height:80vh;overflow-y:auto;position:relative}
+.modal-box h3{font-size:1.3rem;font-weight:900;color:var(--primary);margin-bottom:16px}
+.modal-box p{font-size:.85rem;color:#555;line-height:1.7;margin-bottom:10px}
+.modal-close{position:absolute;top:16px;right:20px;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#888}
+@media(min-width:768px){.hero-content h1{font-size:3.4rem}}
+</style>
+<meta name="description" content="de corazon en la falda cordoba argentina. Contacta ahora por WhatsApp.">
+<meta property="og:image" content="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AU_ZVEHAY7Lag1Ai7tZmtclEYOC3M32IAFF5gudHtWQRPtLFCaXWudCyOKPJBc_traBve3lo0ajVQwZiaEC-pO22nWrBaTrVwJwVEVljLQiFbNmu3MdVlmD7Nah-ch_00Ayyeorf-iRuiz9nQ0r7Fq9IWxhu4qHqrj5hhpJjBhKvDY9d3951__njRb5jRd5T0bMNcRmKnv3EdefFZcsvpN-GpXVuzoGmnA3ySMYHs1EWba5dOYjUO71UbFFY0eH8NtGrrynGRZH9ncJYBPJ3u88F7CO-teRPpnsXQB7dROtOs7PB8FUCVcKJgwxMdyxDZfO4j_kQi61DYSS06_hspdaB-CN03cyqnkrHb6skwvV4J7LgDM8QXBCx2Umxs1y4tnfJ-W4GhL0iSmPG76Rg-sISTQjp73QnSXdszOI25dRnvPN-w8xp&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw">
+<meta property="og:title" content="de corazon">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"de corazon","telephone":"+34000000000","url":"https://albiazul1988-creator.github.io/cruzdigital-webs/de-corazon-la-falda-cordoba-argentina-mn96udzm/","address":{"@type":"PostalAddress","addressLocality":"la falda cordoba argentina","addressCountry":"ES","streetAddress":"X5172 La Falda, Córdoba, Argentina"},"description":"Negocio ubicado en la falda cordoba argentina, con 4.7 estrellas en Google, 144 reseñas verificadas.","image":"https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AU_ZVEHAY7Lag1Ai7tZmtclEYOC3M32IAFF5gudHtWQRPtLFCaXWudCyOKPJBc_traBve3lo0ajVQwZiaEC-pO22nWrBaTrVwJwVEVljLQiFbNmu3MdVlmD7Nah-ch_00Ayyeorf-iRuiz9nQ0r7Fq9IWxhu4qHqrj5hhpJjBhKvDY9d3951__njRb5jRd5T0bMNcRmKnv3EdefFZcsvpN-GpXVuzoGmnA3ySMYHs1EWba5dOYjUO71UbFFY0eH8NtGrrynGRZH9ncJYBPJ3u88F7CO-teRPpnsXQB7dROtOs7PB8FUCVcKJgwxMdyxDZfO4j_kQi61DYSS06_hspdaB-CN03cyqnkrHb6skwvV4J7LgDM8QXBCx2Umxs1y4tnfJ-W4GhL0iSmPG76Rg-sISTQjp73QnSXdszOI25dRnvPN-w8xp&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw","email":"albiazul1988@gmail.com"}</script>
+</head>
+<body>
+<header>
+<div class="logo">de corazon</div>
+<a href="https://wa.me/34000000000?text=Hola%2C%20me%20interesa%20informacion" class="btn-wa" target="_blank">
+<svg width="18" height="18" fill="#fff" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.86L.057 23.486a.5.5 0 00.602.633l5.878-1.543A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.034-1.388l-.36-.214-3.733.979.997-3.648-.235-.374A9.787 9.787 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+WhatsApp
+</a>
+</header>
+
+<section class="hero">
+<div class="hero-bg"></div>
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<h1>La <span>otros</span> que buscabas en la falda cordoba argentina</h1>
+<p>4.7 ★ en Google · 144 reseñas verificadas · Responde en minutos</p>
+<div class="hero-btns">
+<a href="https://wa.me/34000000000?text=Hola%2C%20me%20interesa%20informacion" class="btn-wa" target="_blank">
+<svg width="18" height="18" fill="#fff" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.86L.057 23.486a.5.5 0 00.602.633l5.878-1.543A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.034-1.388l-.36-.214-3.733.979.997-3.648-.235-.374A9.787 9.787 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+Escribir por WhatsApp
+</a>
+<a href="tel:+34000000000" class="btn-call">📞 Llamar ahora</a>
+</div>
+<span class="badge">⚡ Respuesta en minutos</span>
+</div>
+</section>
+
+<section class="social-proof">
+<h2>Por qué eligen de corazon</h2>
+<div class="stats">
+<div class="stat">
+<div class="num">4.7★</div>
+<div class="label">Valoración Google</div>
+</div>
+<div class="stat">
+<div class="num">144</div>
+<div class="label">Reseñas verificadas</div>
+</div>
+<div class="stat">
+<div class="num">100%</div>
+<div class="label">Compromiso local</div>
+</div>
+</div>
+<a href="https://maps.google.com/?q=de%20corazon%20la%20falda%20cordoba%20argentina" class="maps-link" target="_blank">
+📍 Ver en Google Maps
+</a>
+</section>
+
+<section class="services">
+<h2>Nuestros Servicios</h2>
+<p class="sub">Consulta todo lo que podemos hacer por ti</p>
+<div class="services-grid">
+<div class="service-card">
+<span class="emoji">✨</span>
+<div class="name">Consultar servicios disponibles</div>
+</div>
+<div class="service-card">
+<span class="emoji">💬</span>
+<div class="name">Atención personalizada</div>
+</div>
+<div class="service-card">
+<span class="emoji">📍</span>
+<div class="name">Presencia local en La Falda</div>
+</div>
+</div>
+<div class="services-cta">
+<a href="https://wa.me/34000000000?text=Hola%2C%20me%20interesa%20informacion" class="btn-wa" target="_blank">
+<svg width="18" height="18" fill="#fff" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.86L.057 23.486a.5.5 0 00.602.633l5.878-1.543A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.034-1.388l-.36-.214-3.733.979.997-3.648-.235-.374A9.787 9.787 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+Consultar por WhatsApp
+</a>
+</div>
+</section>
+
+<section class="album">
+<h2>Nuestro espacio</h2>
+<div class="album-grid">
+<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AU_ZVEFdiZwkvOPa9q0wF2pY9eiYUUUOUJDH5vfCNtKyJf5T1lVJfkFusEtaEs6O4TB5kjwkjMHcwhHF6KzuhEGvQIwfMypHPAr_U9WDb6cLNLxaeg6QqCVSbAre1FFRHX_YCSnXajo7qR8BJoi1kyElpfUmguyttFesJl3tIBtlmf2AcoFYNNmfwTuIRo-qkvB5DHfhZ3BNNnkaHILTjNTvOcNE6IIpBvFlSwSeYcNvmnppq5H9Nh2r8GvztMY8-QfePUg_j_DcJ2QvbFuJQWLbCFZNSV6inFvDxR7cSTsskcKZsbXqtYOKoCdptsxhOzaZ1Bzb5fL4fspoFd0__VsL-XgeCA_WszQaoilp129fCe2Mbz16UKIlONdjbAA9Ob5dJp0NZCkhBxAd7tretAE3oJtNxNjqqjfJjLehEibJ51IIAui8ZgIB8v_M2bPm32hW&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw" alt="de corazon foto 1" loading="lazy">
+<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AU_ZVEErIZ-SzPQy0sV5-ONAb90-WK3WjGmPZYbIcljEPRbRqXzmhdrmarTgtoWtQa4wlpozcS7UtWYsvWnx91kLLJABZ3pGvBi-XLr1c6d1kPRYcvqOVsYnlTi9iSK8JvcxWqKrjJ8YSHIBly0swCfl-ThmAX_cJwFC4sZiNqmtlW6fxVQ7_NI8l4O8l_i7PXxIPUyLo-iXDsAcJQVwIK6zEiYN2_jhxa2roLWJUvuOk6bf3JE1BlGG4Y_LfBkA9-rUnl7VR2j8rm7vzGARjBCq48JeufBM8FiVdLtCefGkhcGcubJzQSeFyRFhipKCfR_Bw6XqiEIDSUsj3Ya7H-q7ijtWkMLQy7mmhxyaLcbJ-kUXKWMYZN9jVh8kMbG5BeY6fzO4d1vru4FCvQCP_QXh_yTQDdqmfEzH6N-iOT8fEwvW-g&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw" alt="de corazon foto 2" loading="lazy">
+<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AU_ZVEE0a3MiGZnErTAUvJON9IKfbVTxrmRLMMQ8Asl-msd9M6PMg2NnoojsiAUiBdqjsgHomtSH4KRJypjkaPDldQKBpGxrml5zPqKV9ncU9-uVWE-cTLLFXvfF30z3IYF0oiGQ8cK_5qr11Nc4qn_1QPewxdoyk36LzP3E0NP78jOM8cOcKYlvay-CeaYDctArIUSBkFEv2G2czSdMsxbP6lq-cvdwL3WS10LEBVVsHOuMWc0dY_CYtsIldjnvDutUN_A_z8EuGRAA4FjqUTdT3hGDUtULN1NHFx6fZrIvK2uIKmEezWgVT_OjjO75Ibgwmz1t9xvGnyQcfMjjiAsfjpubUuEmKNl5yzIEMwnHg16QXLTLVoLQaY7NhFRnRgM9KqeA5oBak6cnvDG9SvkFXXj7u3bk0y57J-ofF53JhnWfRaQQ&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw" alt="de corazon foto 3" loading="lazy">
+<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AU_ZVEEawelyl81CzviNFmC8BUzW0IhXhGdqWAHUEbZW3c7kQle1bcMojoq7-Ncv9IX71MHLAbOQq3g3anhOMaIAsTMY2kQ30PXqXZ90zShodiC3Y4BXxaJNVJMikRWJpRUF9UI_KyTd8fiH2uDDXB1aDu9KtfY3PU58OODPNv7UjpEZdMic8XcXL1VGnHUaK-WW1x1Bp69mR5RxHuQWTn6MT4G3Td9zdALSRy5sGNfU5_laVOeoCs3cO531quD36szFq8cjxFygbpg-OFslQEUbW0YJGWq02sAVMd48wkGLYQucslOPJm8wYXiNvODFEpS7qzgPezUt5Iuqg0GSfbIVel-iJciWvGYNL-JnhxR793kduqOcp4xrhxygDMd3rRVMs03rhYh-oWCuIyczUfvnTMZ7XPEaEYlIxaffnyw5LmJuHw&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw" alt="de corazon foto 4" loading="lazy">
+</div>
+</section>
+
+<section class="review">
+<div class="review-inner">
+<div class="review-quote">"</div>
+<p class="review-text">Pequeño pero hermoso ubicado en un lugar muy tranquilo en las afueras del centro recomiendo que esté abierto al público para poder ir a orar en el momento que fuere porque cuando f...</p>
+<div class="review-stars">★★★★★</div>
+<div class="review-author">— Lorena Noguera · Google</div>
+</div>
+</section>
+
+<section class="cta-urgency">
+<h2>¿Listo para <span>contactarnos</span>?</h2>
+<p>Escríbenos ahora y te respondemos en minutos</p>
+<a href="https://wa.me/34000000000?text=Hola%2C%20me%20interesa%20informacion" class="btn-wa" target="_blank">
+<svg width="22" height="22" fill="#fff" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164<a href="https://wa.me/34000000000?text=Hola%2C%20me%20interesa%20informacion" target="_blank" rel="noopener" aria-label="WhatsApp" style="position:fixed;bottom:22px;right:18px;z-index:9998;background:#25D366;border-radius:50%;width:58px;height:58px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(37,211,102,0.5);text-decoration:none"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<div id="aviso-legal-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:99999;align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto">
+  <div style="background:#fff;color:#222;max-width:680px;width:100%;margin:40px auto;border-radius:14px;padding:36px;font-family:sans-serif;font-size:14px;line-height:1.75;position:relative">
+    <button onclick="document.getElementById('aviso-legal-modal').style.display='none'" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:#aaa">&#x2715;</button>
+    <h2 style="font-size:20px;font-weight:800;margin-bottom:6px">Aviso Legal y Pol&iacute;tica de Privacidad</h2>
+    <p style="font-size:12px;color:#999;margin-bottom:24px">de corazon &mdash; 2026</p>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">1. Datos del titular</h3>
+    <ul style="margin:10px 0 10px 20px;color:#444">
+      <li><strong>Titular:</strong> de corazon</li>
+      <li><strong>NIF/CIF:</strong> En tr&aacute;mitaci&oacute;n</li>
+      <li><strong>Domicilio:</strong> X5172 La Falda, Córdoba, Argentina</li>
+      <li><strong>Tel&eacute;fono:</strong> 000000000</li>
+      <li><strong>Email:</strong> albiazul1988@gmail.com</li>
+    </ul>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">2. Protecci&oacute;n de datos (RGPD)</h3>
+    <ul style="margin:10px 0 10px 20px;color:#444">
+      <li><strong>Responsable:</strong> de corazon</li>
+      <li><strong>Finalidad:</strong> Gesti&oacute;n de consultas comerciales</li>
+      <li><strong>Base jur&iacute;dica:</strong> Consentimiento (art. 6.1.a RGPD)</li>
+      <li><strong>Derechos:</strong> Acceso, rectificaci&oacute;n y supresi&oacute;n. Contacto: albiazul1988@gmail.com</li>
+      <li><strong>Reclamaciones:</strong> <a href="https://www.aepd.es" target="_blank" style="color:#0077B6">www.aepd.es</a></li>
+    </ul>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">3. Cookies</h3>
+    <p>Este sitio no usa cookies de seguimiento ni anal&iacute;ticas.</p>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">4. Propiedad intelectual</h3>
+    <p>Contenidos propiedad de de corazon. Prohibida reproducci&oacute;n sin autorizaci&oacute;n.</p>
+    <p style="margin-top:24px;font-size:11px;color:#bbb;border-top:1px solid #eee;padding-top:14px">Dise&ntilde;o: Cruz Digital &middot; cruzdigital.shop</p>
+  </div>
+</div>
+<script>document.addEventListener('keydown',function(e){if(e.key==='Escape'){var m=document.getElementById('aviso-legal-modal');if(m)m.style.display='none';}});</script>
