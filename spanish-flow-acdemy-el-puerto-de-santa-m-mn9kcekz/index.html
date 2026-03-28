@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>spanish flow acdemy — otros en el puerto de santa maria</title>
+<meta name="description" content="spanish flow acdemy en el puerto de santa maria. Llama o escribe por WhatsApp ahora.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#1A1A2E;--secondary:#E94560;--dark:#0A0A14;--light:#F8F8FF}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:var(--dark);color:var(--light);overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+.btn-wa{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;font-weight:700;padding:14px 28px;border-radius:50px;font-size:1rem;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 20px rgba(37,211,102,.4)}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(37,211,102,.6)}
+.btn-call{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#fff;font-weight:700;padding:14px 28px;border-radius:50px;font-size:1rem;border:2px solid #fff;transition:transform .2s,background .2s}
+.btn-call:hover{background:rgba(255,255,255,.1);transform:translateY(-2px)}
+header{position:sticky;top:0;z-index:999;background:rgba(10,10,20,.95);backdrop-filter:blur(10px);padding:14px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(233,69,96,.3)}
+.header-name{font-size:1.05rem;font-weight:800;color:var(--light);letter-spacing:.5px;text-transform:uppercase}
+.header-name span{color:var(--secondary)}
+.header-wa{display:inline-flex;align-items:center;gap:6px;background:#25D366;color:#fff;font-weight:700;padding:10px 20px;border-radius:50px;font-size:.85rem;box-shadow:0 4px 15px rgba(37,211,102,.4);transition:transform .2s}
+.header-wa:hover{transform:translateY(-1px)}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 20px}
+.hero-bg{position:absolute;inset:0;background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AU_ZVEEqdzSQCFX9T7ef_oFUKNIj3ZHXkmt8mQD4P-cXqrNYCDTpPLt6ehF3mm1OyBvnf5vXw9RXHYkj_fXunQ02SqVQt9qzbsidjP4G5K6H3gPN_UhaLXk6q16mXQJSZGw5CAtDAo935IN-7_IQNeXhBCmV7dNKljmTJnt0OFsYjbMSngsyfPVRJo7ueorAYoe94HL6ZQm7WoB6sYZC0hmMxW-zMKEBdnnXPNrUSNn_rSKpwNpCN16HNiZMeaDEcybQsuESlwre9zp7ptMoiJ2h1bcGqOISYBI2Xf5vHhp-4xahcw&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw');background-size:cover;background-position:center;filter:brightness(.35)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,20,.6) 0%,rgba(26,26,46,.8) 100%)}
+.hero-content{position:relative;z-index:2;max-width:800px}
+.hero-badge{display:inline-block;background:var(--secondary);color:#fff;font-size:.75rem;font-weight:700;padding:6px 16px;border-radius:50px;margin-bottom:20px;letter-spacing:1px;text-transform:uppercase;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(233,69,96,.5)}50%{box-shadow:0 0 0 10px rgba(233,69,96,0)}}
+.hero h1{font-size:clamp(2rem,6vw,3.8rem);font-weight:900;line-height:1.1;margin-bottom:16px;color:#fff}
+.hero h1 span{color:var(--secondary)}
+.hero p{font-size:clamp(1rem,2.5vw,1.3rem);color:rgba(248,248,255,.8);margin-bottom:32px;max-width:600px;margin-left:auto;margin-right:auto}
+.hero-btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:24px}
+.response-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:.8rem;padding:8px 18px;border-radius:50px}
+.response-badge::before{content:'⚡';font-size:1rem}
+.social-proof{background:var(--primary);padding:60px 20px;text-align:center}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:700px;margin:0 auto 30px}
+.stat{padding:20px 10px}
+.stat-number{font-size:clamp(2.2rem,6vw,3.5rem);font-weight:900;color:var(--secondary);line-height:1}
+.stat-label{font-size:.8rem;color:rgba(248,248,255,.6);margin-top:6px;text-transform:uppercase;letter-spacing:.5px}
+.maps-link{display:inline-flex;align-items:center;gap:8px;background:rgba(233,69,96,.15);border:1px solid rgba(233,69,96,.4);color:var(--secondary);font-weight:600;padding:12px 24px;border-radius:50px;font-size:.9rem;transition:background .2s}
+.maps-link:hover{background:rgba(233,69,96,.3)}
+.services{padding:60px 20px;background:var(--dark)}
+.services h2{text-align:center;font-size:clamp(1.5rem,4vw,2.2rem);font-weight:800;margin-bottom:10px}
+.services .sub{text-align:center;color:rgba(248,248,255,.5);margin-bottom:40px;font-size:.95rem}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;max-width:900px;margin:0 auto 40px}
+.service-card{background:rgba(26,26,46,.8);border:1px solid rgba(233,69,96,.2);border-radius:16px;padding:28px 16px;text-align:center;transition:transform .2s,border-color .2s}
+.service-card:hover{transform:translateY(-4px);border-color:var(--secondary)}
+.service-card .emoji{font-size:2.2rem;margin-bottom:12px;display:block}
+.service-card .name{font-size:.9rem;font-weight:600;color:var(--light)}
+.services-cta{text-align:center}
+.album{padding:60px 20px;background:var(--primary)}
+.album h2{text-align:center;font-size:clamp(1.5rem,4vw,2.2rem);font-weight:800;margin-bottom:36px}
+.album-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:960px;margin:0 auto}
+@media(min-width:768px){.album-grid{grid-template-columns:repeat(3,1fr)}}
+.album-grid img{width:100%;height:220px;object-fit:cover;border-radius:12px;display:block;transition:transform .3s}
+.album-grid img:hover{transform:scale(1.03)}
+.review-section{padding:60px 20px;background:var(--light)}
+.review-inner{max-width:700px;margin:0 auto;text-align:center}
+.review-quote{font-size:4rem;line-height:1;color:var(--primary);font-family:Georgia,serif;margin-bottom:-10px}
+.review-text{font-size:clamp(1rem,2.5vw,1.2rem);font-style:italic;color:var(--primary);line-height:1.7;margin-bottom:20px}
+.review-stars{color:var(--primary);font-size:1.4rem;margin-bottom:10px}
+.review-author{font-weight:700;color:var(--primary);font-size:.95rem}
+.cta-urgency{padding:70px 20px;background:var(--primary);text-align:center;position:relative;overflow:hidden}
+.cta-urgency::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(233,69,96,.2) 0%,transparent 70%)}
+.cta-urgency h2{font-size:clamp(1.8rem,5vw,3rem);font-weight:900;margin-bottom:16px;position:relative}
+.cta-urgency p{color:rgba(248,248,255,.7);margin-bottom:36px;font-size:1rem;position:relative}
+.btn-wa-lg{display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#fff;font-weight:800;padding:18px 40px;border-radius:50px;font-size:1.15rem;transition:transform .2s,box-shadow .2s;box-shadow:0 6px 30px rgba(37,211,102,.5);position:relative}
+.btn-wa-lg:hover{transform:translateY(-3px);box-shadow:0 10px 40px rgba(37,211,102,.7)}
+.location{padding:60px 20px;background:var(--dark)}
+.location h2{text-align:center;font-size:clamp(1.5rem,4vw,2.2rem);font-weight:800;margin-bottom:36px}
+.location-inner{display:grid;gap:30px;max-width:900px;margin:0 auto}
+@media(min-width:768px){.location-inner{grid-template-columns:1fr 1fr;align-items:start}}
+.hours-table{width:100%;border-collapse:collapse}
+.hours-table tr{border-bottom:1px solid rgba(248,248,255,.07)}
+.hours-table td{padding:10px 8px;font-size:.9rem}
+.hours-table td:first-child{color:rgba(248,248,255,.5);text-transform:capitalize}
+.hours-table td:last-child{text-align:right;font-weight:600;color:#25D366}
+.address-box{margin-top:16px;display:flex;align-items:flex-start;gap:10px;color:rgba(248,248,255,.6);font-size:.9rem;line-height:1.5}
+.address-box::before{content:'📍';flex-shrink:0}
+footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid rgba(233,69,96,.2)}
+.footer-inner{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center;font-size:.85rem;color:rgba(248,248,255,.4)}
+.footer-inner a{color:rgba(248,248,255,.5);transition:color .2s}
+.footer-inner a:hover{color:var(--secondary)}
+.footer-sep{color:rgba(248,248,255,.2)}
+.cruz-digital{color:var(--secondary);font-weight:700}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:9999;align-items:center;justify-content:center;padding:20px}
+.modal-box{background:var(--primary);border:1px solid rgba(233,69,96,.3);border-radius:20px;max-width:640px;width:100%;max-height:80vh;overflow-y:auto;padding:36px 28px;position:relative}
+.modal-close{position:absolute;top:16px;right:20px;background:none;border:none;color:var(--light);font-size:1.5rem;cursor:pointer;opacity:.7}
+.modal-close:hover{opacity:1}
+.modal-box h2{font-size:1.3rem;font-weight:800;margin-bottom:20px;color:var(--secondary)}
+.modal-box p,.modal-box li{font-size:.85rem;color:rgba(248,248,255,.7);line-height:1.7;margin-bottom:12px}
+.modal-box h3{font-size:1rem;font-weight:700;color:var(--light);margin:20px 0 8px}
+.modal-box ul{padding-left:20px}
+</style>
+<meta name="description" content="spanish flow acdemy en el puerto de santa maria. Contacta ahora por WhatsApp.">
+<meta property="og:image" content="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AU_ZVEEqdzSQCFX9T7ef_oFUKNIj3ZHXkmt8mQD4P-cXqrNYCDTpPLt6ehF3mm1OyBvnf5vXw9RXHYkj_fXunQ02SqVQt9qzbsidjP4G5K6H3gPN_UhaLXk6q16mXQJSZGw5CAtDAo935IN-7_IQNeXhBCmV7dNKljmTJnt0OFsYjbMSngsyfPVRJo7ueorAYoe94HL6ZQm7WoB6sYZC0hmMxW-zMKEBdnnXPNrUSNn_rSKpwNpCN16HNiZMeaDEcybQsuESlwre9zp7ptMoiJ2h1bcGqOISYBI2Xf5vHhp-4xahcw&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw">
+<meta property="og:title" content="spanish flow acdemy">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"spanish flow acdemy","telephone":"+34646172638","url":"https://albiazul1988-creator.github.io/cruzdigital-webs/spanish-flow-acdemy-el-puerto-de-santa-m-mn9kcekz/","address":{"@type":"PostalAddress","addressLocality":"el puerto de santa maria","addressCountry":"ES","streetAddress":"C. Cincha, 21, 11500 El Puerto de Sta María, Cádiz"},"description":"Negocio ubicado en el puerto de santa maria, con 4.8 estrellas en Google, 21 reseñas verificadas.","image":"https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AU_ZVEEqdzSQCFX9T7ef_oFUKNIj3ZHXkmt8mQD4P-cXqrNYCDTpPLt6ehF3mm1OyBvnf5vXw9RXHYkj_fXunQ02SqVQt9qzbsidjP4G5K6H3gPN_UhaLXk6q16mXQJSZGw5CAtDAo935IN-7_IQNeXhBCmV7dNKljmTJnt0OFsYjbMSngsyfPVRJo7ueorAYoe94HL6ZQm7WoB6sYZC0hmMxW-zMKEBdnnXPNrUSNn_rSKpwNpCN16HNiZMeaDEcybQsuESlwre9zp7ptMoiJ2h1bcGqOISYBI2Xf5vHhp-4xahcw&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw","email":"albiazul1988@gmail.com"}</script>
+</head>
+<body>
+
+<header>
+<div class="header-name">Spanish Flow <span>Academy</span></div>
+<a class="header-wa" href="https://wa.me/34646172638?text=Hola%2C%20me%20interesa%20informacion">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+WhatsApp
+</a>
+</header>
+
+<section class="hero">
+<div class="hero-bg"></div>
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<div class="hero-badge">⭐ 4.8 en Google · El Puerto de Santa María</div>
+<h1>La <span>academia</span> que buscabas en El Puerto de Santa María</h1>
+<p>Valorada con 4.8 estrellas · 21 reseñas verificadas · Respuesta inmediata por WhatsApp</p>
+<div class="hero-btns">
+<a class="btn-wa" href="https://wa.me/34646172638?text=Hola%2C%20me%20interesa%20informacion">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+Escríbenos ahora
+</a>
+<a class="btn-call" href="tel:+34646172638">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+Llamar ahora
+</a>
+</div>
+<div class="response-badge">Respuesta en minutos</div>
+</div>
+</section>
+
+<section class="social-proof">
+<div class="stats-grid">
+<div class="stat">
+<div class="stat-number">4.8</div>
+<div class="stat-label">⭐ Valoración</div>
+</div>
+<div class="stat">
+<div class="stat-number">21</div>
+<div class="stat-label">Reseñas reales</div>
+</div>
+<div class="stat">
+<div class="stat-number">24h</div>
+<div class="stat-label">Disponibilidad</div>
+</div>
+</div>
+<a class="maps-link" href="https://maps.google.com/?q=spanish%20flow%20acdemy%20el%20puerto%20de%20santa%20maria" target="_blank" rel="noopener">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+Ver en Google Maps
+</a>
+</section>
+
+<section class="services">
+<h2>Nuestros Servicios</h2>
+<p class="sub">Consulta disponibilidad directamente por WhatsApp</p>
+<div class="services-grid">
+<div class="service-card">
+<span class="emoji">🎯</span>
+<span class="name">Clases Personalizadas</span>
+</div>
+<div class="service-card">
+<span class="emoji">🏆</span>
+<span class="name">Formación Especializada</span>
+</div>
+<div class="service-card">
+<span class="emoji">📅</span>
+<span class="name">Sesiones Grupales</span>
+</div>
+<div class="service-card">
+<span class="emoji">⚡</span>
+<span class="name">Cursos Intensivos</span>
+</div>
+<div class="service-card">
+<span class="emoji">🌟</span>
+<span class="name">Tutoría Individual</span>
+</div>
+<div class="service-card">
+<span class="emoji">💬</span>
+<span class="name">Consultoría</span>
+</div>
+</div>
+<div class="services-cta">
+<a class="btn-wa" href="https://wa.me/34646172638?text=Hola%2C%20me%20interesa%20informacion">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+Consultar servicios por WhatsApp
+</a>
+</div>
+</section>
+
+<section class="album">
+<h2>Nuestro espacio</h2>
+<div class="album-grid">
+<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AU_ZVEHCFA8Ojku0JjEdbVXf5Lhn7EZ-9WJXbQwfW7LTBKDN9dgtW0Ppbov5lEhdR6jQQNQ1MvKv9fxy4G5Ylo-Hu9JGMFocdHIBXiQL7LjqxtnoYi_tqlhQeSyZCumgE4VPdcHBCb6jG9Bzsofx3uaUTGmHK0NqpanPgVv-9BhONCDw41yWygtmTGDPzc0X186r5TFiQrqKiXy04m_rjcvk8vPs1YsscY91YCFDklCjSsinwSyM2mO83kZ8EAq30G-2cS0TWViFDiyEjN5HkuAy7KjDz4kqB5r9lLV2dQdBRcTDBzT9VYcBKUXGG2iW5Cqid92sEVVEQFfPuOWUsoxijMILTuKrgN4WFv9waMRlW76zmAsw1y4S6wnpje3dMnNUFkThrmiRlHg7MLLUbbsn2zVJTeMYf22P0CenXTwr6P7SkQ&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw" alt="Espacio 1" loading="lazy">
+<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AU_ZVEGUZS-yhcoFiwbGZAjEGxUTGoLtgH2zEmK1Q9JsRpaLi-tb5s7vc8lNzelbn3956nEFRLeusmKIgIWC9y2lNEz3RkiQLVM4ay-ua2pswF5hcU9xeyEsM_ok_rGdYIENBZ7Iaa-fDfr2rGEF5VJu8lGMdxVCZGKaJtv--H-Hd7rAn5f90M3jFPNgPI1zSC4dLzBSJYfc3kwcmlh3ukmdAPH0Aj6eN-p3rdNb2BYm3xgG63fnctSIQ2AIyu2U-waG8lXCrQX5CrvV2zC8RShNzXoVpwE6M6g3PvYavxMc1zciix58_lfbC-_vYTmcB9kQMLvcD5_I8hs9NUmPWINGHm1eyFZxaie5_jMUi3mzqwtPc6cA0o7gIJKgbcP9p4aZzKbOtwloojql8pF-m6DvmJUmDpkvGRQLDXHECq6c_cqZRqVz&key=AIzaSyBGkTZsuUVgKJRzuaCkRAVO65DdriEYilw" alt="Espacio 2" loading="lazy">
+<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AU_ZVEEI6SmPjR28lqyefjNozr4YJLRt78r6m7ZpnHVULy3V2p8AuRk166kKcxLgZAkDDphYkwBR8o4mabKND0OZLNXpef5bxeKTNJLjmAz3<section style="background:#f7f7f7;padding:48px 20px;text-align:center"><div style="max-width:320px;margin:0 auto"><p style="font-size:13px;font-weight:700;color:#25D366;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px">Contactar por WhatsApp</p><h3 style="font-size:20px;font-weight:900;color:#111;margin:0 0 16px">Escanea y escíbenos</h3><img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https%3A%2F%2Fwa.me%2F34646172638%3Ftext%3DHola%252C%2520me%2520interesa%2520informacion&color=000000&bgcolor=ffffff&qzone=1" alt="WhatsApp QR" width="160" height="160" style="border-radius:16px;border:3px solid #25D366;display:block;margin:0 auto 12px"><p style="color:#666;font-size:13px">Abre la cámara de tu móvil y escánea</p></div></section><a href="https://wa.me/34646172638?text=Hola%2C%20me%20interesa%20informacion" target="_blank" rel="noopener" aria-label="WhatsApp" style="position:fixed;bottom:22px;right:18px;z-index:9998;background:#25D366;border-radius:50%;width:58px;height:58px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(37,211,102,0.5);text-decoration:none"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<div id="aviso-legal-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:99999;align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto">
+  <div style="background:#fff;color:#222;max-width:680px;width:100%;margin:40px auto;border-radius:14px;padding:36px;font-family:sans-serif;font-size:14px;line-height:1.75;position:relative">
+    <button onclick="document.getElementById('aviso-legal-modal').style.display='none'" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:#aaa">&#x2715;</button>
+    <h2 style="font-size:20px;font-weight:800;margin-bottom:6px">Aviso Legal y Pol&iacute;tica de Privacidad</h2>
+    <p style="font-size:12px;color:#999;margin-bottom:24px">spanish flow acdemy &mdash; 2026</p>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">1. Datos del titular</h3>
+    <ul style="margin:10px 0 10px 20px;color:#444">
+      <li><strong>Titular:</strong> spanish flow acdemy</li>
+      <li><strong>NIF/CIF:</strong> En tr&aacute;mitaci&oacute;n</li>
+      <li><strong>Domicilio:</strong> C. Cincha, 21, 11500 El Puerto de Sta María, Cádiz</li>
+      <li><strong>Tel&eacute;fono:</strong> 646172638</li>
+      <li><strong>Email:</strong> albiazul1988@gmail.com</li>
+    </ul>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">2. Protecci&oacute;n de datos (RGPD)</h3>
+    <ul style="margin:10px 0 10px 20px;color:#444">
+      <li><strong>Responsable:</strong> spanish flow acdemy</li>
+      <li><strong>Finalidad:</strong> Gesti&oacute;n de consultas comerciales</li>
+      <li><strong>Base jur&iacute;dica:</strong> Consentimiento (art. 6.1.a RGPD)</li>
+      <li><strong>Derechos:</strong> Acceso, rectificaci&oacute;n y supresi&oacute;n. Contacto: albiazul1988@gmail.com</li>
+      <li><strong>Reclamaciones:</strong> <a href="https://www.aepd.es" target="_blank" style="color:#0077B6">www.aepd.es</a></li>
+    </ul>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">3. Cookies</h3>
+    <p>Este sitio no usa cookies de seguimiento ni anal&iacute;ticas.</p>
+    <h3 style="font-size:15px;font-weight:700;margin:20px 0 8px">4. Propiedad intelectual</h3>
+    <p>Contenidos propiedad de spanish flow acdemy. Prohibida reproducci&oacute;n sin autorizaci&oacute;n.</p>
+    <p style="margin-top:24px;font-size:11px;color:#bbb;border-top:1px solid #eee;padding-top:14px">Dise&ntilde;o: Cruz Digital &middot; cruzdigital.shop</p>
+  </div>
+</div>
+<script>document.addEventListener('keydown',function(e){if(e.key==='Escape'){var m=document.getElementById('aviso-legal-modal');if(m)m.style.display='none';}});</script>
